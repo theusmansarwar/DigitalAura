@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "./Faqs.css";
 import { useRouter } from "next/navigation";
+import Button from "../Buttons/Button";
 
 const Faqs = ({ data }) => {
   const router = useRouter();
@@ -16,23 +17,25 @@ const Faqs = ({ data }) => {
       <div className="faq-left">
         <h2 className="faq-heading">{data?.title}</h2>
         <p>{data?.description}</p>
-        <div className="faq-buttons">
-          <button
-            onClick={() => {
-              router.push("/contact-us");
-            }}
-          >
-            More Questions
-          </button>
-          <span
-            onClick={() => {
-              router.push("/contact-us");
-            }}
-          >
-            Contact Us
-          </span>
-        </div>
         <img src="/faqs.svg" alt="FAQs" />
+        <div className="buttons-container">
+          <Button
+            variant="filled"
+            onClick={() => {
+              router.push("/contact");
+            }}
+          >
+            Start Ranking Now
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => {
+              router.push("/");
+            }}
+          >
+            Contact Now
+          </Button>
+        </div>
       </div>
       <div className="faq-right">
         {data?.questions.map((item, index) => (

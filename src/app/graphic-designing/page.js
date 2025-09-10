@@ -43,6 +43,11 @@ const faqs = {
       answer:
         "The competition online grows every day. Waiting gives rivals more space to take customers. Zemalt helps brands secure visibility, build authority, and gain trust today. Early action brings long-term growth and lasting market advantage.",
     },
+    {
+      question: "Why invest in digital marketing?",
+      answer:
+        "The competition online grows every day. Waiting gives rivals more space to take customers. Zemalt helps brands secure visibility, build authority, and gain trust today. Early action brings long-term growth and lasting market advantage.",
+    },
   ],
 };
 const page = () => {

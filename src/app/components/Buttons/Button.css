@@ -1,0 +1,84 @@
+ .filled-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  outline: none;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 8px;
+  padding-left: 12px;
+  border-radius: var(--border-radius3);
+  cursor: pointer;
+  color: var(--text-color2);
+  font-weight: var(--bold-font-weight);
+  font-size: var(--default-p-size);
+}
+ .outline-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  outline: none;
+  background-color: var(--text-color2);
+  border: 1px solid var(--primary-color);
+  padding: 8px;
+  padding-left: 12px;
+  border-radius: var(--border-radius3);
+  cursor: pointer;
+  color: var(--text-color);
+  font-weight: var(--bold-font-weight);
+  font-size: var(--default-p-size);
+}
+ .filled-btn span {
+  background-color: var(--text-color2);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .outline-btn span {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .filled-btn span svg {
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  color: var(--text-color);
+}
+ .outline-btn span svg {
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  color: var(--text-color2);
+}
+
+ .filled-btn:hover span svg {
+  transform: rotate(0deg);
+  color: var(--text-color2);
+}
+ .outline-btn:hover span svg {
+  transform: rotate(0deg);
+  color: var(--text-color);
+}
+ .filled-btn:hover {
+  background-color: var(--text-color2);
+  color: var(--text-color);
+}
+ .outline-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color2);
+}
+ .filled-btn:hover span {
+  background-color: var(--primary-color);
+  color: var(--text-color2);
+}
+ .outline-btn:hover span {
+  background-color: var(--text-color2);
+}

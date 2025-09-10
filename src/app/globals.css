@@ -1,0 +1,59 @@
+:root {
+  --font-geist-sans: "Geist", sans-serif;
+  --font-syne: "Syne", sans-serif;
+  --text-color: #000000;
+  --text-color2: #ffffff;
+  --background1: #ededed;
+  --background2: #efefef;
+  --primary-color: #f94900;
+  --secondary-color: #e85319;
+  --bold-font-weight: 700;
+  --border-radius3: 25px;
+  --border-radius1: 20px;
+  --border-radius2: 8px;
+  --default-width: 90%;
+  --left-space: 5%;
+  --default-box-shadow: 0px 0px 2px black;
+  --default-box-shadow2: 0px 0px 12px rgba(0, 0, 0, 0.508);
+  --heading-one: 56px;
+  --heading-two: 42px;
+  --heading-three: 32px;
+  --heading-four: 24px;
+  --default-p-size: 16px;
+}
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-geist-sans);
+}
+
+h1 {
+  font-family: var(--font-syne);
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.section-heading {
+  font-size: var(--heading-two);
+  font-weight: var(--bold-font-weight);
+  color: var(--text-color);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --default-width: 90%;
+    --left-space: 5%;
+    --default-box-shadow: 0px 0px 2px black;
+    --heading-one: 32px;
+    --heading-two: 28px;
+    --heading-three: 24px;
+    --heading-four: 18px;
+  }
+}

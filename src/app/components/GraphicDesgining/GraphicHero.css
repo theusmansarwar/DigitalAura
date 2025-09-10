@@ -15,16 +15,6 @@
 .graphic-hero p {
   text-align: center;
 }
-.graphic-hero .buttons-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-top: 40px;
-}
-.graphic-hero .buttons-container .arrow-img {
-  width: 100px;
-  margin-top: -40px;
-}
 
 @media (max-width: 900px) {
   .graphic-hero {
@@ -32,13 +22,5 @@
   }
   .graphic-hero .hero-img {
     width: 100%;
-  }
-  .graphic-hero .buttons-container {
-    gap: 10px;
-    margin-top: 20px;
-    flex-direction: column;
-  }
-  .graphic-hero .buttons-container .arrow-img {
-    display: none;
   }
 }

@@ -45,6 +45,16 @@ textarea {
   font-weight: var(--bold-font-weight);
   color: var(--text-color);
 }
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+.buttons-container .arrow-img {
+  width: 100px;
+  margin-top: -40px;
+}
 
 @media (max-width: 900px) {
   :root {
@@ -55,5 +65,13 @@ textarea {
     --heading-two: 28px;
     --heading-three: 24px;
     --heading-four: 18px;
+  }
+  .buttons-container {
+    gap: 10px;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .buttons-container .arrow-img {
+    display: none;
   }
 }

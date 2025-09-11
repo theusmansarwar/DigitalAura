@@ -10,6 +10,7 @@
   --para-text: #4a5568;
   --foot-color: #718096;
   --light-gray: #f8fbfd;
+  --dark-gray:#EDEDED;
   --border-radius: 6px;
   --border-radius2: 25px;
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -21,7 +22,7 @@
   --heading-three: 32px;
   --heading-four: 24px;
   --default-p-size: 16px;
-}
+  --gradient-one: linear-gradient(90deg, var(--primary-color), var(--dark-orange));}
 * {
   padding: 0%;
   margin: 0%;

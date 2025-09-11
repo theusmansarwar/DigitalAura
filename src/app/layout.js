@@ -2,6 +2,7 @@ import "./globals.css";
 import { Syne } from "next/font/google";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "./components/Header/Header";
+import FooterF from "./components/Footer/FooterF";
 // import localFont from "next/font/local";
 
 // // Self-hosted Century Gothic (put the font file inside /public/fonts/)
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${syne.variable}`}>
         <Header/>
         {children}
+        <FooterF/>
       </body>
     </html>
   );

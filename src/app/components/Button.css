@@ -1,0 +1,39 @@
+.blogs-section {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+.blog-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 20px;
+  font-weight: 500;
+  width: 270.56px;
+  height: 35px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.blog-btn:hover {
+  background-color: #D94000;
+}
+.blog-btn .icon {
+  position: absolute;
+  left: 10px;
+  width: 18px;
+  height: 15px;
+  object-fit: contain;
+}
+
+
+
+
+
+

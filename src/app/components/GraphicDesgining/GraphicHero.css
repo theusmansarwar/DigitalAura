@@ -19,6 +19,7 @@
 @media (max-width: 900px) {
   .graphic-hero {
     gap: 10px;
+    padding: 10px var(--left-space);
   }
   .graphic-hero .hero-img {
     width: 100%;

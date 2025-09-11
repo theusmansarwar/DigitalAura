@@ -9,7 +9,7 @@ export const metadata = {
     "Elevate your brand with Digital Aura’s creative expertise. Smart design in logos, ads, and UI/UX ensures trust, style, and powerful business growth.",
 };
 const faqs = {
-  title: "Frequently Asked Question about Social Media Marketing",
+  title: "Frequently Asked Question about Graphic Designing",
   description:
     "You can return any item within 30 days of purchase as long as it’s in its original condition with tags still attached. Simply contact our customer service team, and they will guide you through the process. Please note that certain items, such as swimwear and final sale items, are non-returnable.",
   questions: [

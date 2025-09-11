@@ -1,0 +1,139 @@
+ .featured-wrapper {
+  max-width: 1103px;
+  margin: 40px auto;
+}
+
+.featured-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  background: var(--light-gray);
+}
+
+.featured-text {
+  flex: 1.2; 
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-text h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.featured-text p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--foot-color);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.featured-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.featured-footer span {
+  color: var(--foot-color);
+  font-weight: 400;
+}
+
+.featured-footer a {
+  color: var(--text-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.featured-footer a:hover {
+  text-decoration: underline;
+}
+
+.featured-image {
+  flex: 1.8; 
+  background-size: cover;
+  background-position: center;
+  min-height: 571.5px;
+}
+
+.see-more-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.see-more-btn {
+  background: var(--primary-color);  
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;  
+  transition: background 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: var(--dark-orange);
+}
+
+.arrow-icon img {
+  width: 16px;   
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .featured-wrapper {
+    max-width: 95%;
+  }
+
+  .featured-text {
+    padding: 40px 25px;
+  }
+
+  .featured-text h2 {
+    font-size: 32px;
+  }
+
+  .featured-text p {
+    font-size: 15px;
+  }
+
+  .featured-image {
+    min-height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .featured-card {
+    flex-direction: column;
+  }
+
+  .featured-image {
+    min-height: 250px;
+    width: 100%;
+  }
+
+  .featured-text {
+    padding: 20px;
+    text-align: left;
+  }
+
+  .see-more-container {
+    justify-content: center;   
+    margin-top: 20px;
+  }
+
+  .see-more-btn {
+    width: auto;               
+  }
+}

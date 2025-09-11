@@ -13,7 +13,7 @@ const DesginProcess = () => {
       </p>
       <img
         className="process-img"
-        src="/graphic-design.svg"
+        src="/design-process.png"
         alt="Graphic Design"
       />
       <div className="buttons-container">

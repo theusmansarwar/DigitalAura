@@ -1,0 +1,12 @@
+.blog-header {
+  margin: 60px 0;
+}
+.paragraph {
+  margin: 20px auto;
+  width: 80%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: var(--default-size);
+  line-height: 150%;
+  text-align: center;
+  color: var(--text-color);
+}

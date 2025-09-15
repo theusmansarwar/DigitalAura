@@ -30,15 +30,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${syne.variable}`}>
-           <ToastContainer
-                  position="top-right"
-                  autoClose={2000}
-                  pauseOnHover={false}
-                  newestOnTop
-                />
-        <Header/>
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          pauseOnHover={false}
+          newestOnTop
+        />
+        <Header />
         {children}
-        <FooterF/>
+        <FooterF />
       </body>
     </html>
   );

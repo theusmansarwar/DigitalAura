@@ -1,5 +1,5 @@
 import BlogDetails from "@/components/BlogDetail/BlogDetails";
-import { fetchBlogBySlug } from "@/DAL/fetch";
+import { fetchBlogBySlug } from "@/DAL/Fetch";
 
 export async function generateMetadata({ params }) {
   const slug = (await params).slug;

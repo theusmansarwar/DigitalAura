@@ -1,4 +1,5 @@
-import { baseUrl } from "@/app/config/config";
+
+import { baseUrl } from "@/app/config/Config";
 import axios from "axios";
 
 

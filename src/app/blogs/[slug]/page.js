@@ -1,3 +1,4 @@
+import { baseUrl } from "@/app/config/Config";
 import BlogDetails from "@/components/BlogDetail/BlogDetails";
 import { fetchBlogBySlug } from "@/DAL/Fetch";
 
@@ -12,7 +13,7 @@ export async function generateMetadata({ params }) {
     blog?.metaDescription ||
     `Details about ${slug.replace(/-/g, " ")} on plutosec.`;
   const image = baseUrl + blog?.thumbnail;
-  const url = `https://plutosec.ca/blog/${slug}`;
+  const url = `https://aurafrontend.ztesting.site/${slug}`;
   return {
     title: `${title} `,
     description: description,

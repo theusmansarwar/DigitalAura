@@ -49,14 +49,24 @@ const JoinUs = () => {
       const res = await CreateApplication(form);
 
       if (res.status === 201) {
-        toast.success(res?.data?.message || "Application submitted successfully!");
+        toast.success(
+          res?.data?.message || "Application submitted successfully!"
+        );
         setErrors({});
-        setFormData({ fname: "", lname: "", email: "", phone: "", jobTitle: "" });
+        setFormData({
+          fname: "",
+          lname: "",
+          email: "",
+          phone: "",
+          jobTitle: "",
+        });
         setSelectedFileName("");
         if (fileInputRef.current) fileInputRef.current.value = null;
       } else if (res?.status === 400 && res.missingFields) {
         const fieldErrors = {};
-        res.missingFields.forEach((field) => (fieldErrors[field.name] = field.message));
+        res.missingFields.forEach(
+          (field) => (fieldErrors[field.name] = field.message)
+        );
         setErrors(fieldErrors);
       }
     } catch (err) {
@@ -67,19 +77,21 @@ const JoinUs = () => {
 
   return (
     <div className="join-us">
-      <ToastContainer position="top-right" autoClose={3000} pauseOnHover={false} />
-
-      <Button2 label="careers" />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        pauseOnHover={false}
+      />
       <div className="profile-image"></div>
       <Button2 label="Apply Now" />
 
       <div className="form-wrapper">
         {/* Heading center */}
         <div className="form-header">
-          <h2 className="form-title">Ready to Take the Next Step ?</h2>
+          <h2 className="form-title">Join our journey of excellence</h2>
           <p className="form-subtitle">
-            Fill out the form below and take the first step toward an exciting
-            career with us. Let’s build the future together!
+            Step into a future where creativity meets growth. Build your career
+            with Digital Aura and shape the next era of digital success.
           </p>
         </div>
 
@@ -122,7 +134,9 @@ const JoinUs = () => {
                   onChange={handleChange}
                   placeholder="Job title"
                 />
-                {errors.jobTitle && <p className="error-msg">{errors.jobTitle}</p>}
+                {errors.jobTitle && (
+                  <p className="error-msg">{errors.jobTitle}</p>
+                )}
               </div>
 
               <div className="form-group">
@@ -151,8 +165,14 @@ const JoinUs = () => {
 
               <div className="form-group">
                 <label htmlFor="resume">Upload Resume</label>
-                <div className="upload-box" id="resume" onClick={handleUploadClick}>
-                  <p>{selectedFileName || "Drag & drop or click to choose file"}</p>
+                <div
+                  className="upload-box"
+                  id="resume"
+                  onClick={handleUploadClick}
+                >
+                  <p>
+                    {selectedFileName || "Drag & drop or click to choose file"}
+                  </p>
                   <span>Upload an image or PDF</span>
                   <input
                     type="file"

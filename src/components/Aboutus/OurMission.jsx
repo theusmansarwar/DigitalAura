@@ -6,10 +6,13 @@ const OurMission = () => {
     <div className="our-mission">
       <Button2 label={"Our Mission/Vision"} />
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, tenetur
-        ipsa? Eveniet voluptates quibusdam ex sapiente atque voluptate non ullam
-        eaque architecto quaerat inventore neque voluptatum, sunt rerum
-        dignissimos quae?
+        A strong digital presence shapes success in today’s world. At Digital
+        Aura, we aim to create solutions that bring measurable results and
+        long-term impact. Our focus is on growth, trust, and creative value that
+        set brands apart. Every service reflects our belief in clarity and
+        excellence. We look beyond short-term wins and design strategies that
+        secure lasting progress. From automation to digital marketing, each step
+        builds a solid foundation. Our mission and vision guide every project.
       </p>
       <img
         className="mission-img"

@@ -54,6 +54,21 @@
   padding: 30px;
 }
 
+.rotating-text {
+  animation: rotateText 15s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 /* Grid Layout */
 .services-grid {
   display: flex;

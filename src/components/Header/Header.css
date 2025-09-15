@@ -71,6 +71,10 @@
 .quote-link {
   text-decoration: underline;
   color: var(--text-dark);
+  text-underline-offset: 3px;
+}
+.quote-link:hover {
+  opacity: 0.8;
 }
 
 /* Bottom Header */
@@ -177,7 +181,6 @@
     cursor: pointer;
     font-weight: 500;
   }
-
 
   .mobile-menu ul li:hover {
     color: var(--primary-color);

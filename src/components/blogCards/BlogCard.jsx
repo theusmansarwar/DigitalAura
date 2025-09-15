@@ -20,6 +20,7 @@ import Button2 from "../Buttons/Button2";
 import { FaChevronDown } from "react-icons/fa";
 import axios from "axios";
 import { fetchallBloglist } from "@/DAL/Fetch";
+import { baseUrl } from "@/app/config/Config";
 
 const links = [
   "All",
@@ -59,13 +60,12 @@ const BlogCard = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const res = await fetchallBloglist(page, itemsPerPage);
-      const data = await res.json();
-
-      if (data?.blogs) {
-        setBlogs(data.blogs);
-        setTotalPages(data.totalPages || 1);
-        setTotalItems(data.totalBlogs || data.blogs.length); // backend returns totalBlogs
+      const res = await fetchallBloglist(page, rowsPerPage);
+      console.log("API response:", res);
+      if (res?.blogs) {
+        setBlogs(res.blogs);
+        setTotalPages(res.totalPages || 1);
+        setTotalItems(res.totalBlogs || res.blogs.length);
       } else {
         setBlogs([]);
         setTotalPages(1);
@@ -115,10 +115,12 @@ const BlogCard = () => {
   // Range calculation
   const start = totalItems > 0 ? (page - 1) * rowsPerPage + 1 : 0;
   const end = Math.min(page * rowsPerPage, totalItems);
-
+  const desc = [
+    "The DigitalAura blog brings you fresh insights into the digital world. You explore proven tips on digital marketing, YouTube automation, SEO strategies, and creative design. Each post is written to guide you with simple steps that create measurable results. We cover trends that help you stay ahead and case studies that show real success. Our goal is to give you practical knowledge that makes digital growth easy, smart, and effective.",
+  ];
   return (
     <div className="blog-cards-container">
-      <Button2 label="Blogs" />
+      <Button2 label="Blogs" data={desc} />
       <div className="header">
         <div className="left">
           <CiCircleChevLeft
@@ -170,7 +172,7 @@ const BlogCard = () => {
               <div
                 className="post-image"
                 style={{
-                  backgroundImage: `url(https://plutosec.ca/backend/api${post.thumbnail})`,
+                  backgroundImage: `url(${baseUrl + post.thumbnail})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   width: "100%",

@@ -9,44 +9,60 @@ import WhyChoose from "@/components/WhyChoose";
 import PartB from "@/components/latestBlogs/partB/PartB";
 
 const faqs = {
-  title: "Frequently Asked Question",
+  title: "Frequently Asked Questions",
   description:
-    "You can return any item within 30 days of purchase as long as it’s in its original condition with tags still attached. Simply contact our customer service team, and they will guide you through the process. Please note that certain items, such as swimwear and final sale items, are non-returnable.",
+    "You may have questions about how Digital Aura helps your brand grow online. Our FAQ section gives you clear answers so you know exactly what to expect. Each answer is simple, easy to follow, and focused on helping you understand our services better.",
   questions: [
     {
-      question: "What services do we provide to support your business growth?",
+      question: "What digital marketing services does DigitalAura offer?",
       answer:
-        "Zemalt provides all digital marketing solutions in one place. Our services include SEO, PPC ads, social media management, content writing, web design, and branding. Each service is built to improve visibility and bring in more customers.",
+        "DigitalAura gives you a full range of digital marketing services. You get SEO to improve your rankings, and social media marketing. We create awareness, PPC ads to drive sales, branding to shape your identity, and web design for your online presence",
     },
     {
-      question: "Why is SEO audit important before starting campaigns?",
+      question: "How long does SEO take to show results?",
       answer:
-        "An SEO audit shows what holds a website back. Zemalt checks site speed, broken links, mobile use, and keyword gaps. You get a clear plan with fixes that boost performance. Strong audits lead to higher rankings and more traffic.",
+        "SEO is a long-term process to improve the results. Most businesses see progress in 3 to 6 months. The speed depends on your industry, competition, and keywords.",
     },
     {
-      question: "How can Zemalt help e-commerce stores grow sales?",
+      question: "Can search engine rankings be guaranteed with SEO?",
       answer:
-        "We optimize product pages, categories, and content to rank higher. Customers find your store faster and buy with ease. Zemalt improves visibility, increases conversions, and drives steady growth. Online shops achieve long-term success through our strategies.",
+        "No one can promise the top spot on search engines. Rankings depend on search engines, not agencies. .",
     },
     {
-      question: "How do we measure digital marketing success?",
+      question:
+        "Does DigitalAura provide social media marketing for global clients?",
       answer:
-        "We track every step with data. Reports show rankings, traffic, leads, and sales clearly. You always know what works and where growth comes from. Zemalt uses transparent reporting so you can trust the results.",
+        "Yes, we support businesses in different regions. Our campaigns reach the right audience, whether they are near or far. We design posts, guide communities, and build trust that leads to growth.",
     },
     {
-      question: "How fast can Zemalt deliver results?",
+      question: "How does PPC help in business growth?",
       answer:
-        "Some services, like ads, bring traffic and leads within days. SEO builds long-term success and usually shows results within weeks. Zemalt focuses on both quick wins and steady growth. Businesses see progress faster with our proven methods.",
+        "PPC gives quick results. Your ads show up right away, and people see your business instantly. A smart PPC campaign can bring you leads, increase sales, and give better ROI than many traditional ads. ",
     },
     {
-      question: "Why invest in digital marketing?",
+      question: "Why choose DigitalAura for digital marketing?",
       answer:
-        "The competition online grows every day. Waiting gives rivals more space to take customers. Zemalt helps brands secure visibility, build authority, and gain trust today. Early action brings long-term growth and lasting market advantage.",
+        "You get more than just services. You get a partner that listens, understands, and acts. We bring creative designs, fresh strategies, and data that guide real decisions. We make sure your brand stands out online and keeps growing.",
     },
     {
-      question: "Why invest in digital marketing?",
+      question: "Does DigitalAura provide YouTube channel management?",
       answer:
-        "The competition online grows every day. Waiting gives rivals more space to take customers. Zemalt helps brands secure visibility, build authority, and gain trust today. Early action brings long-term growth and lasting market advantage.",
+        "Yes, we offer full YouTube automation, including content planning, scriptwriting, video editing, thumbnail design, SEO, and publishing. Your channel grows efficiently while saving time.",
+    },
+    {
+      question: "How can YouTube automation help my channel grow?",
+      answer:
+        "You gain more visibility, higher watch time, and loyal subscribers. Each video reaches the right audience, boosting engagement and turning your channel into a reliable growth and income source.",
+    },
+    {
+      question: "How is the success of a campaign measured?",
+      answer:
+        "We measure success with clear numbers. You see traffic growth, keyword rankings, social media engagement, leads, and ROI. Reports are simple and easy to read. You always know how your campaign is performing.",
+    },
+    {
+      question: "What budget is needed for online marketing?",
+      answer:
+        "The cost of digital marketing depends on your goals. Small campaigns need less, while bigger goals require more budget. Audience size and competitors also affect costs. PlutoSec offers flexible packages for every business. You stay in control of your budget. We focus on delivering the best results for your investment.",
     },
   ],
 };

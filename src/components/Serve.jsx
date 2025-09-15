@@ -8,31 +8,31 @@ const services = [
     id: 1,
     title: "Social Media Marketing",
     description:
-      "Engage with your audience, build brand loyalty, drive conversions through strategic social media marketing. From content creation and community management.",
+      "We help your brand reach the audience on famous platforms. The attention is on building engagement, loyalty, and sales. Digital Aura makes sure your social media grows with real impact from creative posts to community support.",
     icon: "/service-icon11.svg.png",
     number: "01",
   },
   {
     id: 2,
-    title: "Social Media Marketing",
+    title: "SEO Optimization",
     description:
-      "Engage with your audience, build brand loyalty, drive conversions through strategic social media marketing. From content creation and community management.",
+      "Our SEO services improve visibility and bring higher search rankings. We work on your website, content, and backlinks using trusted methods. The goal is steady organic traffic that brings long-term growth.",
     icon: "/service-icon11.svg.png",
     number: "02",
   },
   {
     id: 3,
-    title: "Social Media Marketing",
+    title: "YouTube Automation",
     description:
-      "Engage with your audience, build brand loyalty, drive conversions through strategic social media marketing. From content creation and community management.",
+      "Grow your YouTube channel without stress. You get content planning, scriptwriting, video editing, thumbnail design, SEO, and publishing done professionally. Each video reaches the right audience and increases watch time.",
     icon: "/service-icon11.svg.png",
     number: "03",
   },
   {
     id: 4,
-    title: "Social Media Marketing",
+    title: "Branding & Web Design",
     description:
-      "Engage with your audience, build brand loyalty, drive conversions through strategic social media marketing. From content creation and community management.",
+      "Your brand identity shapes how people see your business online. We create modern designs and websites that inspire trust. The design stays simple and easy to use. It supports your business growth and makes your brand professional. ",
     icon: "/service-icon11.svg.png",
     number: "04",
   },
@@ -48,20 +48,25 @@ const Serve = () => {
         <div className="back">
           <div className="back1">
             <div className="back2">
-              <svg viewBox="0 0 300 300" width="300" height="300">
+              <svg
+                viewBox="0 0 300 300"
+                width="300"
+                height="300"
+                className="rotating-text"
+              >
                 <defs>
                   <path
                     id="circlePath"
                     d="M 150,150
-               m -120,0
-               a 120,120 0 1,1 240,0
-               a 120,120 0 1,1 -240,0"
+       m -120,0
+       a 120,120 0 1,1 240,0
+       a 120,120 0 1,1 -240,0"
                   />
                 </defs>
                 <text fill="white" fontSize="18">
                   <textPath href="#circlePath" startOffset="0%">
-                    -Digital Aura - Digital Aura - Digital Aura - Digital Aura -
-                    Digital Aura - Digital Aura - Digital Aura
+                    - Digital Aura - Digital Aura - Digital Aura - Digital Aura
+                    - Digital Aura - Digital Aura - Digital Aura -
                   </textPath>
                 </text>
               </svg>

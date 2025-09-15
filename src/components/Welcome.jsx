@@ -8,8 +8,8 @@ const Welcome = () => {
     <div className="welcome">
       <Button2 label="Welcome to Digital Aura" />{" "}
       <h2 className="welcome-title">
-        <span>Meet SEOC Your Trusted </span>
-        <span>Digital Automation Partner</span>
+        <span>Your Trusted Digital </span>
+        <span>Marketing Partner for Growth</span>
       </h2>
       <div className="partner-section">
         {/* Left Side (Images) */}
@@ -27,15 +27,17 @@ const Welcome = () => {
         {/* Right Side (Text + Progress + Button) */}
         <div className="right">
           <h3>
-            <span>Best Experience &</span>
-            <span> Professional Team To grow Your</span> Business
+            <span>Data-Driven </span>
+            <span>Digital Strategies for Every</span> Business
           </h3>
 
           <p>
-            We're not just another agency – we're your digital growth partners.
-            With years of industry experience and a passion for innovation, our
-            team is dedicated to delivering measurable results propel your
-            business forward.
+            Digital Aura is a trusted digital marketing partner for real growth.
+            We stand beside your business to guide every step. Our team uses
+            skill, ideas, and strategy to deliver results that matter. We
+            believe in long-term partnerships. Our way combines fresh ideas with
+            proven methods. Every campaign builds visibility, grows engagement,
+            and creates real business value.
           </p>
 
           {/* Progress Bars */}

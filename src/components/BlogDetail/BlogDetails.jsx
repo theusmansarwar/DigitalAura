@@ -18,8 +18,9 @@ const BlogDetails = ({ slug }) => {
     const fetchBlog = async () => {
       try {
         const res = await fetchBlogBySlug(slug);
-        const data = await res.json();
-        setBlog(data);
+        console.log(res.blog);
+
+        setBlog(res.blog);
       } catch (err) {
         console.error("Error fetching blog details:", err);
       } finally {
@@ -32,12 +33,14 @@ const BlogDetails = ({ slug }) => {
   if (loading) return <p>Loading...</p>;
   if (!blog) return <p>Blog not found</p>;
 
+  console.log({ bloggggggggggg: blog.title });
+
   return (
     <div className="blog-detail">
       <Button2 label={blog.category?.name || "Category"} />
       <MainHead title={blog.title} date={blog.createdAt} author={blog.author} />
       <div className="main-section">
-        <LeftDetail content={blog.content} thumbnail={blog.thumbnail} />
+        <LeftDetail blog={blog} />
         <PopularPostsSidebar />
       </div>
       <LatestBlog />

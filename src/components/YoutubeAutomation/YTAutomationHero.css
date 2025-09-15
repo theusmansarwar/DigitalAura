@@ -17,7 +17,7 @@
 .yt-auto-hero .hero-bottom .right {
   width: 40%;
 }
-.yt-auto-hero .hero-img {
+.yt-auto-hero .yt-hero-img {
   height: 400px;
   display: flex;
   justify-self: center;
@@ -32,7 +32,7 @@
     gap: 10px;
     padding: 10px var(--left-space);
   }
-  .yt-auto-hero .hero-img {
+  .yt-auto-hero .yt-hero-img {
     width: 100%;
   }
   .yt-auto-hero .hero-bottom {
@@ -47,7 +47,7 @@
   .yt-auto-hero .hero-bottom .right {
     width: 100%;
   }
-  .yt-auto-hero .hero-img {
+  .yt-auto-hero .yt-hero-img {
     height: 300px;
   }
 }

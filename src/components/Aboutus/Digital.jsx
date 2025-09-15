@@ -1,46 +1,61 @@
+  "use client";
 import React from "react";
 import "./Digital.css";
 import Button from "../Buttons/Button";
+import { useRouter } from "next/navigation";
 const Digital = () => {
+  const router = useRouter();
   return (
     <div className="trusted-partner">
       <div className="trusted-card">
         <h2 className="trusted-heading">
-          Meet SEOC Your Trusted Digital Automation Partner
+          Meet Digital Aura – Your Trusted Digital Automation Partner
         </h2>
         <p className="para">
-          sollicitudin. viverra nisl. ex Nam adipiscing volutpat Sed ex. maximus
-          Donec viverra tincidunt elit Sed eu tincidunt turpis dui. est.
-          ullamcorper sit placerat Praesent faucibus leo. id scelerisque
-          faucibus sapien gravida dui. vel amet, id
+          Digital Aura helps you build a strong digital presence. We create
+          strategies that save your time and bring real growth. Our focus stays
+          on automation, smart tools, and results that you can measure. We
+          design systems that make digital work simple. From YouTube automation
+          to streamlined campaigns, every process runs smoothly. You focus on
+          your vision, and we handle the tasks that slow you down.
         </p>
 
         <p className="para">
-          {" "}
-          Nunc id In Nunc commodo dui. turpis malesuada venenatis diam Lorem
-          non, viverra facilisis lacus, ex. ex efficitur. consectetur nisl.
-          consectetur Quisque vitae risus varius nibh ipsum placerat ex libero,
-          massa nec odio vitae fringilla ex{" "}
+          Our services cover more than automation. We provide SEO, PPC, social
+          media, and complete branding support. Each service connects with the
+          other to give you one strong digital solution.
         </p>
 
         <p className="para">
-          {" "}
-          eget est. fringilla eget porta vitae est. quam enim. viverra libero,
-          ac odio ac est. Ut faucibus venenatis cursus ultrices elit sapien elit
-          varius nulla, nisl. elit. nisi faucibus elementum massa commodo leo.
-          varius odio elit Morbi nisl.
+          We believe in work that mixes creativity with data. Every project aims
+          to reach the right audience and show progress you can track. You see
+          clear reports that build trust at every step.
         </p>
 
         <p className="para">
-          {" "}
-          odio ipsum Donec Praesent dolor faucibus tincidunt efficitur. odio
-          consectetur porta elementum felis, Nunc gravida viverra risus Morbi
-          enim. tincidunt est. Ut sapien amet, Sed Ut Praesent Cras sapien Donec
-          at, Ut efficitur. cursus sapien{" "}
+          Our goal is long-term success for your business. We bring solutions
+          that are simple, powerful, and made to perform in a fast digital
+          world. Digital Aura stands as your partner for growth, trust, and
+          results.
         </p>
         <div className="buttons-container">
-          <Button variant="filled">Start Ranking Now</Button>
-          <Button variant="outline">Contact Now</Button>
+          <Button
+            variant="filled"
+            onClick={() => {
+              router.push("/");
+            }}
+          >
+            Start Ranking Now
+          </Button>
+
+          <Button
+            variant="outline"
+            onClick={() => {
+              router.push("/contact-us");
+            }}
+          >
+            Contact Now
+          </Button>
         </div>
       </div>
     </div>

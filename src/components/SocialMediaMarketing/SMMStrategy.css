@@ -8,39 +8,16 @@
 /* left */
 
 .smm-strategy .left {
-  width: 60%;
+  width: 50%;
 }
 .smm-strategy .left .sub-heading {
   color: var(--primary-color);
   margin-bottom: 20px;
 }
-.smm-strategy .left .each-step {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-.smm-strategy .left .each-step .step-heading {
-  font-size: var(--heading-four);
-}
-.smm-strategy .left .each-step .step-heading.purple {
-  color: #b246cd;
-}
-.smm-strategy .left .each-step .step-heading.blue {
-  color: #5f60d4;
-}
-.smm-strategy .left .each-step .step-heading.light-blue {
-  color: #0a9ce5;
-}
-.smm-strategy .left .each-step .step-heading.green {
-  color: #07cc97;
-}
-.smm-strategy .left .each-step .step-heading.light-green {
-  color: #47c547;
-}
+
 /* right */
 .smm-strategy .right {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,6 +50,7 @@
 .smm-strategy .right .top-card .point span {
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
 }
 
 .smm-strategy .right .top-card .point .purple {

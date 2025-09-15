@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import "./Featured.css";
 import Button from "../Buttons/Button";
+import { useRouter } from "next/navigation";
 
 const Featured = () => {
+  const router = useRouter();
   return (
     <>
       <section className="featured">
@@ -20,26 +23,50 @@ const Featured = () => {
           </ul>
         </div>
         <div className="featured-left">
-          <p className="small-text">Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+          <p className="small-text">
+            We help you get noticed with your Digital Aura
+          </p>
           <h1 className="title">
             DIGITAL <br /> <span>MARKETING</span>
           </h1>
 
           <p className="desc">
-            non elementum gravida Lorem viverra Quisque sit amet, enim. nisl.
-            non. vitae cursus volutpat ex. ex faucibus est. nibh Ut
-          </p>
-
-          <p className="desc">
-            tincidunt luctus tincidunt quis nisi faucibus Lorem lobortis,
-            sodales. sapien tincidunt nisi adipiscing commodo elit. eu id
+            Digital Aura is a leading digital marketing agency that drives real
+            business growth. We help brands build strong identities, grow on
+            YouTube, increase visibility, and connect with their target
+            audience. Our team blends ideas and data to create solutions that
+            work. We manage search, social media, and paid campaigns to give
+            your audience a smooth experience.
           </p>
 
           {/* Buttons */}
           <div className="buttons-container">
-            <Button variant="filled">Start Ranking Now</Button>
-            <Button variant="outline">Contact Now</Button>
+            <div className="buttons-container">
+              <Button
+                variant="filled"
+                onClick={() => {
+                  router.push("/");
+                }}
+              >
+                Start Ranking Now
+              </Button>
+
+              <Button
+                variant="outline"
+                onClick={() => {
+                  router.push("/contact-us");
+                }}
+              >
+                Contact Now
+              </Button>
+            </div>
           </div>
+          <p className="desc2">
+            Our strategies help brands grow stronger online and turn
+            opportunities into real results. Businesses trust us because we mix
+            creativity, data, and smart ideas. We focus on lasting success, not
+            quick fixes, so you see growth that stays.
+          </p>
         </div>
 
         {/* Right Image */}
@@ -56,6 +83,12 @@ const Featured = () => {
           <img src="featured3.png" alt="icon3" className="featured3" />
         </div>
       </section>
+      <div className="trusted-by-cont">
+        <p className="trusted-by-heading">
+          Trusted by <span>Top Global Brands</span>
+        </p>
+        <img src="/featured-arrow.svg" alt="Arrow Image" />
+      </div>
       <div className="featured-bottom">
         <div className="featured-heading-section">
           <p>Our Esteemed </p>

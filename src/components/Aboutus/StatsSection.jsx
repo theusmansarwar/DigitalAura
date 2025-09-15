@@ -1,6 +1,6 @@
 import "./StatsSection.css";
 
-export default function StatsSection() {
+export default function StatsSection({data}) {
   const stats = [
     {
       number: "1000+",
@@ -32,10 +32,7 @@ export default function StatsSection() {
           ))}
         </div>
         <div className="stats-description">
-          vitae laoreet Cras eget est. vitae Nunc Donec in hendrerit felis,
-          porta bibendum. Cras Praesent at et elementum placerat. Nam leo. Cras
-          elit ex, faucibus ex facilisis ullamcorper vitae id ex scelerisque
-          scelerisque nec Vestibulum lacus.
+         {data}
         </div>
       </div>
     </div>

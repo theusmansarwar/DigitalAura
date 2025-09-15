@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import "./ThirdSection.css";
 import Button from "../Buttons/Button";
+import { useRouter } from "next/navigation";
 
 const ThirdSection = () => {
+  const router = useRouter();
   return (
     <div
       className="third-section"
@@ -13,16 +16,39 @@ const ThirdSection = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <h2 className="section-heading">Lorem ipsum dolor sit</h2>
+      <h2 className="section-heading">
+        See the Power of YouTube Automation in Action
+      </h2>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, tenetur
-        ipsa? Eveniet voluptates quibusdam ex sapiente atque voluptate non ullam
-        eaque architecto quaerat inventore neque voluptatum, sunt rerum
-        dignissimos quae?
+        DigitalAura shows how YouTube channel growth works through automation.
+        Your channel gains subscribers every day without extra work. Every video
+        improves its video ranking, appears in suggested lists, and reaches your
+        target audience. Our demo proves our
+      </p>
+      <p>
+        YouTube SEO services bring results. Channels we manage saw doubled watch
+        time, boosted engagement, and unlocked monetization. Your content steps
+        into the spotlight. DigitalAura makes your growth process clear, strong,
+        and built to last.
       </p>
       <div className="buttons-container">
-        <Button variant="filled">Start Ranking Now</Button>
-        <Button variant="outline">Contact Now</Button>
+        <Button
+          variant="filled"
+          onClick={() => {
+            router.push("/");
+          }}
+        >
+          Start Ranking Now
+        </Button>
+
+        <Button
+          variant="outline"
+          onClick={() => {
+            router.push("/contact-us");
+          }}
+        >
+          Contact Now
+        </Button>
       </div>
     </div>
   );

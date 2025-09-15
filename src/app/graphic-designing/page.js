@@ -2,6 +2,7 @@ import Faqs from "@/components/Faqs/Faqs";
 import DesginProcess from "@/components/GraphicDesgining/DesginProcess";
 import GraphicHero from "@/components/GraphicDesgining/GraphicHero";
 import Testimonal from "@/components/Testimonal";
+import WeBring from "@/components/WeBring/WeBring";
 
 export const metadata = {
   title: "Creative Services | Digital Aura",
@@ -11,45 +12,70 @@ export const metadata = {
 const faqs = {
   title: "Frequently Asked Question about Graphic Designing",
   description:
-    "You can return any item within 30 days of purchase as long as it’s in its original condition with tags still attached. Simply contact our customer service team, and they will guide you through the process. Please note that certain items, such as swimwear and final sale items, are non-returnable.",
+    "Our graphic design FAQs help you understand how clear and creative visuals create trust, shape identity, and turn viewers into customers. You need professional graphic design services to stand out in a busy market. DigitalAura offers custom graphic design solutions that match your business goals. Every design boosts your presence and supports growth.",
   questions: [
     {
-      question: "What services do we provide to support your business growth?",
+      question:
+        "What role does graphic design play in building a brand identity?",
       answer:
-        "Zemalt provides all digital marketing solutions in one place. Our services include SEO, PPC ads, social media management, content writing, web design, and branding. Each service is built to improve visibility and bring in more customers.",
+        "Graphic design gives your brand a face. Colors, fonts, and layouts create recognition. A strong design sets you apart from others. Digital Aura helps you build an identity that people remember.",
     },
     {
-      question: "Why is SEO audit important before starting campaigns?",
+      question:
+        "How does Digital Aura design graphics that fit my business style?",
       answer:
-        "An SEO audit shows what holds a website back. Zemalt checks site speed, broken links, mobile use, and keyword gaps. You get a clear plan with fixes that boost performance. Strong audits lead to higher rankings and more traffic.",
+        "Digital Aura studies your brand before starting. The team looks at your goals, industry, and audience. Every design matches your tone and vision. You get graphics that reflect your true brand style.",
     },
     {
-      question: "How can Zemalt help e-commerce stores grow sales?",
+      question: "Can graphic design really impact sales and conversions?",
       answer:
-        "We optimize product pages, categories, and content to rank higher. Customers find your store faster and buy with ease. Zemalt improves visibility, increases conversions, and drives steady growth. Online shops achieve long-term success through our strategies.",
+        "Good design attracts buyers easily. Clear product visuals and strong marketing graphics make people take action. Customers stay longer when they see professional designs. We help you to increase sales with visuals that convert.",
     },
     {
-      question: "How do we measure digital marketing success?",
+      question: "How do you make sure designs stand out in a crowded market?",
       answer:
-        "We track every step with data. Reports show rankings, traffic, leads, and sales clearly. You always know what works and where growth comes from. Zemalt uses transparent reporting so you can trust the results.",
+        "Original designs grab more attention from people. We avoid generic templates and create fresh visuals. Every graphic highlights your strengths. The unique designs help you to rise above the competitors.",
     },
     {
-      question: "How fast can Zemalt deliver results?",
+      question: "What is included in a complete graphic design package?",
       answer:
-        "Some services, like ads, bring traffic and leads within days. SEO builds long-term success and usually shows results within weeks. Zemalt focuses on both quick wins and steady growth. Businesses see progress faster with our proven methods.",
+        "A full package covers the logos, branding kits, social media posts, and print designs. You also get website graphics and business cards. We give you a package that fits your needs and budget.",
     },
     {
-      question: "Why invest in digital marketing?",
+      question: "Why should I invest in custom design instead of templates?",
       answer:
-        "The competition online grows every day. Waiting gives rivals more space to take customers. Zemalt helps brands secure visibility, build authority, and gain trust today. Early action brings long-term growth and lasting market advantage.",
+        "Templates look common and lack identity. Custom designs give you originality and strength. People remember unique visuals. Digital Aura creates designs that make your brand stand out.",
     },
     {
-      question: "Why invest in digital marketing?",
+      question: "How do you ensure designs work across different platforms?",
       answer:
-        "The competition online grows every day. Waiting gives rivals more space to take customers. Zemalt helps brands secure visibility, build authority, and gain trust today. Early action brings long-term growth and lasting market advantage.",
+        "Designs must look sharp everywhere. Digital Aura provides files that fit websites, social media, and print. Your visuals maintain quality across all platforms. You get graphics ready for any use.",
+    },
+    {
+      question: "What industries does Digital Aura serve with graphic design?",
+      answer:
+        "Digital Aura works with retail, real estate, tech, education, and more. The team adjusts designs to your industry tone. Every graphic reflects the style your market demands.",
+    },
+    {
+      question: "Can I hire Digital Aura for long-term graphic design support?",
+      answer:
+        "Yes. Many brands choose ongoing support for fresh designs. Digital Aura offers monthly plans to keep your content updated. You stay consistent without worrying about design gaps.",
     },
   ],
 };
+
+const statsDesc = {
+  desc: "Our graphic design solution gives your brand a strong place in the market. Each visual tells your story, increases trust, and attracts the good people. You need the best professional graphic design services to make logos, brand materials, and digital assets for you. The strong visuals keep your brand professional and help you connect with your customers.",
+};
+const weBringSections = [
+  {
+    heading: "We Bring Creative Design That Builds Your Brand",
+    paragraphs: [
+      "Digital Aura creates custom graphic design solutions that match your business goals. Our designers focus on building visuals that look creative and professional. Every design supports your message and helps your brand stand out in a crowded market. Strong graphics improve visibility, bring higher engagement, and give your audience a reason to trust your brand.",
+      "You get a complete design approach that covers social media graphics, brand identity, and marketing materials. We ensure your business gains a powerful image that delivers long-term results. Digital Aura makes sure every design works as a tool for growth, recognition, and success.",
+    ],
+  },
+];
 const page = () => {
   return (
     <div>
@@ -57,6 +83,7 @@ const page = () => {
       <DesginProcess />
       <Faqs data={faqs} />
       <Testimonal />
+      <WeBring statsDesc={statsDesc} data={weBringSections} />
     </div>
   );
 };

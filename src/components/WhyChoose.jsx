@@ -6,44 +6,42 @@ const WhyChoose = () => {
     <div className="why-choose">
       <Button2 label="Why Choose Us" />
       <h2>
-        faucibus placerat Morbi elit facilisis massa dui varius ultrices
-        facilisis ex Nullam faucibus risus elit. lobortis, lorem. elit Lorem
-        luctus Lorem Morbi odio{" "}
+        Why Choose Digital Aura to Build a Strong Online Presence and Achieve
+        Real Business Growth
       </h2>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
-        sequi placeat corrupti, a repellat aperiam facilis suscipit cumque
-        corporis ipsum magnam quo, eius nostrum blanditiis ipsam temporibus.
-        Delectus, totam perspiciatis rerum, vitae doloremque placeat officia aut
-        enim numquam, pariatur facere.
+        DigitalAura helps businesses grow fast with a clear digital marketing
+        strategy. A strong online presence is the best thing in today’s market.
+        We design strategies to bring visibility, engagement, and measurable
+        results.
       </p>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
-        sequi placeat corrupti, a repellat aperiam facilis suscipit cumque
-        corporis ipsum magnam quo, eius nostrum blanditiis ipsam temporibus.
-        Delectus, totam perspiciatis rerum, vitae doloremque placeat officia aut
-        enim numquam, pariatur facere.
+        You grow your YouTube channel with DigitalAura’s complete automation
+        services. You get content planning, scriptwriting, video editing,
+        thumbnail design, SEO, and publishing handled professionally. Each video
+        reaches the right audience and increases watch time.
       </p>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
-        sequi placeat corrupti, a repellat aperiam facilis suscipit cumque
-        corporis ipsum magnam quo, eius nostrum blanditiis ipsam temporibus.
-        Delectus, totam perspiciatis rerum, vitae doloremque placeat officia aut
-        enim numquam, pariatur facere.
+        Our team's creativity and technical skills enable us to create
+        campaigns. Each service, from SEO to PPC, is shaped with data and
+        precision. Your brand gets the strength to stand out and reach the right
+        people.
       </p>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
-        sequi placeat corrupti, a repellat aperiam facilis suscipit cumque
-        corporis ipsum magnam quo, eius nostrum blanditiis ipsam temporibus.
-        Delectus, totam perspiciatis rerum, vitae doloremque placeat officia aut
-        enim numquam, pariatur facere.
+        We give you complete solutions in one place. We improve websites for
+        better search rankings. We run ad campaigns that generate real leads. We
+        manage social media channels and create a strong brand identity with
+        modern web design.
       </p>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
-        sequi placeat corrupti, a repellat aperiam facilis suscipit cumque
-        corporis ipsum magnam quo, eius nostrum blanditiis ipsam temporibus.
-        Delectus, totam perspiciatis rerum, vitae doloremque placeat officia aut
-        enim numquam, pariatur facere.
+        Transparency is at the center of our work. Reports are simple, and
+        updates are clear. You always know how campaigns perform and where your
+        brand is moving.
+      </p>
+      <p>
+        Choosing Digital Aura means choosing a partner in growth. We bring new
+        strategies, subscriptions, a customer-first mindset, and a promise of
+        excellence. Your brand competes and leads in the fast digital world.
       </p>
     </div>
   );

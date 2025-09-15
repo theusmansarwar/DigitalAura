@@ -10,7 +10,7 @@
 }
 .text-content .ranking-heading {
   font-size: var(--heading-two);
-  width: 70%;
+  width: 80%;
   line-height: 1.2;
   margin-bottom: 10px;
 }
@@ -18,7 +18,8 @@
   line-height: 1.7;
   color: var(--para-text);
   margin-bottom: 30px;
-  width: 60%;
+  width: 80%;
+  text-align: justify;
 }
 
 /* Right image */

@@ -1,17 +1,16 @@
 import React from "react";
 import "./MainHead.css";
+import { formatDate } from "@/utils/FormatDate";
 
-const MainHead = () => {
+const MainHead = ({ title, date, author }) => {
   return (
     <div className="mainhead-wrapper">
-      <h2 className="mainhead-title">
-        Lorem ipsum dolor consectetur amet, adipiscing
-      </h2>
+      <h2 className="mainhead-title">{title}</h2>
       <div className="mainhead-meta">
         <div className="author-info">
           <img src="/author.png" alt="Author" className="author-img" />
-          <span className="author">By John Doe | </span>
-          <span className="date">Published on September 10, 2025 | </span>
+          <span className="author">By {author} | </span>
+          <span className="date">Published on {formatDate(date)} | </span>
           <span className="category">2 min read</span>
         </div>
       </div>

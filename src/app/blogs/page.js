@@ -1,13 +1,12 @@
-import React from "react";
-import BlogHead from "@/components/Blog/BlogHead";
 import BlogCard from "@/components/blogCards/BlogCard";
 import LatestBlog from "@/components/latestBlogs/LatestBlog";
-
+import { Suspense } from "react";
 const page = () => {
   return (
     <div>
-      <BlogHead />
-      <BlogCard />
+      <Suspense fallback={<div>Loading blogs...</div>}>
+        <BlogCard />
+      </Suspense>
       <LatestBlog />
     </div>
   );

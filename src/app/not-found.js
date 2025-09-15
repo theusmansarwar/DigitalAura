@@ -17,6 +17,7 @@ const NotFound = () => {
       }}
     >
       <h1
+        className="not-found-heading"
         style={{
           fontSize: "120px",
           fontWeight: "900",

@@ -12,6 +12,9 @@
 }
 .blog-cards-container .header .right {
   width: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .blog-cards-container .header .left {
@@ -72,7 +75,6 @@
   overflow: hidden;
   cursor: pointer;
   background: var(--text-color4);
-  box-shadow: var(--box-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .blog-post-card:hover {
@@ -81,7 +83,7 @@
 }
 .blog-post-card .post-image {
   width: 100%;
-  height: 250px;
+  height: 200px;
   border-radius: 4px;
 }
 .blog-post-card .post-content {

@@ -8,6 +8,7 @@ import "./BlogCard.css";
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
 import truncateTextByWords from "@/utils/TruncateByWords";
 import { PaginationItem } from "@mui/material";
+import Button2 from "../Buttons/Button2";
 
 const links = [
   "All",
@@ -101,6 +102,7 @@ const BlogCard = () => {
 
   return (
     <div className="blog-cards-container">
+      <Button2 label="Blogs" />
       <div className="header">
         <div className="left">
           <CiCircleChevLeft

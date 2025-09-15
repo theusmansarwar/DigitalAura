@@ -7,6 +7,7 @@ import MainHead from "../DetailHead/MainHead";
 import LeftDetail from "../leftDetail/LeftDetail";
 import PopularPostsSidebar from "../popular/Popular";
 import LatestBlog from "../latestBlogs/LatestBlog";
+import { fetchBlogBySlug } from "@/DAL/Fetch";
 
 const BlogDetails = ({ slug }) => {
   const [blog, setBlog] = useState(null);
@@ -16,7 +17,7 @@ const BlogDetails = ({ slug }) => {
     if (!slug) return;
     const fetchBlog = async () => {
       try {
-        const res = await fetch(`https://plutosec.ca/backend/api/blog/${slug}`);
+        const res = await fetchBlogBySlug(slug);
         const data = await res.json();
         setBlog(data);
       } catch (err) {

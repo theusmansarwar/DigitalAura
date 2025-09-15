@@ -1,0 +1,29 @@
+.we-bring {
+  width: 100%;
+  margin-top: 40px;
+}
+.stats-component {
+  margin-bottom: -100px;
+}
+.we-bring .webring-card {
+  padding: 80px var(--left-space) 40px;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.we-bring .webring-card h2 {
+  font-size: var(--heading-four);
+  color: var(--secondary-color);
+  text-align: center;
+}
+.we-bring .webring-card p {
+  color: var(--secondary-color);
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .we-bring {
+    margin-top: 0px;
+  }
+}

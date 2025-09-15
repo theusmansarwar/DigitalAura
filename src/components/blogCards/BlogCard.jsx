@@ -18,6 +18,8 @@ import {
 
 import Button2 from "../Buttons/Button2";
 import { FaChevronDown } from "react-icons/fa";
+import axios from "axios";
+import { fetchallBloglist } from "@/DAL/Fetch";
 
 const links = [
   "All",
@@ -57,10 +59,7 @@ const BlogCard = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const res = await fetch(
-        `https://plutosec.ca/backend/api/blog/list?limit=${rowsPerPage}&page=${page}`,
-        { cache: "no-store" }
-      );
+      const res = await fetchallBloglist(page, itemsPerPage);
       const data = await res.json();
 
       if (data?.blogs) {

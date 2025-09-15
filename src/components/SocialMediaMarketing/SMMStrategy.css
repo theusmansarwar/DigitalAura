@@ -1,0 +1,124 @@
+.smm-strategy {
+  height: fit-content;
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  gap: 20px;
+}
+/* left */
+
+.smm-strategy .left {
+  width: 60%;
+}
+.smm-strategy .left .sub-heading {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+.smm-strategy .left .each-step {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.smm-strategy .left .each-step .step-heading {
+  font-size: var(--heading-four);
+}
+.smm-strategy .left .each-step .step-heading.purple {
+  color: #b246cd;
+}
+.smm-strategy .left .each-step .step-heading.blue {
+  color: #5f60d4;
+}
+.smm-strategy .left .each-step .step-heading.light-blue {
+  color: #0a9ce5;
+}
+.smm-strategy .left .each-step .step-heading.green {
+  color: #07cc97;
+}
+.smm-strategy .left .each-step .step-heading.light-green {
+  color: #47c547;
+}
+/* right */
+.smm-strategy .right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.smm-strategy .right .top-card {
+  background-color: #e85319;
+  padding: 40px 80px 40px 20px;
+  color: var(--secondary-color);
+}
+.smm-strategy .right .top-card {
+  border-bottom-left-radius: var(--border-radius2);
+  border-top-left-radius: var(--border-radius2);
+}
+.smm-strategy .right .top-card h3 {
+  font-size: var(--heading-four);
+}
+.smm-strategy .right .top-card .point-parent {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 15px 0;
+}
+.smm-strategy .right .top-card .point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 47%;
+}
+.smm-strategy .right .top-card .point span {
+  width: 20px;
+  height: 20px;
+}
+
+.smm-strategy .right .top-card .point .purple {
+  background-color: #b246cd;
+}
+.smm-strategy .right .top-card .point .blue {
+  background-color: #5f60d4;
+}
+.smm-strategy .right .top-card .point .light-blue {
+  background-color: #0a9ce5;
+}
+.smm-strategy .right .top-card .point .green {
+  background-color: #07cc97;
+}
+.smm-strategy .right .top-card .point .light-green {
+  background-color: #47c547;
+}
+.smm-strategy .right .top-card p {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 900px) {
+  .smm-strategy {
+    padding: 15px;
+    flex-direction: column;
+  }
+  /* left */
+  .smm-strategy .left {
+    width: 100%;
+  }
+  /* mid */
+  .smm-strategy .right {
+    width: 100%;
+  }
+  .smm-strategy .right .top-card {
+    padding: 30px 10px;
+    border-radius: var(--border-radius2);
+  }
+  .smm-strategy .right .top-card .point-parent {
+    gap: 0px;
+    margin: 10px 0;
+  }
+  .smm-strategy .right .top-card .point {
+    width: 100%;
+  }
+  .smm-strategy .right .top-card p {
+    margin-bottom: 10px;
+  }
+}

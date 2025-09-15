@@ -1,0 +1,38 @@
+.trusted-partner {
+  width: 100%;
+  padding: 40px var(--left-space);
+}
+.trusted-partner .trusted-card {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  height: fit-content;
+  border-radius: var(--border-radius2);
+  background-color: #faddd1;
+}
+.trusted-partner .trusted-card .trusted-heading {
+  text-align: center;
+  font-size: var(--heading-two);
+  width: 60%;
+  line-height: 1.2;
+}
+.trusted-partner .trusted-card .para {
+  text-align: center;
+  color: var(--para-color);
+  width: 80%;
+}
+
+@media (max-width: 900px) {
+  .trusted-partner .trusted-card {
+    padding: 20px;
+  }
+  .trusted-partner .trusted-card .trusted-heading {
+    width: 100%;
+  }
+  .trusted-partner .trusted-card .para {
+    width: 100%;
+  }
+}

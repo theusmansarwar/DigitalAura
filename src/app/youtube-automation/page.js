@@ -1,7 +1,9 @@
-import Faqs from "../components/Faqs/Faqs";
-import AutomationProcess from "../components/YoutubeAutomation/AutomationProcess";
-import ThirdSection from "../components/YoutubeAutomation/ThirdSection";
-import YTAutomationHero from "../components/YoutubeAutomation/YTAutomationHero";
+import Faqs from "@/components/Faqs/Faqs";
+import Testimonal from "@/components/Testimonal";
+import AutomationProcess from "@/components/YoutubeAutomation/AutomationProcess";
+import ThirdSection from "@/components/YoutubeAutomation/ThirdSection";
+import YTAutomationHero from "@/components/YoutubeAutomation/YTAutomationHero";
+
 
 export const metadata = {
   title: "Youtube Automation | Digital Aura",
@@ -57,6 +59,7 @@ const page = () => {
       <AutomationProcess/>
       <ThirdSection/>
       <Faqs data={faqs} />
+      <Testimonal />
     </div>
   );
 };

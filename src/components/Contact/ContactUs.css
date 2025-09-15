@@ -1,0 +1,141 @@
+.contact-container {
+  display: flex;
+  background: #1a1a1a;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  width: 90%;
+  max-width: 1196px;   
+  margin: 30px auto;
+  box-shadow: var(--box-shadow);
+  height: auto; 
+}
+
+.contact-image {
+  flex: 1;
+  background-image: url("/orange.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 667px;   
+  height: auto;
+}
+
+.contact-form {
+  flex: 1;
+  background: var(--secondary-color);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto; 
+}
+
+form {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.input-group input,
+.input-group textarea {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  font-size: 14px;
+  outline: none;
+  width: 80%
+}
+
+.input-group textarea {
+  resize: none;
+  min-height: 20px;
+  width: 90%; 
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.radio-group label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.send-btn {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 12px 25px;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: var(--box-shadow);
+  transition: 0.3s;
+  display: flex;     
+  justify-self: center;            
+  text-align: center;
+  width: fit-content;
+  margin-left: 320px;
+}
+
+.send-btn:hover {
+  background: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+ 
+  }
+
+  .contact-image {
+    min-height: 200px; 
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+  .send-btn {
+    width: 50% !important;          
+    margin: 20px auto 0 !important;   
+    display: block;
+    text-align: start;
+    text-align: center;
+    margin-left: 0;
+
+  }
+}
+
+

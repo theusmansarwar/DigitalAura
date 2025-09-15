@@ -1,8 +1,4 @@
-import React from "react";
-import ContactInfo from "../components/Contact/ContactInfo";
-import ContactUs from "../components/Contact/ContactUs";
-import JoinUs from "../components/career/JoinUs";
-
+import JoinUs from "@/components/career/JoinUs";
 
 export const metadata = {
   title: "Creative Services | Digital Aura",
@@ -13,7 +9,8 @@ export const metadata = {
 const page = () => {
   return (
     <div>
-   <JoinUs/>    </div>
+      <JoinUs />{" "}
+    </div>
   );
 };
 

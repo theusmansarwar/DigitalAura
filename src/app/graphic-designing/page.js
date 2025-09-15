@@ -1,7 +1,7 @@
-import React from "react";
-import GraphicHero from "../components/GraphicDesgining/GraphicHero";
-import DesginProcess from "../components/GraphicDesgining/DesginProcess";
-import Faqs from "../components/Faqs/Faqs";
+import Faqs from "@/components/Faqs/Faqs";
+import DesginProcess from "@/components/GraphicDesgining/DesginProcess";
+import GraphicHero from "@/components/GraphicDesgining/GraphicHero";
+import Testimonal from "@/components/Testimonal";
 
 export const metadata = {
   title: "Creative Services | Digital Aura",
@@ -56,6 +56,7 @@ const page = () => {
       <GraphicHero />
       <DesginProcess />
       <Faqs data={faqs} />
+      <Testimonal />
     </div>
   );
 };

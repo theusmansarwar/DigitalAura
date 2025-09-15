@@ -1,6 +1,7 @@
-import Faqs from "../components/Faqs/Faqs";
-import SMMHero from "../components/SocialMediaMarketing/SMMHero";
-import SMMStrategy from "../components/SocialMediaMarketing/SMMStrategy";
+import Faqs from "@/components/Faqs/Faqs";
+import SMMHero from "@/components/SocialMediaMarketing/SMMHero";
+import SMMStrategy from "@/components/SocialMediaMarketing/SMMStrategy";
+import Testimonal from "@/components/Testimonal";
 
 export const metadata = {
   title: "Socail Media Marketing | Digital Aura",
@@ -53,8 +54,9 @@ const page = () => {
   return (
     <div>
       <SMMHero />
-      <SMMStrategy/>
+      <SMMStrategy />
       <Faqs data={faqs} />
+      <Testimonal />
     </div>
   );
 };

@@ -1,0 +1,90 @@
+.Digital-aura {
+  height: fit-content;
+  width: 100%;
+}
+.auraImg {
+  height: 150px;
+  width: 90%;
+  margin: 0 auto;
+}
+.auraImg img {
+  margin-top: 20px;
+  height: 110px;
+}
+.meet {
+  display: flex;
+  height: fit-content;
+  width: 90%;
+  background-color: var(--orange-color);
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+.meetL {
+  padding: 40px 0;
+  width: 70%;
+  position: relative;
+}
+.meetH1 {
+  font-size: 24px;
+  font-weight: 600;
+  width: 40%;
+  margin: 10px 10%;
+  color: var(--secondary-color);
+}
+.meetH2 {
+  font-size: 14px;
+  font-weight: 100;
+  width: 80%;
+  margin: 20px 10%;
+  color: var(--secondary-color);
+}
+
+.meetR {
+  width: 30%;
+  position: relative;
+}
+
+.meetR img {
+  height: 420px;
+  position: absolute;
+  bottom: 0;
+}
+
+@media (max-width: 970px) {
+  .auraImg {
+    height: 80px;
+  }
+  .auraImg img {
+    height: 30px;
+  }
+  .meet {
+    display: flex;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+  }
+  .meetL {
+    width: 100%;
+    margin: 0%;
+    padding: 20px 0;
+  }
+  .meetH1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    width: 90%;
+    margin: 10px 5%;
+  }
+  .meetH2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    width: 90%;
+    margin: 10px 5%;
+  }
+  .meetR {
+    display: none;
+  }
+}

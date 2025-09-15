@@ -1,14 +1,14 @@
 import React from "react";
-import BlogData from "../components/blogData/BlogData";
-import BlogHead from "../components/Blog/BlogHead";
-import LatestBlog from "../components/latestBlogs/LatestBlog";
+import BlogHead from "@/components/Blog/BlogHead";
+import BlogCard from "@/components/blogCards/BlogCard";
+import LatestBlog from "@/components/latestBlogs/LatestBlog";
 
 const page = () => {
   return (
     <div>
       <BlogHead />
-      <BlogData />
-      <LatestBlog/>
+      <BlogCard />
+      <LatestBlog />
     </div>
   );
 };

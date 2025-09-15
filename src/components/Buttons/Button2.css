@@ -1,0 +1,23 @@
+.blog-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: var(--default-p-size);
+  width: 224.56px;
+  height: 32px;
+  margin: 60px auto 40px;
+  border: none;
+  border-radius: var(--border-radius);
+
+}
+
+.blog-btn .icon {
+  position: absolute;
+  left: 16px;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}

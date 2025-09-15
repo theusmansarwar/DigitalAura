@@ -1,11 +1,9 @@
+import StatsSection from "@/components/Aboutus/StatsSection";
+import Aura from "@/components/Aboutus/Aura";
+import Digital from "@/components/Aboutus/Digital";
 import React from "react";
-import ContactInfo from "../components/Contact/ContactInfo";
-import ContactUs from "../components/Contact/ContactUs";
-import JoinUs from "../components/career/JoinUs";
-import AboutProjects from "../components/Aboutus/AboutProjects";
-import Digital from "../components/DigitalAutomation/Digital";
-import Aura from "../components/DigitalAura/Aura";
-
+import OurMission from "@/components/Aboutus/OurMission";
+import OurValues from "@/components/Aboutus/OurValues";
 
 export const metadata = {
   title: "Creative Services | Digital Aura",
@@ -16,10 +14,12 @@ export const metadata = {
 const page = () => {
   return (
     <div>
-      <AboutProjects/>
-     <Digital/>
-     <Aura/>
-      </div>
+      <StatsSection />
+      <Digital />
+      <OurValues />
+      <OurMission />
+      <Aura />
+    </div>
   );
 };
 

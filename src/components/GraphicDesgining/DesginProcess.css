@@ -1,0 +1,33 @@
+.design-process {
+  height: fit-content;
+  width: 100%;
+  padding: 40px var(--left-space);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.design-process .process-img {
+  width: 100%;
+  max-width: 900px;
+}
+.design-process p {
+  text-align: center;
+  width: 60%;
+}
+
+
+@media (max-width: 900px) {
+  .design-process {
+    gap: 10px;
+    padding: 10px var(--left-space);
+  }
+  .design-process .process-img {
+    width: 100%;
+  }
+  
+  .design-process p {
+    width: 100%;
+  }
+}

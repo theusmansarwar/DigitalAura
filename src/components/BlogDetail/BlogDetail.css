@@ -1,0 +1,22 @@
+.main-section {
+  display: flex;
+  gap: 10px;
+  padding: 25px;
+  max-width: 1188px;
+  margin: 0 auto; 
+}
+
+ 
+/* @media (max-width: 1024px) {
+  .main-section {
+    flex-direction: column;
+  }
+} */
+
+ 
+@media (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+    padding: 15px;  
+  }
+}

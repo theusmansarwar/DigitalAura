@@ -1,6 +1,5 @@
-import React from "react";
-import ContactInfo from "../components/Contact/ContactInfo";
-import ContactUs from "../components/Contact/ContactUs";
+import ContactInfo from "@/components/Contact/ContactInfo";
+import ContactUs from "@/components/Contact/ContactUs";
 
 
 export const metadata = {
@@ -12,8 +11,9 @@ export const metadata = {
 const page = () => {
   return (
     <div>
-     <ContactInfo/>
-<ContactUs/>    </div>
+      <ContactInfo />
+      <ContactUs />{" "}
+    </div>
   );
 };
 

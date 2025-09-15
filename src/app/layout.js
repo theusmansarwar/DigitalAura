@@ -3,6 +3,7 @@ import "./globals.css";
 import { Syne } from "next/font/google";
 import { Geist, Geist_Mono } from "next/font/google";
 import FooterF from "@/components/Footer/FooterF";
+import { ToastContainer } from "react-toastify";
 // import localFont from "next/font/local";
 
 // // Self-hosted Century Gothic (put the font file inside /public/fonts/)
@@ -29,6 +30,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${syne.variable}`}>
+           <ToastContainer
+                  position="top-right"
+                  autoClose={2000}
+                  pauseOnHover={false}
+                  newestOnTop
+                />
         <Header/>
         {children}
         <FooterF/>

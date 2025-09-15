@@ -54,35 +54,53 @@ form {
 }
 
 .input-group input,
-.input-group textarea {
+.input-group textarea,
+.input-group select
+ {
   border: none;
   border-bottom: 1px solid #ccc;
   padding: 8px;
   font-size: 14px;
   outline: none;
-  width: 80%
+  width: 100%
 }
 
-.input-group textarea {
-  resize: none;
-  min-height: 20px;
-  width: 90%; 
+.radio-group-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* fill evenly */
+  gap: 12px;
+  width: 100%;
 }
 
-.radio-group {
+.radio-element {
   display: flex;
-  flex-wrap: wrap; 
-  gap: 10px;
-  margin-top: 8px;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-.radio-group label {
-  display: inline-flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-color);
+.radio-element:hover  .radio-wrapper {
+  color: var(--primary-color);
+}
+
+.radio-element input {
+  accent-color: var(--primary-color);
   cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.radio-wrapper {
+  cursor: pointer;
+  user-select: none;
+}
+
+.error-msg{
+  color: red;
+    font-size: 10px;
 }
 
 .send-btn {

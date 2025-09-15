@@ -1,6 +1,6 @@
-"use client"
-import React, { useEffect, useState } from 'react';
-import './LeftDetail.css';
+"use client";
+import React, { useEffect, useState } from "react";
+import "./LeftDetail.css";
 import axios from "axios";
 
 const LeftDetail = () => {
@@ -41,11 +41,7 @@ const LeftDetail = () => {
             ></div>
 
             <button className="load-more-btn">
-              <img
-                src="/down.png"
-                alt="Arrow down"
-                className="arrow-icon"
-              />
+              <img src="/down.png" alt="Arrow down" className="arrow-icon" />
               Load more
             </button>
           </>

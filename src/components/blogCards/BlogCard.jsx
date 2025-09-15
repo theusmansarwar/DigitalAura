@@ -2,13 +2,22 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
 import "./BlogCard.css";
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
+import { BiFirstPage, BiLastPage } from "react-icons/bi";
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import truncateTextByWords from "@/utils/TruncateByWords";
-import { PaginationItem } from "@mui/material";
+import {
+  Stack,
+  Pagination,
+  Select,
+  MenuItem,
+  Typography,
+  PaginationItem,
+} from "@mui/material";
+
 import Button2 from "../Buttons/Button2";
+import { FaChevronDown } from "react-icons/fa";
 
 const links = [
   "All",
@@ -32,23 +41,24 @@ const BlogCard = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [totalPages, setTotalPages] = useState(1);
+  const [totalItems, setTotalItems] = useState(0);
 
   const ulRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [activeLink, setActiveLink] = useState(0);
 
-  const itemsPerPage = 9;
+  const [rowsPerPage, setRowsPerPage] = useState(9);
 
   useEffect(() => {
     fetchData();
-  }, [page]);
+  }, [page, rowsPerPage]);
 
   const fetchData = async () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `https://plutosec.ca/backend/api/blog/list?limit=${itemsPerPage}&page=${page}`,
+        `https://plutosec.ca/backend/api/blog/list?limit=${rowsPerPage}&page=${page}`,
         { cache: "no-store" }
       );
       const data = await res.json();
@@ -56,20 +66,23 @@ const BlogCard = () => {
       if (data?.blogs) {
         setBlogs(data.blogs);
         setTotalPages(data.totalPages || 1);
+        setTotalItems(data.totalBlogs || data.blogs.length); // backend returns totalBlogs
       } else {
         setBlogs([]);
         setTotalPages(1);
+        setTotalItems(0);
       }
     } catch (error) {
       console.error("Error fetching blogs:", error);
       setBlogs([]);
       setTotalPages(1);
+      setTotalItems(0);
     } finally {
       setLoading(false);
     }
   };
 
-  const handleChange = (event, value) => {
+  const handleChangePage = (event, value) => {
     setPage(value);
     router.push(`?page=${value}`);
   };
@@ -100,6 +113,10 @@ const BlogCard = () => {
     setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1);
   };
 
+  // Range calculation
+  const start = totalItems > 0 ? (page - 1) * rowsPerPage + 1 : 0;
+  const end = Math.min(page * rowsPerPage, totalItems);
+
   return (
     <div className="blog-cards-container">
       <Button2 label="Blogs" />
@@ -110,7 +127,6 @@ const BlogCard = () => {
             className={`scroll-btn ${!canScrollLeft ? "disabled" : ""}`}
           />
           <ul ref={ulRef} onScroll={checkScrollButtons}>
-            {" "}
             {links.map((tab, index) => (
               <li
                 key={index}
@@ -120,10 +136,9 @@ const BlogCard = () => {
                   setPage(1);
                 }}
               >
-                {" "}
-                {tab}{" "}
+                {tab}
               </li>
-            ))}{" "}
+            ))}
           </ul>
           <CiCircleChevRight
             onClick={scrollRight}
@@ -133,10 +148,13 @@ const BlogCard = () => {
 
         <div className="right">
           <label>Sort by:</label>
-          <select>
-            <option>Newest</option>
-            <option>Oldest</option>
-          </select>
+          <div className="select-wrapper">
+            <select className="sort-select">
+              <option>Newest</option>
+              <option>Oldest</option>
+            </select>
+            <FaChevronDown className="select-icon" />
+          </div>
         </div>
       </div>
 
@@ -174,79 +192,76 @@ const BlogCard = () => {
         )}
       </div>
 
-      <Stack spacing={2} sx={{ alignItems: "center", mb: "30px" }}>
+      {/* Pagination Section */}
+      <Stack
+        direction="row"
+        spacing={2}
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{ mt: 3 }}
+      >
+        {/* Left: Showing range */}
+        <Typography>
+          {start}-{end} of {totalItems} items
+        </Typography>
+
+        {/* Middle: Pagination */}
         <Pagination
-          siblingCount={1}
-          boundaryCount={2}
           count={totalPages}
           page={page}
-          onChange={handleChange}
+          onChange={handleChangePage}
+          siblingCount={1}
+          boundaryCount={0}
           shape="rounded"
           renderItem={(item) => (
             <PaginationItem
+              slots={{
+                first: BiFirstPage,
+                previous: MdChevronLeft,
+                next: MdChevronRight,
+                last: BiLastPage,
+              }}
               {...item}
-              components={{
-                previous: () => <span>Previous</span>,
-                next: () => <span>Next</span>,
-              }}
-              sx={{
-                ...(item.type === "page" && {
-                  color: "var(--text-color4)",
-                  border: "none",
-                  fontWeight: 500,
-                  minWidth: "40px",
-                  height: "40px",
-                  margin: "0 4px",
-                  borderRadius: "50%",
-                  "&.Mui-selected": {
-                    backgroundColor: "var(--text-color4)",
-                    color: "var(--main-color)",
-                    border: "none",
-                    boxShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)",
-                    "&:hover": { backgroundColor: "var(--text-color4)" },
-                  },
-                }),
-                ...(item.type === "previous" && {
-                  backgroundColor: "var(--text-color4)",
-                  color: "var(--main-color)",
-                  borderRadius: "25px",
-                  padding: "0 15px",
-                  minWidth: "80px",
-                  fontWeight: 600,
-                  textTransform: "uppercase",
-                  fontSize: "0.75rem",
-                  letterSpacing: "0.05em",
-                  boxShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)",
-                  "&:hover": {
-                    backgroundColor: "#f6efefff",
-                    color: "var(--main-color)",
-                  },
-                }),
-                ...(item.type === "next" && {
-                  backgroundColor: "var(--main-color)",
-                  color: "var(--text-color4)",
-                  borderRadius: "25px",
-                  padding: "0 15px",
-                  minWidth: "80px",
-                  fontWeight: 600,
-                  textTransform: "uppercase",
-                  fontSize: "0.75rem",
-                  letterSpacing: "0.05em",
-                  boxShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)",
-                  "&:hover": {
-                    backgroundColor: "#222",
-                    color: "var(--text-color4)",
-                  },
-                }),
-              }}
             />
           )}
           sx={{
-            backgroundColor: "var(--primary-color)",
-            padding: "5px",
-            borderRadius: "30px",
+            "& .MuiPaginationItem-root": {
+              borderRadius: "6px",
+            },
+            "& .MuiPaginationItem-root.Mui-selected": {
+              backgroundColor: "#f4511e",
+              color: "#fff",
+            },
+            "& .MuiPaginationItem-root.MuiPaginationItem-previousNext, & .MuiPaginationItem-root.MuiPaginationItem-firstLast":
+              {
+                backgroundColor: "#f4511e",
+                color: "#fff",
+                "&:hover": {
+                  backgroundColor: "#d84315",
+                },
+              },
           }}
         />
+
+        {/* Right: Items per page */}
+        <Stack direction="row" alignItems="center" spacing={1}>
+          <Select
+            size="small"
+            value={rowsPerPage}
+            onChange={(e) => {
+              setRowsPerPage(e.target.value);
+              setPage(1);
+            }}
+            sx={{ minWidth: 60 }}
+          >
+            {[5, 9, 10, 20].map((num) => (
+              <MenuItem key={num} value={num}>
+                {num}
+              </MenuItem>
+            ))}
+          </Select>
+          <Typography>Items per page</Typography>
+        </Stack>
       </Stack>
     </div>
   );

@@ -1,6 +1,7 @@
-.full-detail{
-    display: flex;
-    flex-direction: column;
+.full-detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .load-more-btn {
   display: flex;
@@ -13,7 +14,6 @@
   border-radius: var(--border-radius);
   font-size: 14px;
   font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   cursor: pointer;
   transition: all 0.2s ease;
   border: none;
@@ -28,9 +28,7 @@
   transition: transform 0.2s ease;
 }
 
- 
 .load-more-btn:hover {
-  
   border-color: #fb923c;
   color: #c2410c;
   transform: translateY(-1px);
@@ -42,29 +40,28 @@
 }
 
 .custom-html-styles {
-    max-width: 843px;
-  padding-left: 16px;    
-  padding-right: 16px;  
-  margin-top: 24px;     
-  color: var(--text-dark);        
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 24px;
+  color: var(--text-dark);
+  text-align: justify;
 }
 .loader {
-
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
   gap: 8px;
 
-width: 843px;   
-  
-  margin: 40px auto 0 auto;  
-  min-height: 200px; 
+  width: 843px;
+
+  margin: 40px auto 0 auto;
+  min-height: 200px;
 }
 
 .loader span {
   width: 25px;
-  height:25px;
+  height: 25px;
   background-color: var(--primary-color);
   border-radius: 50%;
   display: inline-block;
@@ -88,14 +85,9 @@ width: 843px;
   }
 }
 
- 
 @media (min-width: 640px) {
   .custom-html-styles {
-    padding-left: 32px;   
-    padding-right: 32px; 
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
- 
- 
- 
- 

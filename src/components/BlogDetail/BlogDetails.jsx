@@ -1,22 +1,46 @@
-import React from "react";
-import MainHead from "../components/DetailHead/MainHead";
-import PopularPostsSidebar from "../components/popular/Popular";
-import LatestBlog from "../components/latestBlogs/LatestBlog";
-import LeftDetail from "../components/leftDetail/LeftDetail";
+"use client";
+
+import { useEffect, useState } from "react";
 import "./BlogDetail.css";
 import Button2 from "../Buttons/Button2";
+import MainHead from "../DetailHead/MainHead";
+import LeftDetail from "../leftDetail/LeftDetail";
+import PopularPostsSidebar from "../popular/Popular";
+import LatestBlog from "../latestBlogs/LatestBlog";
 
-const BlogDetails = () => {
+const BlogDetails = ({ slug }) => {
+  const [blog, setBlog] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (!slug) return;
+    const fetchBlog = async () => {
+      try {
+        const res = await fetch(`https://plutosec.ca/backend/api/blog/${slug}`);
+        const data = await res.json();
+        setBlog(data);
+      } catch (err) {
+        console.error("Error fetching blog details:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlog();
+  }, [slug]);
+
+  if (loading) return <p>Loading...</p>;
+  if (!blog) return <p>Blog not found</p>;
+
   return (
-    <>
-      <Button2 label="Category" />
-      <MainHead />
+    <div className="blog-detail">
+      <Button2 label={blog.category?.name || "Category"} />
+      <MainHead title={blog.title} date={blog.createdAt} author={blog.author} />
       <div className="main-section">
-        <LeftDetail />
+        <LeftDetail content={blog.content} thumbnail={blog.thumbnail} />
         <PopularPostsSidebar />
       </div>
       <LatestBlog />
-    </>
+    </div>
   );
 };
 

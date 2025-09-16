@@ -1,7 +1,7 @@
 .graphic-hero {
   height: fit-content;
   width: 100%;
-  padding: 40px var(--left-space);
+  padding: 20px var(--left-space);
   display: flex;
   flex-direction: column;
   align-items: center;

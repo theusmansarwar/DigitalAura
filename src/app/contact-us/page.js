@@ -17,7 +17,7 @@ const desc = [
 ];
 const page = () => {
   return (
-    <div>
+    <div style={{ padding: "40px 0" }}>
       <Button2 label={"Contact Us"} data={desc} />
       <ContactInfo />
       <ContactUs />{" "}

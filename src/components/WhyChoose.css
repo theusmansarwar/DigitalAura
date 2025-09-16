@@ -2,7 +2,10 @@
   width: 100%;
   padding: 40px var(--left-space);
   position: relative;
-  background: url(/why-choose.jpg) center/fill no-repeat;
+  background-image: url(/why-choose.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
   z-index: 1;
 }
 

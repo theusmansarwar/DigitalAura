@@ -145,6 +145,26 @@
   color: var(--grayy);
 }
 
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.testimonial-dots .dot {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #ccc; /* default gray */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.testimonial-dots .dot.active {
+  background: var(--primary-color); /* selected dot */
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .testimonial-wrapper {

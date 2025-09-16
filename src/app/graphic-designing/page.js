@@ -78,7 +78,7 @@ const weBringSections = [
 ];
 const page = () => {
   return (
-    <div>
+    <div style={{ padding: "40px 0" }}>
       <GraphicHero />
       <DesginProcess />
       <Faqs data={faqs} />

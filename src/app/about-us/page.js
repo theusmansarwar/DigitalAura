@@ -23,7 +23,7 @@ const statsDesc = {
 };
 const page = () => {
   return (
-    <div>
+    <div style={{ padding: "40px 0" }}>
       <Button2 label={"About Us"} data={desc} />
       <StatsSection data={statsDesc.desc} />
       <Digital />

@@ -155,6 +155,16 @@ const Testimonal = () => {
           ))}
         </div>
       </div>
+      {/* Dots Navigation */}
+      <div className="testimonial-dots">
+        {testimonials.map((_, dotIndex) => (
+          <span
+            key={dotIndex}
+            className={`dot ${index === dotIndex ? "active" : ""}`}
+            onClick={() => setIndex(dotIndex)}
+          ></span>
+        ))}
+      </div>
     </div>
   );
 };

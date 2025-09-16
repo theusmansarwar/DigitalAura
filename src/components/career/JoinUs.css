@@ -76,7 +76,7 @@ input {
   border: 1px solid #ccc;
   outline: none;
   font-size: 14px;
-  width: 100%; 
+  width: 100%;
   background: var(--secondary-color);
 }
 
@@ -127,8 +127,14 @@ label {
 .sen-btn:hover {
   background: #e05528;
 }
-
-@media (max-width: 768px) {
+.error-msg {
+  font-size: 14px;
+  color: red;
+}
+@media (max-width: 900px) {
+  .form-wrapper {
+    padding: 20px 10px;
+  }
   .form-body {
     flex-direction: column;
   }
@@ -136,6 +142,8 @@ label {
   .form-left {
     max-width: 100%;
     order: 2;
+    width: 100%;
+    padding-top: 20px;
   }
 
   .form-right {
@@ -149,11 +157,6 @@ label {
   .form-row {
     flex-direction: column;
     gap: 10px;
-  }
-
-  #job,
-  #eaddress {
-    width: 100%;
   }
 
   .send-btn {

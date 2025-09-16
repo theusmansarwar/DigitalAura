@@ -79,7 +79,7 @@
     padding: 40px;          
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .partA-card {
     flex-direction: column;   
     max-width: 100%;

@@ -1,8 +1,23 @@
 import { invokeApi } from "../utils/InvokeApi";
 
-export const fetchallBloglist = async (page, rowsPerPages) => {
+export const fetchallBloglist = async (
+  activeCategory,
+  page,
+  rowsPerPages,
+  search
+) => {
   const reqObj = {
-    path: `/blog/list?limit=${rowsPerPages}&page=${page}`,
+    path: `/blog/list?categoryId=${activeCategory}&page=${page}&limit=${rowsPerPages}&search=${search}`,
+    method: "GET",
+    headers: {},
+    body: {},
+  };
+  return invokeApi(reqObj);
+};
+
+export const fetchBlogCategories = async () => {
+  const reqObj = {
+    path: `/category/live`,
     method: "GET",
     headers: {},
 

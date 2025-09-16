@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Button2 from "../Buttons/Button2";
-import PartA from "./partA/PartA";
-import PartB from "./partB/PartB";
-import PartC from "./partC/PartC";
+import "./LatestBlogs2.css";
+import { baseUrl } from "@/app/config/Config";
+import { formatDate } from "@/utils/FormatDate";
 import { fetchallBloglist, fetchBlogCategories } from "@/DAL/Fetch";
+import Button2 from "../Buttons/Button2";
 
-const LatestBlog = () => {
+const LatestBlogs2 = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -17,7 +17,7 @@ const LatestBlog = () => {
         const categoryRes = await fetchBlogCategories();
         const categories = categoryRes?.categories || [];
 
-        // Find "Latest" category
+        // 2. Find "Latest" category
         const latestCategory = categories.find(
           (cat) => cat.name?.toLowerCase() === "latest"
         );
@@ -28,7 +28,7 @@ const LatestBlog = () => {
           return;
         }
 
-        // 2. Fetch blogs from that category
+        // 3. Fetch blogs from that category
         const res = await fetchallBloglist(latestCategory._id, 1, 5, "");
         if (res?.blogs?.length) {
           setBlogs(res.blogs.slice(0, 5)); // take only first 5
@@ -45,28 +45,36 @@ const LatestBlog = () => {
 
     fetchLatestBlogs();
   }, []);
-  
-  const firstBlog = blogs[0] ? [blogs[0]] : [];
-  const middleBlogs = blogs.slice(1, 4);
-  const lastBlog = blogs[4] ? [blogs[4]] : [];
 
   return (
-    <div className="latest-blogs-section">
-      <Button2 label="Latest Blogs" />
-
+    <><Button2 label="Latest Blogs" />
+    <div className="latest-blogs2">
+      
       {loading ? (
         <p>Loading...</p>
       ) : blogs.length > 0 ? (
-        <>
-          <PartA blogs={firstBlog} />
-          <PartB blogs={middleBlogs} />
-          <PartC blogs={lastBlog} />
-        </>
+        blogs.map((blog) => (
+          <div key={blog._id} className="card">
+            <div
+              className="card-image"
+              style={{ backgroundImage: `url(${baseUrl + blog.thumbnail})` }}
+            ></div>
+            <div className="card-content">
+              <h3>{blog.title}</h3>
+              <p>{blog.description}</p>
+              <div className="card-footer">
+                <span>{formatDate(blog.createdAt)}</span>
+                <a href={`/blogs/${blog.slug}`}>Read more</a>
+              </div>
+            </div>
+          </div>
+        ))
       ) : (
         <p>No latest blogs found.</p>
       )}
     </div>
+    </>
   );
 };
 
-export default LatestBlog;
+export default LatestBlogs2;

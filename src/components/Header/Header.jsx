@@ -24,7 +24,14 @@ const Header = () => {
     <div>
       {/* Top Navigation */}
       <div className="nav-area">
-        <img className="logo" src="/DigitalAuraLogo.png" alt="Digital Aura"  onClick={()=>{router.push("/")}}/>
+        <img
+          className="logo"
+          src="/DigitalAuraLogo.png"
+          alt="Digital Aura"
+          onClick={() => {
+            router.push("/");
+          }}
+        />
         <div className="nav-area-right">
           <div className="contact-info">
             <a href="tel:+923001234567">
@@ -145,9 +152,27 @@ const Header = () => {
                 </ul>
               )}
             </li>
-            <li>Blog</li>
-            <li>Pricing</li>
-            <li>About</li>
+            <li
+              onClick={() => {
+                router.push("/blogs");
+              }}
+            >
+              Blog
+            </li>
+            <li
+              onClick={() => {
+                router.push("/career");
+              }}
+            >
+              Careers
+            </li>
+            <li
+              onClick={() => {
+                router.push("/about-us");
+              }}
+            >
+              About
+            </li>
           </ul>
         </div>
       )}

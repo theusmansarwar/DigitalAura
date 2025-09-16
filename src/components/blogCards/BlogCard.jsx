@@ -19,7 +19,7 @@ import {
 import Button2 from "../Buttons/Button2";
 import { FaChevronDown } from "react-icons/fa";
 import axios from "axios";
-import { fetchallBloglist } from "@/DAL/Fetch";
+import { fetchallBloglist, fetchBlogCategories } from "@/DAL/Fetch";
 import { baseUrl } from "@/app/config/Config";
 
 const links = [
@@ -52,34 +52,54 @@ const BlogCard = () => {
   const [activeLink, setActiveLink] = useState(0);
 
   const [rowsPerPage, setRowsPerPage] = useState(9);
+  const [categories, setCategories] = useState([{ _id: "all", name: "All" }]);
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const res = await fetchBlogCategories();
+        const data = res.categories || [];
+
+        // Prepend All to fetched categories
+        setCategories([{ _id: "all", name: "All" }, ...data]);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
+    fetchCategories();
+  }, []);
 
   useEffect(() => {
     fetchData();
-  }, [page, rowsPerPage]);
+  }, [page, rowsPerPage, activeCategory]);
 
   const fetchData = async () => {
-    setLoading(true);
-    try {
-      const res = await fetchallBloglist(page, rowsPerPage);
-      console.log("API response:", res);
-      if (res?.blogs) {
-        setBlogs(res.blogs);
-        setTotalPages(res.totalPages || 1);
-        setTotalItems(res.totalBlogs || res.blogs.length);
-      } else {
-        setBlogs([]);
-        setTotalPages(1);
-        setTotalItems(0);
-      }
-    } catch (error) {
-      console.error("Error fetching blogs:", error);
+  setLoading(true);
+  try {
+    // If activeCategory is "all", pass empty string (no filter)
+    const categoryId = activeCategory === "all" ? "" : activeCategory;
+
+    const res = await fetchallBloglist(categoryId, page, rowsPerPage, "");
+
+    if (res?.blogs) {
+      setBlogs(res.blogs);
+      setTotalPages(res.totalPages || 1);
+      setTotalItems(res.totalBlogs || res.blogs.length);
+    } else {
       setBlogs([]);
       setTotalPages(1);
       setTotalItems(0);
-    } finally {
-      setLoading(false);
     }
-  };
+  } catch (error) {
+    console.error("Error fetching blogs:", error);
+    setBlogs([]);
+    setTotalPages(1);
+    setTotalItems(0);
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleChangePage = (event, value) => {
     setPage(value);
@@ -128,19 +148,21 @@ const BlogCard = () => {
             className={`scroll-btn ${!canScrollLeft ? "disabled" : ""}`}
           />
           <ul ref={ulRef} onScroll={checkScrollButtons}>
-            {links.map((tab, index) => (
+            {categories.map((cat, index) => (
               <li
-                key={index}
-                className={activeLink === index ? "active" : ""}
+                key={cat._id || "all"}
+                className={activeCategory === cat._id ? "active" : ""}
                 onClick={() => {
+                  setActiveCategory(cat._id);
                   setActiveLink(index);
                   setPage(1);
                 }}
               >
-                {tab}
+                {cat.name}
               </li>
             ))}
           </ul>
+
           <CiCircleChevRight
             onClick={scrollRight}
             className={`scroll-btn ${!canScrollRight ? "disabled" : ""}`}

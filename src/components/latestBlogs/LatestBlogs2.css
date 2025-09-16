@@ -1,45 +1,45 @@
-.card-section {
+.latest-blogs2 {
+  width: 100%;
+  padding: 40px var(--left-space);
   display: flex;
   gap: 30px;
-  justify-content: center;
   flex-wrap: wrap;
   margin: 40px 0;
 }
 
-.card {
-  max-width: 342.9px;
+.latest-blogs2 .card {
+  width: 30%;
+  padding: 20px;
   background: var(--secondary-color);
   border-radius: var(--border-radius);
+  border: 1px solid gainsboro;
   box-shadow: var(--box-shadow);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
-.card:hover {
+.latest-blogs2 .card:hover {
   transform: translateY(-4px) scale(1.03);
   box-shadow: var(--hover-shadow);
 }
 
-.card-image {
-  max-width: 341.47px;
+.latest-blogs2 .card .card-image {
+  width: 100%;
   height: 204.6px;
   background-size: cover;
   background-position: center;
 }
 
-.card-content {
-  padding: 16px;
-}
-
-.card-content h3 {
+.latest-blogs2 .card .card-content h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 8px;
   text-transform: lowercase;
 }
 
-.card-content p {
+.latest-blogs2 .card .card-content p {
   font-size: 14px;
   color: var(--text-gray);
   line-height: 1.5;
@@ -68,10 +68,8 @@
 }
 
 @media (max-width: 900px) {
-  .card {
-    max-width: 94%;
+  .latest-blogs2 .card {
+   width: 100%;
   }
-  .card-image {
-  max-width: 100%;
-}
+  
 }

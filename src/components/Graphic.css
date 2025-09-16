@@ -131,7 +131,7 @@
   background-color: var(--secondary-color);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .graphic-section {
     flex-direction: column;
     gap: 20px;

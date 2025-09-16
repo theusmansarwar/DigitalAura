@@ -1,6 +1,6 @@
 .welcome {
   width: 100%;
-  padding: var(--left-space);
+  padding: 20px var(--left-space) 40px;
   background-color: var(--secondary-color);
 }
 

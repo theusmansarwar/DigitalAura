@@ -6,7 +6,7 @@ import Serve from "@/components/Serve";
 import Testimonal from "@/components/Testimonal";
 import Welcome from "@/components/Welcome";
 import WhyChoose from "@/components/WhyChoose";
-import PartB from "@/components/latestBlogs/partB/PartB";
+import LatestBlogs2 from "@/components/latestBlogs/LatestBlogs2";
 
 const faqs = {
   title: "Frequently Asked Questions",
@@ -76,7 +76,7 @@ const page = () => {
       <Graphic />
       <Testimonal />
       <Faqs data={faqs} />
-      <PartB />
+      <LatestBlogs2 />
       <WhyChoose />
     </div>
   );

@@ -1,30 +1,27 @@
 import React from "react";
 import "./PartC.css";
+import { formatDate } from "@/utils/FormatDate";
+import { baseUrl } from "@/app/config/Config";
 
-const featuredData = {
-  title: "What is Lorem Ipsum?",
-  description:
-    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution...",
-  date: "May 20",
-  link: "Read more",
-  image: "/img4.png",
-};
+const PartC = ({ blogs = [] }) => {
+  if (!blogs.length) return null; // no blog to show
 
-const FeaturedCard = () => {
+  const blog = blogs[0]; // take the first (lastBlog is always array of 1)
+
   return (
     <div className="featured-wrapper">
       <div className="featured-card">
         <div className="featured-text">
-          <h2>{featuredData.title}</h2>
-          <p>{featuredData.description}</p>
+          <h2>{blog.title}</h2>
+          <p>{blog.description}</p>
           <div className="featured-footer">
-            <span>{featuredData.date}</span>
-            <a href="/#">{featuredData.link}</a>
+            <span>{formatDate(blog.createdAt)}</span>
+            <a href={`/blog/${blog.slug}`}>Read more</a>
           </div>
         </div>
         <div
           className="featured-image"
-          style={{ backgroundImage: `url(${featuredData.image})` }}
+          style={{ backgroundImage: `url(${baseUrl + blog.thumbnail})` }}
         ></div>
       </div>
 
@@ -40,4 +37,4 @@ const FeaturedCard = () => {
   );
 };
 
-export default FeaturedCard;
+export default PartC;

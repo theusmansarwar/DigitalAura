@@ -39,7 +39,8 @@ const JoinUs = () => {
     e.preventDefault();
 
     const form = new FormData();
-    form.append("name", `${formData.fname} ${formData.lname}`);
+    form.append("name", formData.fname);
+    form.append("lastName", formData.lname);
     form.append("email", formData.email);
     form.append("phone", formData.phone);
     form.append("jobTitle", formData.jobTitle);
@@ -102,6 +103,7 @@ const JoinUs = () => {
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="fname">First Name</label>
+                  {errors.name && <p className="error-msg">{errors.name}</p>}
                   <input
                     type="text"
                     id="fname"
@@ -109,11 +111,13 @@ const JoinUs = () => {
                     onChange={handleChange}
                     placeholder="First name"
                   />
-                  {errors.fname && <p className="error-msg">{errors.fname}</p>}
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="lname">Last Name</label>
+                  {errors.lastName && (
+                    <p className="error-msg">{errors.lastName}</p>
+                  )}
                   <input
                     type="text"
                     id="lname"
@@ -121,12 +125,14 @@ const JoinUs = () => {
                     onChange={handleChange}
                     placeholder="Last name"
                   />
-                  {errors.lname && <p className="error-msg">{errors.lname}</p>}
                 </div>
               </div>
 
               <div className="form-group">
                 <label htmlFor="jobTitle">Job Title</label>
+                {errors.jobTitle && (
+                  <p className="error-msg">{errors.jobTitle}</p>
+                )}
                 <input
                   type="text"
                   id="jobTitle"
@@ -134,13 +140,11 @@ const JoinUs = () => {
                   onChange={handleChange}
                   placeholder="Job title"
                 />
-                {errors.jobTitle && (
-                  <p className="error-msg">{errors.jobTitle}</p>
-                )}
               </div>
 
               <div className="form-group">
                 <label htmlFor="email">Email Address</label>
+                {errors.email && <p className="error-msg">{errors.email}</p>}
                 <input
                   type="email"
                   id="email"
@@ -148,11 +152,11 @@ const JoinUs = () => {
                   onChange={handleChange}
                   placeholder="Email address"
                 />
-                {errors.email && <p className="error-msg">{errors.email}</p>}
               </div>
 
               <div className="form-group">
                 <label htmlFor="phone">Phone Number</label>
+                {errors.phone && <p className="error-msg">{errors.phone}</p>}
                 <input
                   type="tel"
                   id="phone"
@@ -160,11 +164,11 @@ const JoinUs = () => {
                   onChange={handleChange}
                   placeholder="+1 012 3456 789"
                 />
-                {errors.phone && <p className="error-msg">{errors.phone}</p>}
               </div>
 
               <div className="form-group">
                 <label htmlFor="resume">Upload Resume</label>
+                {errors.resume && <p className="error-msg">{errors.resume}</p>}
                 <div
                   className="upload-box"
                   id="resume"
@@ -181,7 +185,6 @@ const JoinUs = () => {
                     onChange={handleFileChange}
                   />
                 </div>
-                {errors.resume && <p className="error-msg">{errors.resume}</p>}
               </div>
 
               <button type="submit" className="sen-btn">

@@ -30,7 +30,7 @@
   --gradient-one: linear-gradient(
     90deg,
     var(--primary-color),
-    var(--dark-orange)
+    #932B00
   );
 }
 * {

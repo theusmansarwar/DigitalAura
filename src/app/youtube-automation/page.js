@@ -91,7 +91,7 @@ const weBringSections = [
 ];
 const page = () => {
   return (
-    <div>
+    <div style={{ padding: "40px 0" }}>
       <YTAutomationHero />
       <AutomationProcess />
       <ThirdSection />

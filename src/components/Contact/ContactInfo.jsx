@@ -1,7 +1,7 @@
 import { FiPhoneCall } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
-import { GoLocation } from "react-icons/go";
 import "./Info.css";
+import { TiLocation } from "react-icons/ti";
 
 const contactData = [
   {
@@ -18,7 +18,7 @@ const contactData = [
   },
   {
     id: 3,
-    icon: <GoLocation />,
+    icon: <TiLocation />,
     title: "OUR OFFICE",
     detail: "132 Dartmouth Street\nBoston, Massachusetts\n02156 United States",
   },

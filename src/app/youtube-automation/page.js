@@ -1,3 +1,4 @@
+import Button2 from "@/components/Buttons/Button2";
 import Faqs from "@/components/Faqs/Faqs";
 import Testimonal from "@/components/Testimonal";
 import WeBring from "@/components/WeBring/WeBring";
@@ -92,6 +93,7 @@ const weBringSections = [
 const page = () => {
   return (
     <div style={{ padding: "40px 0" }}>
+      <Button2 label={"Services"} />
       <YTAutomationHero />
       <AutomationProcess />
       <ThirdSection />

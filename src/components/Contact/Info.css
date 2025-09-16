@@ -23,8 +23,8 @@
   position: relative;
   background: linear-gradient(145deg, #f9f9f9, #ececec);
   
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   padding-top: 50px;

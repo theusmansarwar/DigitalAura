@@ -4,10 +4,10 @@
   border-radius: var(--border-radius);
   overflow: hidden;
   width: 90%;
-  max-width: 1196px;   
+  max-width: 1196px;
   margin: 30px auto;
   box-shadow: var(--box-shadow);
-  height: auto; 
+  height: auto;
 }
 
 .contact-image {
@@ -15,7 +15,7 @@
   background-image: url("/orange.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 667px;   
+  min-height: 667px;
   height: auto;
 }
 
@@ -26,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: auto; 
+  height: auto;
 }
 
 form {
@@ -52,17 +52,19 @@ form {
   font-weight: 500;
   color: var(--text-color);
 }
+.input-group:focus-within .labels {
+  font-weight: 600;
+}
 
 .input-group input,
 .input-group textarea,
-.input-group select
- {
+.input-group select {
   border: none;
   border-bottom: 1px solid #ccc;
   padding: 8px;
   font-size: 14px;
   outline: none;
-  width: 100%
+  width: 100%;
 }
 
 .radio-group-grid {
@@ -82,7 +84,7 @@ form {
   transition: background 0.2s;
 }
 
-.radio-element:hover  .radio-wrapper {
+.radio-element:hover .radio-wrapper {
   color: var(--primary-color);
 }
 
@@ -98,9 +100,9 @@ form {
   user-select: none;
 }
 
-.error-msg{
+.error-msg {
   color: red;
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .send-btn {
@@ -114,8 +116,8 @@ form {
   margin-top: 20px;
   box-shadow: var(--box-shadow);
   transition: 0.3s;
-  display: flex;     
-  justify-self: center;            
+  display: flex;
+  justify-self: center;
   text-align: center;
   width: fit-content;
   margin-left: 320px;
@@ -128,11 +130,10 @@ form {
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
- 
   }
 
   .contact-image {
-    min-height: 200px; 
+    min-height: 200px;
     width: 100%;
   }
 
@@ -146,14 +147,11 @@ form {
     flex-direction: column;
   }
   .send-btn {
-    width: 50% !important;          
-    margin: 20px auto 0 !important;   
+    width: 50% !important;
+    margin: 20px auto 0 !important;
     display: block;
     text-align: start;
     text-align: center;
     margin-left: 0;
-
   }
 }
-
-

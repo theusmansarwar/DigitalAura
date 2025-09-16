@@ -1,3 +1,4 @@
+import Button2 from "@/components/Buttons/Button2";
 import Faqs from "@/components/Faqs/Faqs";
 import DesginProcess from "@/components/GraphicDesgining/DesginProcess";
 import GraphicHero from "@/components/GraphicDesgining/GraphicHero";
@@ -79,6 +80,7 @@ const weBringSections = [
 const page = () => {
   return (
     <div style={{ padding: "40px 0" }}>
+      <Button2 label={"Services"} />
       <GraphicHero />
       <DesginProcess />
       <Faqs data={faqs} />

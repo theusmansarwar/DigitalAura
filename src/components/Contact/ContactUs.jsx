@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import "./ContactUs.css";
 import { CreateLeads } from "@/DAL/Create";
@@ -15,7 +15,7 @@ const ContactUs = () => {
     subject: "",
   });
   const [errors, setErrors] = useState({});
-   const [status, setStatus] = useState(null);
+  const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,8 +36,6 @@ const ContactUs = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-   
 
     const formatSubject = (subjects) => {
       if (subjects.length === 0) return "";
@@ -94,8 +92,6 @@ const ContactUs = () => {
     }
   };
 
-  
-
   return (
     <div className="contact-container">
       <div className="contact-image"></div>
@@ -104,7 +100,8 @@ const ContactUs = () => {
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="input-group">
-              <label>First Name</label>
+              <label className="labels">First Name</label>
+              {errors.name && <span className="error-msg">{errors.name}</span>}
               <input
                 type="text"
                 name="name"
@@ -112,10 +109,12 @@ const ContactUs = () => {
                 onChange={handleChange}
                 placeholder="John"
               />
-              {errors.name && <span className="error-msg">{errors.name}</span>}
             </div>
             <div className="input-group">
-              <label>Last Name</label>
+              <label className="labels">Last Name</label>
+              {errors.lastname && (
+                <span className="error-msg">{errors.lastname}</span>
+              )}
               <input
                 type="text"
                 name="lastname"
@@ -123,13 +122,15 @@ const ContactUs = () => {
                 onChange={handleChange}
                 placeholder="Doe"
               />
-              {errors.lastname && <span className="error-msg">{errors.lastname}</span>}
             </div>
           </div>
 
           <div className="row">
             <div className="input-group">
-              <label>Email</label>
+              <label className="labels">Email</label>
+              {errors.email && (
+                <span className="error-msg">{errors.email}</span>
+              )}
               <input
                 type="email"
                 name="email"
@@ -137,10 +138,12 @@ const ContactUs = () => {
                 onChange={handleChange}
                 placeholder="example@email.com"
               />
-              {errors.email && (<span className="error-msg">{errors.email}</span>)}
             </div>
             <div className="input-group">
-              <label>Phone Number</label>
+              <label className="labels">Phone Number</label>
+              {errors.phone && (
+                <span className="error-msg">{errors.phone}</span>
+              )}
               <input
                 type="tel"
                 name="phone"
@@ -148,13 +151,12 @@ const ContactUs = () => {
                 onChange={handleChange}
                 placeholder="+1 012 3456 789"
               />
-                {errors.phone && (<span className="error-msg">{errors.phone}</span>)}
             </div>
           </div>
 
           <div className="row">
             <div className="input-group">
-              <label>Budget</label>
+              <label className="labels">Budget</label>
 
               <select
                 name="budget"
@@ -172,17 +174,17 @@ const ContactUs = () => {
 
           <br />
           <div className="input-group">
-            <label>Select Subject / Service?</label>
-             {errors.subject && (
-                <span className="error-msg">{errors.subject}</span>
-              )}
-             <div className="radio-group-grid">
+            <label className="labels">Select Subject / Service?</label>
+            {errors.subject && (
+              <span className="error-msg">{errors.subject}</span>
+            )}
+            <div className="radio-group-grid">
               {[
                 "Social Media Marketing",
                 "Youtube Automation",
                 "Graphic Designing",
                 "General Inquery",
-                "Other"
+                "Other",
               ].map((subject) => {
                 const id = subject.toLowerCase().replace(/\s+/g, "-");
                 return (
@@ -203,12 +205,11 @@ const ContactUs = () => {
                 );
               })}
             </div>
-     
           </div>
 
           <br />
           <div className="input-group">
-            <label>Message</label>
+            <label className="labels">Message</label>
             <textarea
               name="query"
               value={formData.query}

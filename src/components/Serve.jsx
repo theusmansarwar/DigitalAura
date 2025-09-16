@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import "./Serve.css";
 import Button2 from "./Buttons/Button2";
 import { FaArrowRight } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const services = [
   {
@@ -11,6 +13,7 @@ const services = [
       "We help your brand reach the audience on famous platforms. The attention is on building engagement, loyalty, and sales. Digital Aura makes sure your social media grows with real impact from creative posts to community support.",
     icon: "/service-icon11.svg.png",
     number: "01",
+    slug: "social-media-marketing",
   },
   {
     id: 2,
@@ -19,6 +22,7 @@ const services = [
       "Our SEO services improve visibility and bring higher search rankings. We work on your website, content, and backlinks using trusted methods. The goal is steady organic traffic that brings long-term growth.",
     icon: "/service-icon11.svg.png",
     number: "02",
+    slug: "seo",
   },
   {
     id: 3,
@@ -27,6 +31,7 @@ const services = [
       "Grow your YouTube channel without stress. You get content planning, scriptwriting, video editing, thumbnail design, SEO, and publishing done professionally. Each video reaches the right audience and increases watch time.",
     icon: "/service-icon11.svg.png",
     number: "03",
+    slug: "youtube-automation",
   },
   {
     id: 4,
@@ -35,9 +40,11 @@ const services = [
       "Your brand identity shapes how people see your business online. We create modern designs and websites that inspire trust. The design stays simple and easy to use. It supports your business growth and makes your brand professional. ",
     icon: "/service-icon11.svg.png",
     number: "04",
+    slug: "graphic-designing",
   },
 ];
 const Serve = () => {
+  const router = useRouter();
   return (
     <div className="serve">
       <Button2 label="What we serve" />
@@ -87,7 +94,12 @@ const Serve = () => {
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
 
-              <button className="learn-more">
+              <button
+                className="learn-more"
+                onClick={() => {
+                  router.push(`/${service.slug}`);
+                }}
+              >
                 Learn More <FaArrowRight />
               </button>
             </div>

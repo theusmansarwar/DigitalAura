@@ -72,9 +72,9 @@ const Header = () => {
           >
             Home
           </li>
-          <li>
+          {/* <li>
             Services <FaAngleDown />
-          </li>
+          </li> */}
           <li
             onClick={() => {
               router.push("/blogs");

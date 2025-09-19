@@ -6,8 +6,10 @@ import { baseUrl } from "@/app/config/Config";
 import truncateTextByWords from "@/utils/TruncateByWords";
 import PopularPostsSkeleton from "../SkeletonLoaders/PopularSkeleton";
 import PopularSkeleton from "../SkeletonLoaders/PopularSkeleton";
+import { useRouter } from "next/navigation";
 
 export default function PopularPostsSidebar() {
+  const router = useRouter();
   const [popularPosts, setPopularPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -40,7 +42,12 @@ export default function PopularPostsSidebar() {
           ) : (
             popularPosts.map((post) => (
               <React.Fragment key={post._id}>
-                <div className="post-item">
+                <div
+                  className="post-item"
+                  onClick={() => {
+                    router.push(`/blogs/${post.slug}`);
+                  }}
+                >
                   <div
                     className="post-image"
                     style={{
@@ -88,7 +95,14 @@ export default function PopularPostsSidebar() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
 
-        <button className="cta-button">Get Started</button>
+        <button
+          className="cta-button"
+          onClick={() => {
+            router.push("/contact-us");
+          }}
+        >
+          Get Started
+        </button>
       </div>
     </div>
   );

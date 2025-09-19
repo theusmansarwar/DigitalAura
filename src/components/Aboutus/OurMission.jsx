@@ -16,8 +16,8 @@ const OurMission = () => {
       </p>
       <img
         className="mission-img"
-        src="/design-process.png"
-        alt="Graphic Design"
+        src="/mission-vision.svg"
+        alt="Our Mission"
       />
     </div>
   );

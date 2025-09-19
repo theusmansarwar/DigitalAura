@@ -15,7 +15,10 @@ const HowWeDeliver = ({ data }) => {
       <h2 className="section-heading">How We Deliver</h2>
 
       {/* API description */}
-      {data.description && <p>{data.description}</p>}
+       <div
+        className="service-description"
+        dangerouslySetInnerHTML={{ __html: data?.description || "" }}
+      />
 
       {/* API image */}
       {data.image && (
@@ -25,7 +28,10 @@ const HowWeDeliver = ({ data }) => {
           alt={data?.title || "How We Deliver"}
         />
       )}
-      {data.lower_description && <p>{data.lower_description}</p>}
+      <div
+        className="service-description"
+        dangerouslySetInnerHTML={{ __html: data?.lower_description || "" }}
+      />
       <div className="buttons-container">
         <Button
           variant="filled"

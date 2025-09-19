@@ -11,13 +11,13 @@ export async function generateMetadata({ params }) {
   const title = blog?.title || slug.replace(/-/g, " ");
   const description =
     blog?.metaDescription ||
-    `Details about ${slug.replace(/-/g, " ")} on plutosec.`;
+    `Details about ${slug.replace(/-/g, " ")} on Digital Aura.`;
   const image = baseUrl + blog?.thumbnail;
   const url = `https://aurafrontend.ztesting.site/${slug}`;
   return {
     title: `${title} `,
     description: description,
-    icons: { icon: "/plutofav.png" },
+    icons: { icon: "/favicon.svg" },
 
     openGraph: {
       title,

@@ -52,7 +52,7 @@ export default function Ranking() {
       {/* Right image */}
       <div className="image-content">
         <img
-          src="/business-graphics-presentation-illustration.png"
+          src="/strategies.png"
           alt="Business Growth Illustration"
         />
       </div>

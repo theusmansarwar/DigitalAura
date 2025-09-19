@@ -1,4 +1,4 @@
- .contact-wrapper {
+.contact-wrapper {
   text-align: center;
   padding: 40px;
   background: rgb(225, 224, 224);
@@ -6,7 +6,7 @@
 }
 
 .contact-heading {
-  font-size: 20px;
+  font-size: var(--heading-three);
   font-weight: bold;
   color: var(--text-dark);
   margin-bottom: 40px;
@@ -22,7 +22,7 @@
 .contact-card {
   position: relative;
   background: linear-gradient(145deg, #f9f9f9, #ececec);
-  
+
   width: 200px;
   height: 200px;
   display: flex;
@@ -61,9 +61,13 @@
 
 .contact-detail {
   font-size: 14px;
-  line-height: 1.4;
+  line-height: var(--p-line-height);
   color: var(--text-dark);
-  white-space: pre-line; 
+  white-space: pre-line;
+  text-decoration: none;
+}
+.contact-detail:hover {
+  opacity: 0.9;
 }
 
 @media (max-width: 900px) {
@@ -84,4 +88,3 @@
     top: -20px;
   }
 }
-

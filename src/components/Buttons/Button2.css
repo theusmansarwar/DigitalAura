@@ -34,4 +34,6 @@
   text-align: center;
   width: 90%;
   margin: 10px auto;
+  font-size: var(--default-p-size);
+   line-height:  var(--p-line-height);
 }

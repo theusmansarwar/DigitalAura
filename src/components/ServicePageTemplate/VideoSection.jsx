@@ -21,7 +21,10 @@ const VideoSection = ({ data }) => {
   return (
     <div className="video-section">
       <h2>Our Video</h2>
-      {data.description && <p>{data.description}</p>}
+        <div
+        className="service-description"
+        dangerouslySetInnerHTML={{ __html: data?.description || "" }}
+      />
 
       {/* {!isPlaying ? (
         <div

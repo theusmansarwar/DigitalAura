@@ -48,9 +48,9 @@
 .testimonial-text {
   margin: 30px auto;
   max-width: 700px;
-  font-size: 18px;
+  font-size: var(--default-p-size);
   color: var(--text-dark);
-  line-height: 1.6;
+  line-height: var(--p-line-height);
   position: relative;
 }
 .quote-left {

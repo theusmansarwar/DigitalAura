@@ -4,7 +4,7 @@
   color: var(--text-dark);
   margin-bottom: 25px;
   width: 70%;
-  line-height: 1.2;
+  line-height: var(--heading-line-height);
 }
 
 .mainhead-meta .author-info {

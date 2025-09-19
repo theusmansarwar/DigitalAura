@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { FaSearch, FaTimes } from "react-icons/fa";
-import { FaAngleDown, FaArrowRight, FaBars } from "react-icons/fa6";
+import { FaArrowRight, FaBars } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { useRouter } from "next/navigation";
@@ -10,14 +10,9 @@ import { useRouter } from "next/navigation";
 const Header = () => {
   const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
   };
 
   //  Main nav links
@@ -48,8 +43,8 @@ const Header = () => {
         />
         <div className="nav-area-right">
           <div className="contact-info">
-            <a href="tel:+923001234567">
-              <BiSolidPhoneCall /> +92 300 123 4567
+            <a href="tel:+46763177364 ">
+              <BiSolidPhoneCall /> +46 763177364
             </a>
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=info@digitalaura.se"
@@ -85,6 +80,14 @@ const Header = () => {
               {link.label}
             </li>
           ))}
+          <a
+            className="store-link"
+            href="https://digitalaura.lemonsqueezy.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Store
+          </a>
         </ul>
 
         <div className="search-box">
@@ -116,20 +119,14 @@ const Header = () => {
                 {link.label}
               </li>
             ))}
-
-            {/* Services dropdown stays mapped too */}
-            <li onClick={toggleServices}>
-              Services <FaAngleDown />
-              {isServicesOpen && (
-                <ul className="dropdown">
-                  {serviceLinks.map((s) => (
-                    <li key={s.path} onClick={() => router.push(s.path)}>
-                      {s.label}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
+            <a
+              className="store-link"
+              href="https://digitalaura.lemonsqueezy.com/"
+                 target="_blank"
+              rel="noopener noreferrer"
+            >
+              Store
+            </a>
           </ul>
         </div>
       )}

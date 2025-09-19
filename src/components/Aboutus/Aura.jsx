@@ -5,7 +5,7 @@ const Aura = () => {
   return (
     <div className="Digital-aura">
       <div className="auraImg">
-        <img src="/DigitalAura.png" alt="" />
+        <img src="/aura.svg" alt="Digital Aura" />
       </div>
 
       <div className="meet">

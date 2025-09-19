@@ -27,11 +27,9 @@
   --heading-three: 32px;
   --heading-four: 24px;
   --default-p-size: 16px;
-  --gradient-one: linear-gradient(
-    90deg,
-    var(--primary-color),
-    #932B00
-  );
+  --p-line-height: 1.4;
+  --heading-line-height: 1.2;
+  --gradient-one: linear-gradient(90deg, var(--primary-color), #932b00);
 }
 * {
   padding: 0%;
@@ -212,11 +210,11 @@ textarea {
     --heading-two: 28px;
     --heading-three: 24px;
     --heading-four: 18px;
+    --default-p-size: 14px;
   }
   .buttons-container {
     gap: 10px;
     margin-top: 20px;
-    flex-direction: column;
   }
   .buttons-container .arrow-img {
     display: none;

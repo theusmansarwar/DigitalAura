@@ -1,9 +1,12 @@
+"use client"
 import React from "react";
 import "./Welcome.css";
 import Button2 from "./Buttons/Button2";
 import { FaArrowRight } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 
 const Welcome = () => {
+  const router = useRouter();
   return (
     <div className="welcome">
       <Button2 label="Welcome to Digital Aura" />{" "}
@@ -16,10 +19,10 @@ const Welcome = () => {
         <div className="left">
           <div className="left-images">
             <img className="image1" src="/about-img5.png (2).png" alt="" />
-            <img className="image2" src="/Group 72107.png" alt="" />
+            <img className="image2" src="/trusted2.svg" alt="" />
           </div>
           <div className="right-images">
-            <img className="image3" src="/Group 72106.png" alt="" />
+            <img className="image3" src="/trusted3.svg" alt="" />
             <img className="image4" src="/about-img6.png.png" alt="" />
           </div>
         </div>
@@ -65,7 +68,7 @@ const Welcome = () => {
 
           {/* Button */}
           <div className="button-parent">
-            <button className="welcome-btn">
+            <button className="welcome-btn" onClick={()=>{router.push("/services")}}>
               Learn More <FaArrowRight />
             </button>
           </div>

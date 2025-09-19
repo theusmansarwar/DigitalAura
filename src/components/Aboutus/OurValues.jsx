@@ -5,17 +5,11 @@ const OurValues = () => {
   return (
     <div className="our-values">
       <Button2 label={"Our Values"} />
-      <p>
+      <h2>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, tenetur
-        ipsa? Eveniet voluptates quibusdam ex sapiente atque voluptate non ullam
-        eaque architecto quaerat inventore neque voluptatum, sunt rerum
-        dignissimos quae?
-      </p>
-      <img
-        className="values-img"
-        src="/design-process.png"
-        alt="Graphic Design"
-      />
+      
+      </h2>
+      <img className="values-img" src="/our-values.svg" alt="Our Values" />
     </div>
   );
 };

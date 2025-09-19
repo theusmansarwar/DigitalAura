@@ -28,11 +28,13 @@
   font-size: var(--heading-three);
   color: var(--text-dark);
   margin-bottom: 10px;
+  line-height: var(--heading-line-height);
 }
 
 .form-subtitle {
   color: #666;
-  line-height: 1.6;
+  line-height: var(--p-line-height);
+  font-size: var(--default-p-size);
 }
 
 .form-body {
@@ -50,7 +52,7 @@
 
 .form-right {
   width: 60%;
-  background: url("/Group.png") no-repeat center right;
+  background: url("/career.svg") no-repeat center right;
   background-size: contain;
 }
 

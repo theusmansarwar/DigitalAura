@@ -10,11 +10,12 @@
 }
 .automation-process .process-img {
   width: 60%;
-  max-width: 1024px;
+  max-width: 900px;
 }
 .automation-process p {
   text-align: center;
   width: 60%;
+  margin: 0 auto;
 }
 
 @media (max-width: 900px) {

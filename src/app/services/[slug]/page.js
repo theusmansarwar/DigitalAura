@@ -35,14 +35,14 @@ export async function generateMetadata({ params }) {
     return {
       title: "Service Not Found",
       description: "This service is currently unavailable.",
-      icons: { icon: "/logo.png" },
+      icons: { icon: "/favicon.svg" },
     };
   }
 
   return {
     title: service.title,
     description: service.metaDescription,
-    icons: { icon: "/logo.png" },
+    icons: { icon: "/favicon.svg" },
   };
 }
 
@@ -77,7 +77,7 @@ const Page = async ({ params }) => {
       )}
 
       <Testimonal />
-      <ServiceStats />
+      {/* <ServiceStats /> */}
     </div>
   );
 };

@@ -3,9 +3,9 @@ import ContactInfo from "@/components/Contact/ContactInfo";
 import ContactUs from "@/components/Contact/ContactUs";
 
 export const metadata = {
-  title: "Creative Services | Digital Aura",
+  title: "Contact Us | Digital Aura",
   description:
-    "Elevate your brand with Digital Aura’s creative expertise. Smart design in logos, ads, and UI/UX ensures trust, style, and powerful business growth.",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae incidunt accusamus, architecto aperiam ullam earum.",
 };
 const desc = [
   "Open communication builds strong partnerships with Digital Aura. You share your goals, and our team listens with precision. You get strategies in YouTube automation services, digital marketing agency, creative design solutions, SEO strategies, social media marketing, premium digital products, and brand authority building that align with your vision.",

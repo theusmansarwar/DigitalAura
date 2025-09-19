@@ -31,8 +31,8 @@
 }
 
 .footer-col.about p {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: var(--default-p-size);
+   line-height:  var(--p-line-height);
   color: var(--grayy);
 }
 

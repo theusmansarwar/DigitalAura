@@ -62,9 +62,11 @@
 
 .stats-description {
   color: #090b0e;
-  line-height: 1.6;
+  line-height: var(--p-line-height);
+  font-size: var(--default-p-size);
   max-width: 600px;
   margin: 0 auto;
+
 }
 
 @media (max-width: 900px) {

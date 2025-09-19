@@ -9,7 +9,7 @@
   margin: 20px auto;
   width: 80%;
   max-width: 1104.14px;
-  max-height:300px;
+  max-height: 300px;
 }
 
 .partA-content {
@@ -25,12 +25,13 @@
   font-weight: bold;
   color: var(--text-dark);
   margin-bottom: 15px;
+  line-height: var(--heading-line-height);
 }
 
 .partA-text {
   max-width: 460.73px;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
   color: var(--para-text);
   margin-bottom: 25px;
 }
@@ -79,7 +80,7 @@
 }
 @media (max-width: 900px) {
   .partA-card {
-    flex-direction: column;
+    flex-direction: column-reverse;
     max-width: 100%;
   }
 
@@ -87,6 +88,7 @@
     width: 100%;
     min-height: 200px;
     max-width: 100%;
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.074);
   }
 
   .partA-content {

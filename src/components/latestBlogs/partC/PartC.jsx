@@ -42,7 +42,12 @@ const PartC = ({ blogs = [] }) => {
       </div>
 
       <div className="see-more-container">
-        <button className="see-more-btn">
+        <button
+          className="see-more-btn"
+          onClick={() => {
+            router.push("/blogs");
+          }}
+        >
           See more
           <span className="arrow-icon">
             <img src="/Vector.png" alt="arrow" />

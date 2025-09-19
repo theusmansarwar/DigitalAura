@@ -2,6 +2,11 @@ import Faqs from "@/components/Faqs/Faqs";
 import ServicesCards from "@/components/ServicesCards/ServicesCards";
 import ThirdSection from "@/components/ServicePageTemplate/ThirdSection";
 
+export const metadata = {
+  title: "Services| Digital Aura",
+description :
+"Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae incidunt accusamus, architecto aperiam ullam earum."
+};
 const servicesFaqs = {
   title: "FAQs",
   description:
@@ -49,6 +54,7 @@ const page = () => {
   return (
     <div style={{ padding: "20px 0" }}>
       <ServicesCards />
+      
       <Faqs data={servicesFaqs} />
       <ThirdSection data={Third} />
     </div>

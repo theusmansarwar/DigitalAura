@@ -76,31 +76,31 @@ const BlogCard = () => {
   }, [page, rowsPerPage, activeCategory]);
 
   const fetchData = async () => {
-  setLoading(true);
-  try {
-    // If activeCategory is "all", pass empty string (no filter)
-    const categoryId = activeCategory === "all" ? "" : activeCategory;
+    setLoading(true);
+    try {
+      // If activeCategory is "all", pass empty string (no filter)
+      const categoryId = activeCategory === "all" ? "" : activeCategory;
 
-    const res = await fetchallBloglist(categoryId, page, rowsPerPage, "");
+      const res = await fetchallBloglist(categoryId, page, rowsPerPage, "");
 
-    if (res?.blogs) {
-      setBlogs(res.blogs);
-      setTotalPages(res.totalPages || 1);
-      setTotalItems(res.totalBlogs || res.blogs.length);
-    } else {
+      if (res?.blogs) {
+        setBlogs(res.blogs);
+        setTotalPages(res.totalPages || 1);
+        setTotalItems(res.totalBlogs || res.blogs.length);
+      } else {
+        setBlogs([]);
+        setTotalPages(1);
+        setTotalItems(0);
+      }
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
       setBlogs([]);
       setTotalPages(1);
       setTotalItems(0);
+    } finally {
+      setLoading(false);
     }
-  } catch (error) {
-    console.error("Error fetching blogs:", error);
-    setBlogs([]);
-    setTotalPages(1);
-    setTotalItems(0);
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
   const handleChangePage = (event, value) => {
     setPage(value);
@@ -184,7 +184,7 @@ const BlogCard = () => {
 
       <div className="blog-grid">
         {loading ? (
-          <BCard/>
+          <BCard />
         ) : blogs.length > 0 ? (
           blogs.map((post) => (
             <div
@@ -218,7 +218,7 @@ const BlogCard = () => {
 
       {/* Pagination Section */}
       <Stack
-        direction="row"
+        direction={{ xs: "column", sm: "row" }} // column on mobile, row on desktop
         spacing={2}
         alignItems="center"
         justifyContent="space-between"
@@ -267,8 +267,13 @@ const BlogCard = () => {
           }}
         />
 
-        {/* Right: Items per page */}
-        <Stack direction="row" alignItems="center" spacing={1}>
+        {/* Right: Items per page (hidden on mobile) */}
+        <Stack
+          direction="row"
+          alignItems="center"
+          spacing={1}
+          sx={{ display: { xs: "none", sm: "flex" } }} // hide on xs
+        >
           <Select
             size="small"
             value={rowsPerPage}

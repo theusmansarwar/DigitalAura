@@ -86,19 +86,19 @@
   .filled-btn {
     padding: 6px;
     padding-left: 12px;
-    font-size: 14px;
+    font-size: 12px;
   }
   .outline-btn {
     padding: 6px;
     padding-left: 12px;
-    font-size: 14px;
+    font-size: 12px;
   }
   .filled-btn span {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
   }
   .outline-btn span {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
   }
 }

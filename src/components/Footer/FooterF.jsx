@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import "./FooterF.css";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { TbBrandLinkedin } from "react-icons/tb";
-import { BsTwitterX } from "react-icons/bs";
+import { AiOutlineYoutube } from "react-icons/ai";
 import { MdEmail, MdPhone } from "react-icons/md";
-import { TiLocation } from "react-icons/ti";
+import { TiLocation, TiSocialFacebook } from "react-icons/ti";
 import { useRouter } from "next/navigation";
 
 const FooterF = () => {
@@ -32,18 +32,41 @@ const FooterF = () => {
             best practices, businesses can secure prominent position (SEO)
           </p>
           <div className="social-icons">
-            <span className="icon-container">
-              <FaFacebookF />
-            </span>
-            <span className="icon-container">
+            <a
+              href="https://facebook.com/share/1CdEhnbb42"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-container"
+            >
+              <TiSocialFacebook />
+            </a>
+
+            <a
+              href="https://instagram.com/digitalaura8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-container"
+            >
               <FaInstagram />
-            </span>
-            <span className="icon-container">
+            </a>
+
+            <a
+              href="https://linkedin.com/company/thedigitalaura"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-container"
+            >
               <TbBrandLinkedin />
-            </span>
-            <span className="icon-container">
-              <BsTwitterX />
-            </span>
+            </a>
+
+            <a
+              href="https://youtube.com/@DigitalAura-h2o"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-container"
+            >
+              <AiOutlineYoutube />
+            </a>
           </div>
         </div>
 

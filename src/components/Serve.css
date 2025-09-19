@@ -17,7 +17,7 @@
   width: 70%;
   display: flex;
   justify-self: center;
-  line-height: 1.2;
+  line-height: var(--heading-line-height);
 }
 .back {
   height: 600px;
@@ -134,8 +134,9 @@
 .service-description {
   color: #060606;
   margin-bottom: 20px;
-  line-height: 1.6;
+   line-height:  var(--p-line-height);
   min-height: 120px;
+  font-size: var(--default-p-size);
 }
 
 /* Learn More link */
@@ -183,9 +184,6 @@
   }
   .services-grid {
     gap: 20px;
-  }
-  .service-description {
-    font-size: 15px;
   }
   .service-icon-circle {
     width: 40px;

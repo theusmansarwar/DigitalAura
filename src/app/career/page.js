@@ -2,9 +2,9 @@ import Button2 from "@/components/Buttons/Button2";
 import JoinUs from "@/components/career/JoinUs";
 
 export const metadata = {
-  title: "Creative Services | Digital Aura",
+  title: "Careers | Digital Aura",
   description:
-    "Elevate your brand with Digital Aura’s creative expertise. Smart design in logos, ads, and UI/UX ensures trust, style, and powerful business growth.",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae incidunt accusamus, architecto aperiam ullam earum.",
 };
 const desc = [
   "Digital Aura opens the door to real opportunities in the digital world. You join a team that builds strategies and delivers measurable growth. Careers here are more than jobs. You step into a digital marketing agency for business and global brands that want results with confidence.",

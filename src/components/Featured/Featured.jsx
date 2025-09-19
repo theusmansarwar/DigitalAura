@@ -11,11 +11,37 @@ const Featured = () => {
       <section className="featured">
         {/* Left Content */}
         <div className="vertical-box">
-          <ul className="section-one-vert">
-            <li>fb</li>
-            <li>insta</li>
-            <li>in</li>
-          </ul>
+          <div className="section-one-vert">
+            <a className="featured-social-links"
+              href="https://facebook.com/share/1CdEhnbb42"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              fb
+            </a>
+            <a className="featured-social-links"
+              href="https://instagram.com/digitalaura8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Insta
+            </a>
+            <a className="featured-social-links"
+              href="https://linkedin.com/company/thedigitalaura"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              in
+            </a>
+            <a className="featured-social-links"
+              href="https://youtube.com/@DigitalAura-h2o"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              yt
+            </a>
+          </div>
+
           <ul className="section-two-vert">
             <li>Marketing</li>
             <li>Designing</li>
@@ -81,10 +107,10 @@ const Featured = () => {
             </div>
           </div>
           <img src="/featured-person.png" alt="Person" className="hero-img" />
-          <img src="featured0.png" alt="icon0" className="featured0" />
-          <img src="featured1.png" alt="icon1" className="featured1" />
-          <img src="featured2.png" alt="icon2" className="featured2" />
-          <img src="featured3.png" alt="icon3" className="featured3" />
+          <img src="featured0.svg" alt="icon0" className="featured0" />
+          <img src="featured1.svg" alt="icon1" className="featured1" />
+          <img src="featured2.svg" alt="icon2" className="featured2" />
+          <img src="featured3.svg" alt="icon3" className="featured3" />
         </div>
       </section>
 

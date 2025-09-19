@@ -17,12 +17,14 @@
   text-align: center;
   font-size: var(--heading-two);
   width: 60%;
-  line-height: 1.2;
+  line-height: var(--heading-line-height);
 }
 .trusted-partner .trusted-card .para {
   text-align: center;
   color: var(--para-color);
   width: 80%;
+  font-size: var(--default-p-size);
+   line-height:  var(--p-line-height);
 }
 
 @media (max-width: 900px) {

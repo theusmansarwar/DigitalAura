@@ -7,9 +7,9 @@ import OurValues from "@/components/Aboutus/OurValues";
 import Button2 from "@/components/Buttons/Button2";
 
 export const metadata = {
-  title: "Creative Services | Digital Aura",
+  title: "About Us | Digital Aura",
   description:
-    "Elevate your brand with Digital Aura’s creative expertise. Smart design in logos, ads, and UI/UX ensures trust, style, and powerful business growth.",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae incidunt accusamus, architecto aperiam ullam earum.",
 };
 
 const desc = [

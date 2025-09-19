@@ -10,7 +10,10 @@ const ServiceHero = ({ service }) => {
   return (
     <div className="smm-hero">
       <h2 className="section-heading">{service?.title}</h2>
-      <p>{service?.description}</p>
+      <div
+        className="service-description"
+        dangerouslySetInnerHTML={{ __html: service?.description || "" }}
+      />
 
       <div className="buttons-container">
         <Button

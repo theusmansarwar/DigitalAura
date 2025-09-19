@@ -12,9 +12,11 @@
   width: 100%;
   max-width: 900px;
 }
-.our-values p {
+.our-values h2{
   text-align: center;
-  width: 60%;
+  width: 70%;
+  font-size: var(--heading-two);
+  line-height: var(--heading-line-height);
 }
 
 @media (max-width: 900px) {

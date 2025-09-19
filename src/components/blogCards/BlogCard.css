@@ -116,6 +116,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 350px;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.041);
+  border: 1px solid rgb(246, 243, 243);
+  border-radius: 4px;
 }
 .blog-post-card:hover {
   transform: translateY(-4px) scale(1.03);
@@ -124,6 +126,7 @@
   width: 100%;
   height: 200px;
   border-radius: 4px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.074);
 }
 .blog-post-card .post-content {
   padding: 10px;
@@ -158,6 +161,10 @@
 
   .blog-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+  }
+  .blog-post-card {
+    width: 100%;
   }
   .blog-post-card .post-image {
     width: 100%;

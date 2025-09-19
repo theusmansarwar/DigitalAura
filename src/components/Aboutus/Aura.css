@@ -30,13 +30,15 @@
   width: 40%;
   margin: 10px 10%;
   color: var(--secondary-color);
+  line-height: var(--heading-line-height);
 }
 .meetH2 {
-  font-size: 14px;
   font-weight: 100;
   width: 80%;
   margin: 20px 10%;
   color: var(--secondary-color);
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
 }
 
 .meetR {

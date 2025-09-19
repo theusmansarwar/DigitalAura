@@ -12,11 +12,12 @@
 .text-content .ranking-heading {
   font-size: var(--heading-two);
   width: 80%;
-  line-height: 1.2;
+  line-height: var(--heading-line-height);
   margin-bottom: 10px;
 }
 .text-content p {
-  line-height: 1.7;
+ font-size: var(--default-p-size);
+  line-height:  var(--p-line-height);
   color: var(--para-text);
   margin-bottom: 30px;
   width: 80%;

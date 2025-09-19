@@ -22,7 +22,10 @@ const ThirdSection = ({ data }) => {
       {data.title && <h2 className="section-heading">{data.title}</h2>}
 
       {/* API description */}
-      {data.description && <p>{data.description}</p>}
+        <div
+        className="service-description"
+        dangerouslySetInnerHTML={{ __html: data?.description || "" }}
+      />
 
       <div className="buttons-container">
         <Button

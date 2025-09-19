@@ -1,5 +1,6 @@
 .ranking-section {
   width: 100%;
+  height: fit-content;
   display: flex;
   padding: 40px var(--left-space);
 }
@@ -19,7 +20,6 @@
   color: var(--para-text);
   margin-bottom: 30px;
   width: 80%;
-  text-align: justify;
 }
 
 /* Right image */
@@ -52,6 +52,6 @@
   /* Right image */
   .image-content {
     width: 100%;
-    height: 200px;
+    height: auto;
   }
 }

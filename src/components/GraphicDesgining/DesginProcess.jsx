@@ -1,4 +1,4 @@
-  "use client";
+"use client";
 
 import React from "react";
 import "./DesginProcess.css";
@@ -21,24 +21,24 @@ const DesginProcess = () => {
         alt="Graphic Design"
       />
       <div className="buttons-container">
-                <Button
-                  variant="filled"
-                  onClick={() => {
-                    router.push("/");
-                  }}
-                >
-                  Start Ranking Now
-                </Button>
-      
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    router.push("/contact-us");
-                  }}
-                >
-                  Contact Now
-                </Button>
-              </div>
+        <Button
+          variant="filled"
+          onClick={() => {
+            router.push("/services");
+          }}
+        >
+          Start Ranking Now
+        </Button>
+
+        <Button
+          variant="outline"
+          onClick={() => {
+            router.push("/contact-us");
+          }}
+        >
+          Contact Now
+        </Button>
+      </div>
     </div>
   );
 };

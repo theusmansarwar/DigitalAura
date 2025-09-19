@@ -9,8 +9,8 @@
   gap: 20px;
 }
 .automation-process .process-img {
-  width: 100%;
-  max-width: 1200px;
+  width: 60%;
+  max-width: 1024px;
 }
 .automation-process p {
   text-align: center;
@@ -19,7 +19,7 @@
 
 @media (max-width: 900px) {
   .automation-process {
-    gap: 10px;
+    gap: 20px;
     padding: 10px var(--left-space);
   }
   .automation-process .process-img {

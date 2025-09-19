@@ -22,7 +22,7 @@ const services = [
       "Our SEO services improve visibility and bring higher search rankings. We work on your website, content, and backlinks using trusted methods. The goal is steady organic traffic that brings long-term growth.",
     icon: "/service-icon11.svg.png",
     number: "02",
-    slug: "seo",
+    slug: "testing-service",
   },
   {
     id: 3,
@@ -85,7 +85,7 @@ const Serve = () => {
           {services.map((service) => (
             <div className="service-card" key={service.id}>
               <div className="service-card-header">
-                <div className="icon-circle">
+                <div className="service-icon-circle">
                   <img src={service.icon}></img>
                 </div>
                 <span className="service-number">{service.number}</span>
@@ -97,7 +97,7 @@ const Serve = () => {
               <button
                 className="learn-more"
                 onClick={() => {
-                  router.push(`/${service.slug}`);
+                  router.push(`/services/${service.slug}`);
                 }}
               >
                 Learn More <FaArrowRight />

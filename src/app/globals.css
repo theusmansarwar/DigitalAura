@@ -190,7 +190,7 @@ textarea {
   font-size: var(--heading-two);
   font-weight: var(--bold-font-weight);
   color: var(--text-dark);
-  white-space: nowrap;
+  text-align: center;
 }
 .buttons-container {
   display: flex;

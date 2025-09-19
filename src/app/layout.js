@@ -20,10 +20,39 @@ const syne = Syne({
   weight: ["400", "700", "800"],
 });
 
+const title = "Digital Aura";
+const description =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae incidunt accusamus, architecto aperiam ullam earum.";
+
+const url = "https://digitalaura.se";
+const image = "/favicon.svg";
+
 export const metadata = {
-  title: "Digital Aura",
-  description:
-    " Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae incidunt accusamus, architecto aperiam ullam earum.",
+  title,
+  description,
+  icons: {
+    icon: "/favicon.svg",
+  },
+  openGraph: {
+    title,
+    description,
+    url,
+    type: "article",
+    images: [
+      {
+        url: image,
+        width: 1200,
+        height: 630,
+        alt: title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [image],
+  },
 };
 
 export default function RootLayout({ children }) {

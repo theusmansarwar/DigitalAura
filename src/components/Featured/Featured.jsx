@@ -41,25 +41,23 @@ const Featured = () => {
 
           {/* Buttons */}
           <div className="buttons-container">
-            <div className="buttons-container">
-              <Button
-                variant="filled"
-                onClick={() => {
-                  router.push("/");
-                }}
-              >
-                Start Ranking Now
-              </Button>
+            <Button
+              variant="filled"
+              onClick={() => {
+                router.push("/services");
+              }}
+            >
+              Start Ranking Now
+            </Button>
 
-              <Button
-                variant="outline"
-                onClick={() => {
-                  router.push("/contact-us");
-                }}
-              >
-                Contact Now
-              </Button>
-            </div>
+            <Button
+              variant="outline"
+              onClick={() => {
+                router.push("/contact-us");
+              }}
+            >
+              Contact Now
+            </Button>
           </div>
           <p className="desc2">
             Our strategies help brands grow stronger online and turn
@@ -67,6 +65,12 @@ const Featured = () => {
             creativity, data, and smart ideas. We focus on lasting success, not
             quick fixes, so you see growth that stays.
           </p>
+          <div className="trusted-by-cont">
+            <p className="trusted-by-heading">
+              Trusted by <span>Top Global Brands</span>
+            </p>
+            <img src="/featured-arrow.svg" alt="Arrow Image" />
+          </div>
         </div>
 
         {/* Right Image */}
@@ -83,12 +87,7 @@ const Featured = () => {
           <img src="featured3.png" alt="icon3" className="featured3" />
         </div>
       </section>
-      <div className="trusted-by-cont">
-        <p className="trusted-by-heading">
-          Trusted by <span>Top Global Brands</span>
-        </p>
-        <img src="/featured-arrow.svg" alt="Arrow Image" />
-      </div>
+
       <div className="featured-bottom">
         <div className="featured-heading-section">
           <p>Our Esteemed </p>

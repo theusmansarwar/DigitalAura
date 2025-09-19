@@ -56,3 +56,22 @@ export const getblogSlugs = async () => {
   };
   return invokeApi(reqObj);
 };
+
+export const fetchAllServices = async (page, rowsPerPages, search) => {
+  const reqObj = {
+    path: `/service/list?${page}&limit=${rowsPerPages}&search=${search}`,
+    method: "GET",
+    headers: {},
+    body: {},
+  };
+  return invokeApi(reqObj);
+};
+export const fetchServiceBySlug = async (slug) => {
+  const reqObj = {
+    path: `/service/view/${slug}`,
+    method: "GET",
+    headers: {},
+    body: {},
+  };
+  return invokeApi(reqObj);
+};

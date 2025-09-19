@@ -1,5 +1,6 @@
 /* Section wrapper */
 .graphic-section {
+  height: fit-content;
   background-color: #e06400;
   width: 100%;
   display: flex;
@@ -135,9 +136,28 @@
   .graphic-section {
     flex-direction: column;
     gap: 20px;
+    height: fit-content;
   }
 
   .graphic-content h2 {
     width: 100%;
+  }
+  .graphic-content .black-filled {
+    padding: 6px;
+    padding-left: 12px;
+    font-size: 14px;
+  }
+  .graphic-content .black-outline {
+    padding: 6px;
+    padding-left: 12px;
+    font-size: 14px;
+  }
+  .graphic-content .black-filled span {
+    width: 25px;
+    height: 25px;
+  }
+  .graphic-content .black-outline span {
+    width: 25px;
+    height: 25px;
   }
 }

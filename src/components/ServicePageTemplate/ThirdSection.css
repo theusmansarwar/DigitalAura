@@ -1,5 +1,5 @@
 .third-section {
-  height: 600px;
+  height: auto;
   width: 100%;
   padding: 40px var(--left-space);
   display: flex;
@@ -14,7 +14,7 @@
 
 @media (max-width: 900px) {
   .third-section {
-    height:460px;
+    height:fit-content;
     gap: 10px;
     padding: 10px var(--left-space);
   }

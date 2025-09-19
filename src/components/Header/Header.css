@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  height: 70px;
+  height: 50px;
 }
 
 .contact-info {
@@ -73,6 +73,8 @@
   color: var(--text-dark);
   text-underline-offset: 3px;
   font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 .quote-link:hover {
   opacity: 0.8;
@@ -180,6 +182,7 @@
     border-bottom: 1px solid #eee;
     cursor: pointer;
     font-weight: 500;
+    text-align: center;
   }
 
   .mobile-menu ul li:hover {

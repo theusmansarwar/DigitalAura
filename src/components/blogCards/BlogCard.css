@@ -95,11 +95,11 @@
 }
 .blog-cards-container .header .left ul li.active {
   color: var(--primary-color);
-  background-color: #F2F4F7;
+  background-color: #f2f4f7;
 }
 .blog-cards-container .header .left ul li:hover {
   color: var(--primary-color);
-  background-color: #F2F4F7;
+  background-color: #f2f4f7;
 }
 
 .blog-grid {
@@ -115,10 +115,10 @@
   background: var(--text-color4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 350px;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.041);
 }
 .blog-post-card:hover {
   transform: translateY(-4px) scale(1.03);
-  box-shadow: var(--hover-shadow);
 }
 .blog-post-card .post-image {
   width: 100%;

@@ -67,7 +67,7 @@ export default function Graphic() {
 
         {/* Buttons */}
         <div className="buttons-container">
-          <button className="black-filled" onClick={()=>{router.push("/")}}>
+          <button className="black-filled" onClick={()=>{router.push("/services")}}>
             Start Ranking Now{" "}
             <span>
               <FaArrowRight />

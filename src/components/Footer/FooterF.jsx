@@ -12,11 +12,9 @@ const FooterF = () => {
   const router = useRouter();
 
   const aboutLinks = [
-    { label: "Our Blog", slug: "/blogs" },
+    { label: "Our Services", slug: "/services" },
+    { label: "Our Blogs", slug: "/blogs" },
     { label: "About Us", slug: "/about-us" },
-    { label: "Social Media Marketing", slug: "/social-media-marketing" },
-    { label: "Graphic Design", slug: "/graphic-designing" },
-    { label: "Youtube Automation", slug: "/youtube-automation" },
     { label: "Contact Us", slug: "/contact-us" },
     { label: "Careers", slug: "/career" },
   ];
@@ -27,7 +25,7 @@ const FooterF = () => {
         {/* About Section */}
         <div className="footer-col about">
           <div className="logo">
-            <img src="/DigitalAuraLogo.png" alt="Digital Aura" />
+            <img src="/logo.svg" alt="Digital Aura" />
           </div>
           <p>
             By optimizing content, leveraging relevant keywords, and adhering to

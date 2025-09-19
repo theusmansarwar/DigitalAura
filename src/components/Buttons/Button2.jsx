@@ -1,10 +1,13 @@
 import React from "react";
 import "./Button2.css";
 
-const Button2 = ({ label, data = [] }) => {
+const Button2 = ({ label, data = [], onClick }) => {
   return (
     <div className="button2-wrapper">
-      <button className="blog-btn">
+      <button
+        className={`blog-btn ${onClick ? "clickable" : ""}`}
+        onClick={onClick ? onClick : undefined}
+      >
         <img src="/logo.png" alt="icon" className="icon" />
         {label}
       </button>

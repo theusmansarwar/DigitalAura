@@ -21,6 +21,7 @@ import { FaChevronDown } from "react-icons/fa";
 import axios from "axios";
 import { fetchallBloglist, fetchBlogCategories } from "@/DAL/Fetch";
 import { baseUrl } from "@/app/config/Config";
+import BCard from "../SkeletonLoaders/BCard";
 
 const links = [
   "All",
@@ -183,7 +184,7 @@ const BlogCard = () => {
 
       <div className="blog-grid">
         {loading ? (
-          <p>Loading...</p>
+          <BCard/>
         ) : blogs.length > 0 ? (
           blogs.map((post) => (
             <div

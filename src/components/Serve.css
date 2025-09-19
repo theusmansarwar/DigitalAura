@@ -68,7 +68,6 @@
   }
 }
 
-
 /* Grid Layout */
 .services-grid {
   display: flex;
@@ -108,7 +107,7 @@
   margin-bottom: 10px;
 }
 
-.icon-circle {
+.service-icon-circle {
   background: #fde5e0;
   color: var(--primary-color);
   border-radius: 50%;
@@ -136,6 +135,7 @@
   color: #060606;
   margin-bottom: 20px;
   line-height: 1.6;
+  min-height: 120px;
 }
 
 /* Learn More link */
@@ -161,6 +161,7 @@
 @media (max-width: 900px) {
   .serve .services-section .serve-title {
     width: 100%;
+    text-align: left;
   }
   /* Grid Layout */
   .services-grid {
@@ -186,13 +187,13 @@
   .service-description {
     font-size: 15px;
   }
-  .icon-circle {
+  .service-icon-circle {
     width: 40px;
     height: 40px;
     padding: 6px 8px;
   }
 
-  .icon-circle img {
+  .service-icon-circle img {
     width: 100%;
     height: 100%;
   }

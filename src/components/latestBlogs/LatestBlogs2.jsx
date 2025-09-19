@@ -3,40 +3,29 @@ import React, { useEffect, useState } from "react";
 import "./LatestBlogs2.css";
 import { baseUrl } from "@/app/config/Config";
 import { formatDate } from "@/utils/FormatDate";
-import { fetchallBloglist, fetchBlogCategories } from "@/DAL/Fetch";
+import { fetchallBloglist } from "@/DAL/Fetch";
 import Button2 from "../Buttons/Button2";
+import { useRouter } from "next/navigation";
+import BCard from "../SkeletonLoaders/BCard";
+import BCard2 from "../SkeletonLoaders/BCard2";
+import truncateTextByWords from "@/utils/TruncateByWords";
 
 const LatestBlogs2 = () => {
+  const router = useRouter();
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchLatestBlogs = async () => {
       try {
-        // 1. Get categories
-        const categoryRes = await fetchBlogCategories();
-        const categories = categoryRes?.categories || [];
-
-        // 2. Find "Latest" category
-        const latestCategory = categories.find(
-          (cat) => cat.name?.toLowerCase() === "latest"
-        );
-
-        if (!latestCategory) {
-          console.warn("No 'Latest' category found");
-          setBlogs([]);
-          return;
-        }
-
-        // 3. Fetch blogs from that category
-        const res = await fetchallBloglist(latestCategory._id, 1, 5, "");
+        const res = await fetchallBloglist("", 1, 3, "");
         if (res?.blogs?.length) {
-          setBlogs(res.blogs.slice(0, 5)); // take only first 5
+          setBlogs(res.blogs);
         } else {
           setBlogs([]);
         }
       } catch (err) {
-        console.error("Error fetching latest blogs:", err);
+        console.error("Error fetching blogs:", err);
         setBlogs([]);
       } finally {
         setLoading(false);
@@ -47,32 +36,43 @@ const LatestBlogs2 = () => {
   }, []);
 
   return (
-    <><Button2 label="Latest Blogs" />
-    <div className="latest-blogs2">
-      
-      {loading ? (
-        <p>Loading...</p>
-      ) : blogs.length > 0 ? (
-        blogs.map((blog) => (
-          <div key={blog._id} className="card">
+    <>
+      <Button2 label="Latest Blogs" />
+      <div className="latest-blogs2">
+        {loading ? (
+          <BCard2 />
+        ) : blogs.length > 0 ? (
+          blogs.map((blog) => (
             <div
-              className="card-image"
-              style={{ backgroundImage: `url(${baseUrl + blog.thumbnail})` }}
-            ></div>
-            <div className="card-content">
-              <h3>{blog.title}</h3>
-              <p>{blog.description}</p>
-              <div className="card-footer">
-                <span>{formatDate(blog.createdAt)}</span>
-                <a href={`/blogs/${blog.slug}`}>Read more</a>
+              key={blog._id}
+              className="latestblogs2-card"
+              onClick={() => {
+                router.push(`/blogs/${blog.slug}`);
+              }}
+            >
+              <div
+                className="latestblogs2-card-image"
+                style={{
+                  backgroundImage: `url(${baseUrl + blog.thumbnail})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></div>
+              <div className="latestblogs2-card-content">
+                <h3> {truncateTextByWords(blog.title, 10)}</h3>
+                <p> {truncateTextByWords(blog.description, 20)}</p>
+                <div className="latestblogs2-card-footer">
+                  <span>{formatDate(blog.createdAt)}</span>
+                  <span>Read more</span>
+                </div>
               </div>
             </div>
-          </div>
-        ))
-      ) : (
-        <p>No latest blogs found.</p>
-      )}
-    </div>
+          ))
+        ) : (
+          <p>No blogs found.</p>
+        )}
+      </div>
     </>
   );
 };

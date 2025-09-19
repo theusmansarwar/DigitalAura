@@ -8,6 +8,7 @@ import LeftDetail from "../leftDetail/LeftDetail";
 import PopularPostsSidebar from "../popular/Popular";
 import LatestBlog from "../latestBlogs/LatestBlog";
 import { fetchBlogBySlug } from "@/DAL/Fetch";
+import BlogDeatilLoader from "../SkeletonLoaders/BlogDetailLoader";
 
 const BlogDetails = ({ slug }) => {
   const [blog, setBlog] = useState(null);
@@ -30,15 +31,18 @@ const BlogDetails = ({ slug }) => {
     fetchBlog();
   }, [slug]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <BlogDeatilLoader />;
   if (!blog) return <p>Blog not found</p>;
-
-  console.log({ bloggggggggggg: blog.title });
 
   return (
     <div className="blog-detail">
       <Button2 label={blog.category?.name || "Category"} />
-      <MainHead title={blog.title} date={blog.createdAt} author={blog.author} />
+      <MainHead
+        title={blog.title}
+        date={blog.createdAt}
+        author={blog.author}
+        thumbnail={blog.thumbnail}
+      />
       <div className="main-section">
         <LeftDetail blog={blog} />
         <PopularPostsSidebar />

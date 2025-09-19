@@ -1,8 +1,10 @@
 "use client";
 import Button2 from "@/components/Buttons/Button2";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const NotFound = () => {
+  const router = useRouter();
   return (
     <div
       style={{
@@ -13,7 +15,6 @@ const NotFound = () => {
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
-        background: "var(--secondary-color)",
       }}
     >
       <h1
@@ -64,7 +65,7 @@ const NotFound = () => {
         src="/not-found.svg"
         style={{ display: "flex", alignSelf: "flex-start", width: "90%" }}
       />
-      <Button2 label="Go TO Home" />
+      <Button2 label="Go TO Home" onClick={() => router.push("/")} />
     </div>
   );
 };

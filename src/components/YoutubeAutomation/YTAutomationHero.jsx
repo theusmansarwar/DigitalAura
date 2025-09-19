@@ -33,7 +33,7 @@ const YTAutomationHero = () => {
             <Button
               variant="filled"
               onClick={() => {
-                router.push("/");
+                router.push("/services");
               }}
             >
               Start Ranking Now

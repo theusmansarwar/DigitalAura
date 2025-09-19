@@ -1,7 +1,8 @@
 .smm-hero {
   position: relative;
-  height: 500px;
-  width: 100%;
+  height: auto;
+  width: 90%;
+  margin: auto;
   padding: 20px var(--left-space);
   display: flex;
   flex-direction: column;
@@ -14,11 +15,12 @@
   content: "";
   position: absolute;
   inset: 0; /* covers the whole div */
-  background: url("/smm.png");
-  opacity: 0.3; /* 👈 only the image opacity */
-  z-index: 0; /* behind content */
-  background-size: auto;
-  background-position: top;
+  background: url("/world-map.svg");
+  opacity: 0.8; 
+  z-index: 0; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .smm-hero * {

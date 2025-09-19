@@ -4,7 +4,8 @@ import Button2 from "../Buttons/Button2";
 import PartA from "./partA/PartA";
 import PartB from "./partB/PartB";
 import PartC from "./partC/PartC";
-import { fetchallBloglist, fetchBlogCategories } from "@/DAL/Fetch";
+import { fetchallBloglist } from "@/DAL/Fetch";
+import LatestBlogsLoader from "../SkeletonLoaders/LatestBlogsLoader";
 
 const LatestBlog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -13,23 +14,8 @@ const LatestBlog = () => {
   useEffect(() => {
     const fetchLatestBlogs = async () => {
       try {
-        // 1. Get categories
-        const categoryRes = await fetchBlogCategories();
-        const categories = categoryRes?.categories || [];
-
-        // Find "Latest" category
-        const latestCategory = categories.find(
-          (cat) => cat.name?.toLowerCase() === "latest"
-        );
-
-        if (!latestCategory) {
-          console.warn("No 'Latest' category found");
-          setBlogs([]);
-          return;
-        }
-
-        // 2. Fetch blogs from that category
-        const res = await fetchallBloglist(latestCategory._id, 1, 5, "");
+        // Fetch all blogs (page 1, limit 5)
+        const res = await fetchallBloglist("", 1, 5, "");
         if (res?.blogs?.length) {
           setBlogs(res.blogs.slice(0, 5)); // take only first 5
         } else {
@@ -45,7 +31,7 @@ const LatestBlog = () => {
 
     fetchLatestBlogs();
   }, []);
-  
+
   const firstBlog = blogs[0] ? [blogs[0]] : [];
   const middleBlogs = blogs.slice(1, 4);
   const lastBlog = blogs[4] ? [blogs[4]] : [];
@@ -55,7 +41,7 @@ const LatestBlog = () => {
       <Button2 label="Latest Blogs" />
 
       {loading ? (
-        <p>Loading...</p>
+        <LatestBlogsLoader/>
       ) : blogs.length > 0 ? (
         <>
           <PartA blogs={firstBlog} />
@@ -63,7 +49,7 @@ const LatestBlog = () => {
           <PartC blogs={lastBlog} />
         </>
       ) : (
-        <p>No latest blogs found.</p>
+        <p>No blogs found.</p>
       )}
     </div>
   );

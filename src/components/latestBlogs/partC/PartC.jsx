@@ -1,27 +1,43 @@
+"use client";
 import React from "react";
 import "./PartC.css";
 import { formatDate } from "@/utils/FormatDate";
 import { baseUrl } from "@/app/config/Config";
+import truncateTextByWords from "@/utils/TruncateByWords";
+import { useRouter } from "next/navigation";
 
 const PartC = ({ blogs = [] }) => {
-  if (!blogs.length) return null; // no blog to show
+  const router = useRouter();
 
-  const blog = blogs[0]; // take the first (lastBlog is always array of 1)
+  if (!blogs.length) return null;
+
+  const blog = blogs[0];
 
   return (
     <div className="featured-wrapper">
       <div className="featured-card">
         <div className="featured-text">
           <h2>{blog.title}</h2>
-          <p>{blog.description}</p>
+          <p>{truncateTextByWords(blog.description, 35)}</p>
           <div className="featured-footer">
             <span>{formatDate(blog.createdAt)}</span>
-            <a href={`/blog/${blog.slug}`}>Read more</a>
+            <span
+              onClick={() => {
+                router.push(`/blogs/${blog.slug}`);
+              }}
+            >
+              Read more
+            </span>
           </div>
         </div>
         <div
           className="featured-image"
-          style={{ backgroundImage: `url(${baseUrl + blog.thumbnail})` }}
+          style={{
+            backgroundImage: `url(${baseUrl + blog.thumbnail})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
         ></div>
       </div>
 

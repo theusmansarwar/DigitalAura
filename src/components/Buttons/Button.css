@@ -1,4 +1,4 @@
- .filled-btn {
+.filled-btn {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -6,14 +6,14 @@
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
   padding: 8px;
-   padding-left: 15px;
+  padding-left: 15px;
   border-radius: var(--border-radius2);
   cursor: pointer;
   color: var(--secondary-color);
   font-weight: var(--bold-font-weight);
   font-size: var(--default-p-size);
 }
- .outline-btn {
+.outline-btn {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -28,7 +28,7 @@
   font-weight: var(--bold-font-weight);
   font-size: var(--default-p-size);
 }
- .filled-btn span {
+.filled-btn span {
   background-color: var(--secondary-color);
   border-radius: 50%;
   width: 30px;
@@ -37,7 +37,7 @@
   align-items: center;
   justify-content: center;
 }
- .outline-btn span {
+.outline-btn span {
   background-color: var(--primary-color);
   border-radius: 50%;
   width: 30px;
@@ -46,39 +46,59 @@
   align-items: center;
   justify-content: center;
 }
- .filled-btn span svg {
+.filled-btn span svg {
   transform: rotate(-45deg);
   transition: transform 0.3s ease;
   flex-shrink: 0;
   color: var(--text-dark);
 }
- .outline-btn span svg {
+.outline-btn span svg {
   transform: rotate(-45deg);
   transition: transform 0.3s ease;
   flex-shrink: 0;
   color: var(--secondary-color);
 }
 
- .filled-btn:hover span svg {
+.filled-btn:hover span svg {
   transform: rotate(0deg);
   color: var(--secondary-color);
 }
- .outline-btn:hover span svg {
+.outline-btn:hover span svg {
   transform: rotate(0deg);
   color: var(--text-dark);
 }
- .filled-btn:hover {
+.filled-btn:hover {
   background-color: var(--secondary-color);
   color: var(--text-dark);
 }
- .outline-btn:hover {
+.outline-btn:hover {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
- .filled-btn:hover span {
+.filled-btn:hover span {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
- .outline-btn:hover span {
+.outline-btn:hover span {
   background-color: var(--secondary-color);
+}
+@media (max-width: 900px) {
+  .filled-btn {
+    padding: 6px;
+    padding-left: 12px;
+    font-size: 14px;
+  }
+  .outline-btn {
+    padding: 6px;
+    padding-left: 12px;
+    font-size: 14px;
+  }
+  .filled-btn span {
+    width: 25px;
+    height: 25px;
+  }
+  .outline-btn span {
+    width: 25px;
+    height: 25px;
+  }
 }

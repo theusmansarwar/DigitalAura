@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 30px;
+  gap: 10px;
   font-size: 16px;
   color: var(--foot-color);
   font-weight: 400;
@@ -22,16 +22,12 @@
   display: inline-block;
 }
 
-.author-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .author-img {
   width: 32px;
   height: 32px;
   object-fit: cover;
+  border: 1px solid gainsboro;
+  border-radius: 50%;
 }
 
 .feature-img {

@@ -1,76 +1,79 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "./Popular.css";
+import { fetchallBloglist } from "@/DAL/Fetch"; // adjust path if needed
+import { baseUrl } from "@/app/config/Config";
+import truncateTextByWords from "@/utils/TruncateByWords";
+import PopularPostsSkeleton from "../SkeletonLoaders/PopularSkeleton";
+import PopularSkeleton from "../SkeletonLoaders/PopularSkeleton";
 
 export default function PopularPostsSidebar() {
-  const popularPosts = [
-    {
-      id: 1,
-      image: "/dummy.jpg",
-      category: "PRODUCT",
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      id: 2,
-      image: "/dummy.jpg",
-      categories: ["PRODUCT", "ENTERPRISE"],
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      id: 3,
-      image: "/dummy.jpg",
-      category: "PRODUCTIVITY",
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      id: 4,
-      image: "/dummy.jpg",
-      category: "PRODUCTIVITY",
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-  ];
+  const [popularPosts, setPopularPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loadPopularPosts();
+  }, []);
+
+  const loadPopularPosts = async () => {
+    try {
+      setLoading(true);
+      // Fetch first page with limit 4 (or any number you want)
+      const res = await fetchallBloglist("", 1, 4, "");
+      if (res?.blogs) {
+        setPopularPosts(res.blogs);
+      }
+    } catch (error) {
+      console.error("Error fetching popular posts:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="sidebar-container">
       <div className="popular-posts-section">
         <h2 className="section-title">POPULAR POSTS</h2>
-
         <div className="posts-list">
-          {popularPosts.map((post, index) => (
-            <React.Fragment key={post.id}>
-              <div className="post-item">
-                <div
-                  className="post-image"
-                  style={{
-                    backgroundImage: `url(${post.image})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                  }}
-                ></div>
+          {loading ? (
+            <PopularSkeleton />
+          ) : (
+            popularPosts.map((post) => (
+              <React.Fragment key={post._id}>
+                <div className="post-item">
+                  <div
+                    className="post-image"
+                    style={{
+                      backgroundImage: `url(${
+                        baseUrl + post.thumbnail || "/dummy.png"
+                      })`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  ></div>
 
-                <div className="post-content">
-                  <div className="post-categories">
-                    {post.categories ? (
-                      <div className="categories-wrapper">
-                        {post.categories.map((cat, idx) => (
-                          <span key={idx} className="category-tag">
-                            {cat}
-                            {idx < post.categories.length - 1 && " | "}
-                          </span>
-                        ))}
-                      </div>
-                    ) : (
-                      <span className="category-tag">{post.category}</span>
-                    )}
+                  <div className="post-content">
+                    <div className="post-categories">
+                      {post.category?.name ? (
+                        <span className="category-tag">
+                          {post.category.name}
+                        </span>
+                      ) : (
+                        <span className="category-tag">Uncategorized</span>
+                      )}
+                    </div>
+
+                    <h3 className="post-title">
+                      {truncateTextByWords(post.title, 15)}
+                    </h3>
                   </div>
-
-                  <h3 className="post-title">{post.title}</h3>
                 </div>
-              </div>
 
-              <div className="divider-line"></div>
-            </React.Fragment>
-          ))}
+                <div className="divider-line"></div>
+              </React.Fragment>
+            ))
+          )}
         </div>
       </div>
 

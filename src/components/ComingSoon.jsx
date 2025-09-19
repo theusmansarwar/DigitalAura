@@ -16,7 +16,7 @@ const ComingSoon = () => {
         alt="Coming Soon"
         style={{ display: "flex", justifySelf: "center", width: "40%" }}
       />
-      <Button2 label="Go To Home" onClick={() => router.push("/")} />
+      <Button2 label="Go TO Home" onClick={() => router.push("/")} />
     </div>
   );
 };

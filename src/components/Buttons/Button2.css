@@ -14,8 +14,17 @@
   margin: 20px auto;
   border: none;
   border-radius: var(--border-radius);
+  transition: all 0.3s ease;
 }
 
+/* Only if it has onClick */
+.blog-btn.clickable {
+  cursor: pointer;
+}
+
+.blog-btn.clickable:hover {
+ opacity: 0.9;
+}
 .blog-btn .icon {
   width: 18px;
   height: 18px;

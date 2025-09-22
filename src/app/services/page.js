@@ -3,7 +3,7 @@ import ServicesCards from "@/components/ServicesCards/ServicesCards";
 import ThirdSection from "@/components/ServicePageTemplate/ThirdSection";
 
 export const metadata = {
-  title: "Services| Digital Aura",
+  title: "Services | Digital Aura",
   description:
     "Ready to scale? Get YouTube automation, SEO, social media design, and complete digital marketing services that help your business shine across platforms.",
 };

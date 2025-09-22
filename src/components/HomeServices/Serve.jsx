@@ -22,7 +22,7 @@ const services = [
       "Our SEO services improve visibility and bring higher search rankings. We work on your website, content, and backlinks using trusted methods. The goal is steady organic traffic that brings long-term growth.",
     icon: "/seo.svg",
     number: "02",
-    slug: "testing-service",
+    slug: "seo",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const services = [
       "Your brand identity shapes how people see your business online. We create modern designs and websites that inspire trust. The design stays simple and easy to use. It supports your business growth and makes your brand professional. ",
     icon: "/web-desgining.svg",
     number: "04",
-    slug: "graphic-designing",
+    slug: "website-designing",
   },
 ];
 const Serve = () => {

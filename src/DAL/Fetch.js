@@ -75,3 +75,12 @@ export const fetchServiceBySlug = async (slug) => {
   };
   return invokeApi(reqObj);
 };
+export const fetchServicesSlugs = async () => {
+  const reqObj = {
+    path: `/service/slugs`,
+    method: "GET",
+    headers: {},
+    body: {},
+  };
+  return invokeApi(reqObj);
+};

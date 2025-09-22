@@ -43,6 +43,7 @@
 .each-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
+  min-height: 60px;
 }
 
 .each-card p {
@@ -79,6 +80,6 @@
     font-size: 18px;
   }
   .small-line {
-  display: none;
-}
+    display: none;
+  }
 }

@@ -3,12 +3,12 @@ import React from "react";
 import "./ServiceStats.css";
 import { FaArrowRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-const ServiceStats = () => {
+const ServiceStats = ({data}) => {
   const router = useRouter();
   return (
     <div className="service-stats">
       {/* Title */}
-      <h2 dangerouslySetInnerHTML={{ __html: data?.title || "Lorem Ipsum" }} />
+      <h2>Lorem Ipsum</h2>
 
       {/* Description 1 */}
       {data?.detail && (

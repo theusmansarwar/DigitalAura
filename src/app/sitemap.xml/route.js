@@ -10,7 +10,7 @@ export async function GET() {
     "careers",
     "contact-us",
     "about-us",
-    "terms-and-condition",
+    "terms-and-conditions",
     "privacy-policy",
   ];
 

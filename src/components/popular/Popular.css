@@ -131,9 +131,10 @@
 }
 
 @media (max-width: 900px) {
+  
   .sidebar-container {
     width: 100%;
-    max-width: 320px;
+    max-width: 100%;
   }
 
   .post-item {

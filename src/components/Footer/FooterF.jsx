@@ -128,8 +128,20 @@ const FooterF = () => {
       <div className="footer-bottom">
         <p>©Copyright 2025. All rights reserved</p>
         <div className="footer-links">
-          <span>Terms & Conditions</span>
-          <span>Privacy Policy</span>
+          <span
+            onClick={() => {
+              router.push("/terms-and-conditions");
+            }}
+          >
+            Terms & Conditions
+          </span>
+          <span
+            onClick={() => {
+              router.push("/privacy-policy");
+            }}
+          >
+            Privacy Policy
+          </span>
         </div>
       </div>
     </footer>

@@ -68,7 +68,7 @@ const ServicesCards = () => {
                 <div className="each-card">
                   <img src={baseUrl + service.icon} className="service-icon" />
                   <h3>{service.title}</h3>
-                  <p>{truncateTextByWords(service.short_description, 35)}</p>
+                  <p>{truncateTextByWords(service.short_description, 25)}</p>
                   <span
                     onClick={() => {
                       router.push(`/services/${service.slug}`);
@@ -78,7 +78,7 @@ const ServicesCards = () => {
                   </span>
                 </div>
 
-                <span className="small-line"></span>
+                {/* <span className="small-line"></span> */}
               </React.Fragment>
             ))}
           </div>

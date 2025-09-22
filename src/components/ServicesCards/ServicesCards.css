@@ -7,6 +7,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
   margin-top: 30px;
@@ -18,7 +19,7 @@
   padding: 20px;
   background: var(--secondary-color);
   transition: all 0.3s ease;
-  width: 100%;
+  width: 32%;
   max-width: 340px;
 }
 
@@ -76,8 +77,12 @@
   text-underline-offset: 4px;
 }
 @media (max-width: 900px) {
-  .services-cards-grid{
+  .services-cards-grid {
     justify-content: center;
+  }
+  .each-card {
+    width: 100%;
+    max-width: 100%;
   }
   .each-card h3 {
     font-size: 18px;

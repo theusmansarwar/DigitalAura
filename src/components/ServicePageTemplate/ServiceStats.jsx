@@ -8,7 +8,7 @@ const ServiceStats = ({data}) => {
   return (
     <div className="service-stats">
       {/* Title */}
-      <h2>Lorem Ipsum</h2>
+      <h2>Your Trusted Partner for Lasting Digital Success</h2>
 
       {/* Description 1 */}
       {data?.detail && (

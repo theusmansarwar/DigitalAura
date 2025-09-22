@@ -4,7 +4,7 @@ import JoinUs from "@/components/career/JoinUs";
 export const metadata = {
   title: "Careers | Digital Aura",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae incidunt accusamus, architecto aperiam ullam earum.",
+    "Looking for digital marketing careers with real impact? Step into roles that grow talent, build confidence, and drive measurable business results.",
 };
 const desc = [
   "Digital Aura opens the door to real opportunities in the digital world. You join a team that builds strategies and delivers measurable growth. Careers here are more than jobs. You step into a digital marketing agency for business and global brands that want results with confidence.",
@@ -15,7 +15,7 @@ const desc = [
 ];
 const page = () => {
   return (
-    <div style={{ padding: "40px 0" }}>
+    <div style={{ padding: "20px 0" }}>
       <Button2 label={"Career at Digital Aura"} data={desc} />
       <JoinUs />{" "}
     </div>

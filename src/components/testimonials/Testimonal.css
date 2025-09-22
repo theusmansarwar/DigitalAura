@@ -1,0 +1,123 @@
+.testimonial {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    #f8f7fa,
+    #faf8fb,
+    #fafafc,
+    #faf8fb,
+    #f8f6f9,
+    #f2f0f1,
+    #ebe9ea
+  );
+  padding: 40px 20px;
+}
+
+/* Slider */
+.testimonial-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.testimonial-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+.testimonial-wrapper {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Name + Role */
+.person-info strong {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.person-info p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Testimonial text */
+.testimonial-text {
+  margin: 30px auto;
+  max-width: 700px;
+  font-size: var(--default-p-size);
+  color: var(--text-dark);
+  line-height: var(--p-line-height);
+  position: relative;
+}
+.quote-left {
+  font-size: 40px;
+  color: var(--primary-color);
+  position: absolute;
+  left: -40px;
+  top: -20px;
+}
+.quote-right {
+  font-size: 40px;
+  color: var(--primary-color);
+  position: absolute;
+  right: -40px;
+  bottom: -20px;
+}
+
+/* Footer */
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+.arrow {
+  font-size: 22px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.arrow:hover {
+  opacity: 0.7;
+}
+.footer-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.thumb-icon {
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.label {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.arrow.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: default;
+}
+
+@media (max-width: 900px) {
+  .quote-left {
+    left: 0px;
+    top: -40px;
+  }
+  .quote-right {
+    right: 0px;
+    bottom: -45px;
+  }
+}

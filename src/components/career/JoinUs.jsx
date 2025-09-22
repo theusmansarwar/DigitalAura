@@ -71,7 +71,6 @@ const JoinUs = () => {
         setErrors(fieldErrors);
       }
     } catch (err) {
-      console.log("Caught error:", err);
       toast.error("Something went wrong. Please try again later.");
     }
   };

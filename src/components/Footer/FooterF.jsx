@@ -28,8 +28,10 @@ const FooterF = () => {
             <img src="/logo.svg" alt="Digital Aura" />
           </div>
           <p>
-            By optimizing content, leveraging relevant keywords, and adhering to
-            best practices, businesses can secure prominent position (SEO)
+            Digital Aura is a creative digital solutions company based in Malmö,
+            Sweden. We specialize in building strategies that drive growth,
+            enhance digital presence, and deliver measurable results for brands
+            worldwide.
           </p>
           <div className="social-icons">
             <a
@@ -92,19 +94,22 @@ const FooterF = () => {
           {/* Get in touch */}
           <div className="footer-col contact">
             <h4>Get in touch</h4>
-            <a href="mailto:info@gmail.com">
-              <MdEmail /> info@gmail.com
-            </a>
             <a
-              href="https://www.google.com/maps?q=8708+Technology+Forest+Pl+Suite+125-G,+The+Woodlands,+TX+773"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=info@digitalaura.se"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <TiLocation /> 8708 Technology Forest Pl Suite 125-G, The
-              Woodlands, TX 773
+              <MdEmail /> info@digitalaura.se
             </a>
-            <a href="tel:1234567890">
-              <MdPhone /> 123-456-7890
+            <a
+              href="https://share.google/DDk8VxJU7znODpsvA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TiLocation /> Kronetorpsgatan 86A 212 27 Malmö, Sweden
+            </a>
+            <a href="tel:46763177364">
+              <MdPhone /> +46 763177364
             </a>
           </div>
 

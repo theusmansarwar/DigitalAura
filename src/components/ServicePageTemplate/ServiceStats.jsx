@@ -7,28 +7,17 @@ const ServiceStats = () => {
   const router = useRouter();
   return (
     <div className="service-stats">
-      <h2>Lorem ipsum</h2>
-      <p className="description1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-        distinctio quidem exercitationem nobis tempore, ad excepturi corrupti
-        nulla quae! Excepturi facere architecto placeat explicabo eaque ut
-        cumque cupiditate vitae nihil error! Ex nesciunt sint eum nobis ducimus,
-        itaque temporibus beatae? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Debitis distinctio quidem exercitationem nobis
-        tempore, ad excepturi corrupti nulla quae! Excepturi facere architecto
-        placeat explicabo eaque ut cumque cupiditate vitae nihil error! Ex
-        nesciunt sint eum nobis ducimus, itaque temporibus beatae?
-      </p>
-      <p className="description2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-        obcaecati magnam. Alias quis reiciendis culpa officiis quas beatae
-        deserunt architecto sequi nulla ducimus cumque, minus odit repellat
-        optio sit! Veniam, excepturi. Similique ratione reiciendis saepe vero
-        expedita magni, impedit cupiditate? deserunt architecto sequi nulla
-        ducimus cumque, minus odit repellat optio sit! Veniam, excepturi.
-        Similique ratione reiciendis saepe vero expedita magni, impedit
-        cupiditate?
-      </p>
+      {/* Title */}
+      <h2 dangerouslySetInnerHTML={{ __html: data?.title || "" }} />
+
+      {/* Description 1 */}
+      {data?.detail && (
+        <div
+          className="description1"
+          dangerouslySetInnerHTML={{ __html: data.detail }}
+        />
+      )}
+
       {/* Buttons */}
       <div className="buttons-container">
         <button
@@ -54,7 +43,7 @@ const ServiceStats = () => {
           </span>
         </button>
       </div>
-      <div className="stats-footer">
+      {/* <div className="stats-footer">
         <div className="each-stat">
           <strong>183+</strong>
           <p>
@@ -82,7 +71,7 @@ const ServiceStats = () => {
             inventore cumque voluptatem natus.
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

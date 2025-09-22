@@ -165,12 +165,12 @@
   .service-stats .black-filled{
     padding: 6px;
     padding-left: 12px;
-    font-size: 14px;
+    font-size: 10px;
   }
   .service-stats .black-outline {
     padding: 6px;
     padding-left: 12px;
-    font-size: 14px;
+    font-size: 10px;
   }
   .service-stats .black-filled span {
     width: 25px;

@@ -8,7 +8,7 @@
   align-items: center;
   gap: 20px;
 }
-.third-section p {
+.third-section .service-description {
   text-align: center;
   width: 60%;
 }
@@ -18,9 +18,9 @@
     height: fit-content;
     min-height: 400px;
     gap: 10px;
-    padding: 10px var(--left-space);
+    padding: 30px var(--left-space);
   }
-  .third-section p {
+  .third-section .service-description {
     width: 100%;
   }
 }

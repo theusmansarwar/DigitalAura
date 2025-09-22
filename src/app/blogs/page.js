@@ -4,11 +4,11 @@ import { Suspense } from "react";
 export const metadata = {
   title: "Blogs | Digital Aura",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae incidunt accusamus, architecto aperiam ullam earum.",
+    "Discover insights from our digital marketing blog. Get proven strategies, case studies, and expert tips to boost visibility and drive measurable results.",
 };
 const page = () => {
   return (
-    <div>
+    <div style={{ padding: "10px 0" }}>
       <Suspense fallback={<div>Loading blogs...</div>}>
         <BlogCard />
       </Suspense>

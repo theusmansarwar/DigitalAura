@@ -2,7 +2,7 @@ import Button2 from "@/components/Buttons/Button2";
 import Faqs from "@/components/Faqs/Faqs";
 import ServiceStats from "@/components/ServicePageTemplate/ServiceStats";
 import VideoSection from "@/components/ServicePageTemplate/VideoSection";
-import Testimonal from "@/components/Testimonal";
+import Testimonal from "@/components/testimonials/Testimonal";
 import ThirdSection from "@/components/ServicePageTemplate/ThirdSection";
 import { fetchServiceBySlug } from "@/DAL/Fetch";
 import ServiceHero from "@/components/ServicePageTemplate/ServiceHero";
@@ -51,7 +51,6 @@ export async function generateMetadata({ params }) {
  * --------------------------------------------------------------- */
 const Page = async ({ params }) => {
   const service = await getService(params.slug);
-  console.log(service);
 
   if (!service) {
     return (
@@ -75,9 +74,9 @@ const Page = async ({ params }) => {
       {service.portfolio?.published && (
         <PortfolioCards data={service.portfolio} />
       )}
-
       <Testimonal />
-      {/* <ServiceStats /> */}
+
+      {service.detail?.published && <ServiceStats data={service.detail} />}
     </div>
   );
 };

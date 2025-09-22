@@ -9,7 +9,7 @@ import Button2 from "@/components/Buttons/Button2";
 export const metadata = {
   title: "About Us | Digital Aura",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae incidunt accusamus, architecto aperiam ullam earum.",
+    "A global digital marketing agency focused on growth, trust, and innovation. DigitalAura creates a strong presence with automation, design, and SEO.",
 };
 
 const desc = [
@@ -23,7 +23,7 @@ const statsDesc = {
 };
 const page = () => {
   return (
-    <div style={{ padding: "40px 0" }}>
+    <div style={{ padding: "20px 0" }}>
       <Button2 label={"About Us"} data={desc} />
       <StatsSection data={statsDesc.desc} />
       <Digital />

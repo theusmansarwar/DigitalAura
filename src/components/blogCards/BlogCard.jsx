@@ -55,6 +55,18 @@ const BlogCard = () => {
   const [rowsPerPage, setRowsPerPage] = useState(9);
   const [categories, setCategories] = useState([{ _id: "all", name: "All" }]);
   const [activeCategory, setActiveCategory] = useState("all");
+  const [sortOrder, setSortOrder] = useState("desc");
+
+  useEffect(() => {
+    if (blogs.length > 0) {
+      const sorted = [...blogs].sort((a, b) => {
+        const dateA = new Date(a.createdAt);
+        const dateB = new Date(b.createdAt);
+        return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
+      });
+      setBlogs(sorted);
+    }
+  }, [sortOrder]);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -173,10 +185,15 @@ const BlogCard = () => {
         <div className="right">
           <label>Sort by:</label>
           <div className="select-wrapper">
-            <select className="sort-select">
-              <option>Newest</option>
-              <option>Oldest</option>
+            <select
+              className="sort-select"
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value)}
+            >
+              <option value="desc">Newest</option>
+              <option value="asc">Oldest</option>
             </select>
+
             <FaChevronDown className="select-icon" />
           </div>
         </div>

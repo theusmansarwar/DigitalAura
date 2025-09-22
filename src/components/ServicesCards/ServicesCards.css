@@ -6,6 +6,7 @@
 .services-cards-grid {
   width: 100%;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 25px;
   margin-top: 30px;
@@ -26,6 +27,12 @@
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+.small-line {
+  border-radius: 21px;
+  width: 4px;
+  height: 30px;
+  background-color: var(--primary-color);
+}
 .service-icon {
   font-size: 30px;
   color: var(--primary-color);
@@ -44,6 +51,9 @@
   line-height: 1.5;
   margin-bottom: 16px;
   min-height: 140px;
+  word-wrap: break-word; /* older support */
+  overflow-wrap: break-word; /* modern */
+  white-space: normal;
 }
 
 .each-card span {
@@ -68,4 +78,7 @@
   .each-card h3 {
     font-size: 18px;
   }
+  .small-line {
+  display: none;
+}
 }

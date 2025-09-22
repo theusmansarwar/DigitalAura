@@ -17,11 +17,13 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { fetchAllServices } from "@/DAL/Fetch";
 import { useRouter } from "next/navigation";
 import { baseUrl } from "@/app/config/Config";
+import ServicesSkeleton from "../SkeletonLoaders/ServicesSkeleton";
 
 const ServicesCards = () => {
   const router = useRouter();
 
   const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(12);
   const [totalItems, setTotalItems] = useState(0);
@@ -31,12 +33,15 @@ const ServicesCards = () => {
   useEffect(() => {
     const loadServices = async () => {
       try {
+        setLoading(true); // 👈 start loading
         const res = await fetchAllServices(page, rowsPerPage, "");
         setServices(res?.services || []);
         setTotalItems(res?.totalServices || 0);
         setTotalPages(res?.totalPages || 0);
       } catch (error) {
         console.error("Error fetching services:", error);
+      } finally {
+        setLoading(false); // 👈 stop loading
       }
     };
     loadServices();
@@ -52,95 +57,102 @@ const ServicesCards = () => {
   return (
     <div className="services-cards">
       <Button2 label="Services" />
-      <div className="services-cards-grid">
-        {services.map((service) => (
-          <div className="each-card" key={service._id}>
-            <img src={baseUrl + service.icon} className="service-icon" />
-            <h3>{service.title}</h3>
-            <p>{truncateTextByWords(service.short_description, 40)}</p>
-            <span
-              onClick={() => {
-                router.push(`/services/${service.slug}`);
-              }}
-            >
-              Learn More <FaArrowRightLong />
-            </span>
+
+      {loading ? (
+        <ServicesSkeleton count={rowsPerPage} />
+      ) : (
+        <>
+          <div className="services-cards-grid">
+            {services.map((service) => (
+              <React.Fragment key={service._id}>
+                <div className="each-card">
+                  <img src={baseUrl + service.icon} className="service-icon" />
+                  <h3>{service.title}</h3>
+                  <p>{truncateTextByWords(service.short_description, 35)}</p>
+                  <span
+                    onClick={() => {
+                      router.push(`/services/${service.slug}`);
+                    }}
+                  >
+                    Learn More <FaArrowRightLong />
+                  </span>
+                </div>
+
+               
+                <span className="small-line"></span>
+              </React.Fragment>
+            ))}
           </div>
-        ))}
-      </div>
 
-      {/* Pagination Section */}
-      {totalItems > 0 && (
-        <Stack
-          direction="row"
-          spacing={2}
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ mt: 3 }}
-        >
-          {/* Left: Showing range */}
-          <Typography>
-            {start}-{end} of {totalItems} items
-          </Typography>
-
-          {/* Middle: Pagination */}
-          <Pagination
-            count={totalPages}
-            page={page}
-            onChange={handleChangePage}
-            siblingCount={1}
-            boundaryCount={0}
-            shape="rounded"
-            renderItem={(item) => (
-              <PaginationItem
-                slots={{
-                  first: BiFirstPage,
-                  previous: MdChevronLeft,
-                  next: MdChevronRight,
-                  last: BiLastPage,
-                }}
-                {...item}
-              />
-            )}
-            sx={{
-              "& .MuiPaginationItem-root": {
-                borderRadius: "6px",
-              },
-              "& .MuiPaginationItem-root.Mui-selected": {
-                backgroundColor: "#f4511e",
-                color: "#fff",
-              },
-              "& .MuiPaginationItem-root.MuiPaginationItem-previousNext, & .MuiPaginationItem-root.MuiPaginationItem-firstLast":
-                {
-                  backgroundColor: "#f4511e",
-                  color: "#fff",
-                  "&:hover": {
-                    backgroundColor: "#d84315",
-                  },
-                },
-            }}
-          />
-
-          {/* Right: Items per page */}
-          <Stack direction="row" alignItems="center" spacing={1}>
-            <Select
-              size="small"
-              value={rowsPerPage}
-              onChange={(e) => {
-                setRowsPerPage(e.target.value);
-                setPage(1);
-              }}
-              sx={{ minWidth: 60 }}
+          {/* Pagination Section */}
+          {totalItems > 0 && (
+            <Stack
+              direction="row"
+              spacing={2}
+              alignItems="center"
+              justifyContent="space-between"
+              sx={{ mt: 3 }}
             >
-              {[6, 12, 24, 48].map((num) => (
-                <MenuItem key={num} value={num}>
-                  {num}
-                </MenuItem>
-              ))}
-            </Select>
-            <Typography>Items per page</Typography>
-          </Stack>
-        </Stack>
+              <Typography>
+                {start}-{end} of {totalItems} items
+              </Typography>
+              <Pagination
+                count={totalPages}
+                page={page}
+                onChange={handleChangePage}
+                siblingCount={1}
+                boundaryCount={0}
+                shape="rounded"
+                renderItem={(item) => (
+                  <PaginationItem
+                    slots={{
+                      first: BiFirstPage,
+                      previous: MdChevronLeft,
+                      next: MdChevronRight,
+                      last: BiLastPage,
+                    }}
+                    {...item}
+                  />
+                )}
+                sx={{
+                  "& .MuiPaginationItem-root": {
+                    borderRadius: "6px",
+                  },
+                  "& .MuiPaginationItem-root.Mui-selected": {
+                    backgroundColor: "#f4511e",
+                    color: "#fff",
+                  },
+                  "& .MuiPaginationItem-root.MuiPaginationItem-previousNext, & .MuiPaginationItem-root.MuiPaginationItem-firstLast":
+                    {
+                      backgroundColor: "#f4511e",
+                      color: "#fff",
+                      "&:hover": {
+                        backgroundColor: "#d84315",
+                      },
+                    },
+                }}
+              />
+              <Stack direction="row" alignItems="center" spacing={1}>
+                <Select
+                  size="small"
+                  value={rowsPerPage}
+                  onChange={(e) => {
+                    setRowsPerPage(e.target.value);
+                    setPage(1);
+                  }}
+                  sx={{ minWidth: 60 }}
+                >
+                  {[6, 12, 24, 48].map((num) => (
+                    <MenuItem key={num} value={num}>
+                      {num}
+                    </MenuItem>
+                  ))}
+                </Select>
+                <Typography>Items per page</Typography>
+              </Stack>
+            </Stack>
+          )}
+        </>
       )}
     </div>
   );

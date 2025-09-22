@@ -10,7 +10,7 @@
   justify-content: center;
 }
 .portfolio-popup {
-  width: calc(60% - 20px);
+  width: 60%;
   margin: 0 auto;
   background-color: var(--secondary-color);
   padding: 10px;
@@ -83,6 +83,10 @@
 
 /* Mobile: stack gallery */
 @media (max-width: 900px) {
+  .portfolio-popup {
+    width: 94%;
+    margin: 0 auto;
+  }
   .gallery {
     grid-template-columns: 1fr;
   }

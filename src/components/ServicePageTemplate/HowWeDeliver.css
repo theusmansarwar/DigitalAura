@@ -12,7 +12,7 @@
   width: 60%;
   max-width: 900px;
 }
-.automation-process p {
+.automation-process .service-description {
   text-align: center;
   width: 60%;
   margin: 0 auto;
@@ -26,7 +26,7 @@
   .automation-process .process-img {
     width: 100%;
   }
-  .automation-process p {
+  .automation-process .service-description {
   width: 100%;
 }
 }

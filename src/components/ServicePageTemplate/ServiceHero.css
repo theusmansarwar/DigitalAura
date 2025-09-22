@@ -28,7 +28,7 @@
   z-index: 1;
 }
 
-.smm-hero p {
+.smm-hero .service-description {
   text-align: center;
   width: 80%;
   margin: 0 auto;
@@ -41,7 +41,7 @@
     padding: 10px var(--left-space);
     margin-top: 40px;
   }
-  .smm-hero p {
+  .smm-hero .service-description {
     width: 100%;
   }
   .smm-hero::before {

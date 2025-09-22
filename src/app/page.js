@@ -1,13 +1,18 @@
 import Faqs from "@/components/Faqs/Faqs";
 import Featured from "@/components/Featured/Featured";
-import Graphic from "@/components/Graphic";
-import Ranking from "@/components/Ranking";
-import Serve from "@/components/Serve";
-import Testimonal from "@/components/Testimonal";
-import Welcome from "@/components/Welcome";
-import WhyChoose from "@/components/WhyChoose";
 import LatestBlogs2 from "@/components/latestBlogs/LatestBlogs2";
+import Serve from "@/components/HomeServices/Serve";
+import SmartStrategy from "@/components/SmartStrategy/SmartStrategy";
+import Testimonal from "@/components/testimonials/Testimonal";
+import Welcome from "@/components/Welcome/Welcome";
+import WhyChoose from "@/components/WhyChoose/WhyChoose";
+import MarketingSolutions from "@/components/MarketingSolutions/MarketingSolutions";
 
+export const metadata = {
+  title: "Digital Aura",
+  description:
+    "DigitalAura offers SEO, PPC, branding, social media, and YouTube automation to help your business gain visibility, leads, and long-term growth.",
+};
 const faqs = {
   title: "Frequently Asked Questions",
   description:
@@ -72,8 +77,8 @@ const page = () => {
       <Featured />
       <Welcome />
       <Serve />
-      <Ranking />
-      <Graphic />
+      <SmartStrategy />
+      <MarketingSolutions />
       <Testimonal />
       <Faqs data={faqs} />
       <LatestBlogs2 />

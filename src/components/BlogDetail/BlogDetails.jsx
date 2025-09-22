@@ -19,7 +19,6 @@ const BlogDetails = ({ slug }) => {
     const fetchBlog = async () => {
       try {
         const res = await fetchBlogBySlug(slug);
-        console.log(res.blog);
 
         setBlog(res.blog);
       } catch (err) {

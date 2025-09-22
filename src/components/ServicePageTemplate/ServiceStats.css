@@ -16,6 +16,7 @@
   z-index: 2;
   width: 50%;
   margin: 0px auto 20px;
+  
 }
 .service-stats .description1 {
   color: var(--secondary-color);
@@ -43,7 +44,8 @@
   border-right: none;
 }
 .service-stats .each-stat strong {
-  font-size: var(--heading-four);
+  font-size: var(--heading-three);
+  color: var(--primary-color);
 }
 .service-stats .each-stat p {
   text-align: center;

@@ -76,6 +76,9 @@
   text-underline-offset: 4px;
 }
 @media (max-width: 900px) {
+  .services-cards-grid{
+    justify-content: center;
+  }
   .each-card h3 {
     font-size: 18px;
   }

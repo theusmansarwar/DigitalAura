@@ -78,24 +78,25 @@ const ServicesCards = () => {
                   </span>
                 </div>
 
-               
                 <span className="small-line"></span>
               </React.Fragment>
             ))}
           </div>
-
           {/* Pagination Section */}
           {totalItems > 0 && (
             <Stack
-              direction="row"
+              direction={{ xs: "column", sm: "row" }} // column on mobile, row on desktop
               spacing={2}
               alignItems="center"
               justifyContent="space-between"
               sx={{ mt: 3 }}
             >
+              {/* Range Text */}
               <Typography>
                 {start}-{end} of {totalItems} items
               </Typography>
+
+              {/* Pagination */}
               <Pagination
                 count={totalPages}
                 page={page}
@@ -132,7 +133,14 @@ const ServicesCards = () => {
                     },
                 }}
               />
-              <Stack direction="row" alignItems="center" spacing={1}>
+
+              {/* Items per page selector (hidden on mobile) */}
+              <Stack
+                direction="row"
+                alignItems="center"
+                spacing={1}
+                sx={{ display: { xs: "none", sm: "flex" } }} // hide on mobile
+              >
                 <Select
                   size="small"
                   value={rowsPerPage}

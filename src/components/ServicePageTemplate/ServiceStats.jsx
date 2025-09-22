@@ -3,7 +3,8 @@ import React from "react";
 import "./ServiceStats.css";
 import { FaArrowRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-const ServiceStats = ({data}) => {
+import CountUp from "../CountUp/CountUp";
+const ServiceStats = ({ data }) => {
   const router = useRouter();
   return (
     <div className="service-stats">
@@ -45,31 +46,22 @@ const ServiceStats = ({data}) => {
       </div>
       <div className="stats-footer">
         <div className="each-stat">
-          <strong>183+</strong>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            culpa soluta nihil vitae quis cumque officia cum corrupti
-            blanditiis, quisquam, enim dolor a laboriosam consequuntur. Ullam
-            inventore cumque voluptatem natus.
-          </p>
+          <strong>
+            <CountUp end={183} />
+          </strong>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
         </div>
         <div className="each-stat">
-          <strong>196+</strong>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            culpa soluta nihil vitae quis cumque officia cum corrupti
-            blanditiis, quisquam, enim dolor a laboriosam consequuntur. Ullam
-            inventore cumque voluptatem natus.
-          </p>
+          <strong>
+            <CountUp end={196} />
+          </strong>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
         </div>
         <div className="each-stat">
-          <strong>229+</strong>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            culpa soluta nihil vitae quis cumque officia cum corrupti
-            blanditiis, quisquam, enim dolor a laboriosam consequuntur. Ullam
-            inventore cumque voluptatem natus.
-          </p>
+          <strong>
+            <CountUp end={229} />
+          </strong>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
         </div>
       </div>
     </div>

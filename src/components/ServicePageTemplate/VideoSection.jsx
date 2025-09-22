@@ -1,10 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import "./VideoSection.css";
-import { IoPlayCircleOutline } from "react-icons/io5";
 
 const VideoSection = ({ data }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
 
   if (!data) return null; 
 
@@ -14,9 +12,6 @@ const VideoSection = ({ data }) => {
     return url.replace("watch?v=", "embed/");
   };
 
-  // const handlePlayClick = () => {
-  //   setIsPlaying(true);
-  // };
 
   return (
     <div className="video-section">
@@ -26,22 +21,6 @@ const VideoSection = ({ data }) => {
         dangerouslySetInnerHTML={{ __html: data?.description || "" }}
       />
 
-      {/* {!isPlaying ? (
-        <div
-          className="thumbnail-container"
-          style={{
-            backgroundImage: `url(/buildings.png)`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <IoPlayCircleOutline
-            className="play-icon"
-            onClick={handlePlayClick}
-          />
-        </div>
-      ) : ( */}
         <div className="thumbnail-container">
           <iframe
             src={getEmbedUrl(data.url)}
@@ -52,7 +31,7 @@ const VideoSection = ({ data }) => {
             frameBorder={0}
           ></iframe>
         </div>
-      {/* )} */}
+    
     </div>
   );
 };

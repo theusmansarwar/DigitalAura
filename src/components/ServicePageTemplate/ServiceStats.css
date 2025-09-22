@@ -20,15 +20,10 @@
 .service-stats .description1 {
   color: var(--secondary-color);
   text-align: center;
-  width: 70%;
-  margin: 0px auto;
-}
-.service-stats .description2 {
-  color: var(--secondary-color);
-  text-align: center;
   width: 80%;
   margin: 0px auto;
 }
+
 .service-stats .stats-footer {
   display: flex;
   margin: 60px 0 20px;
@@ -146,8 +141,7 @@
   .service-stats h2 {
     width: 100%;
   }
-  .service-stats .description1,
-  .service-stats .description2 {
+  .service-stats .description1{
     width: 100%;
   }
   .service-stats .stats-footer {

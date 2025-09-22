@@ -68,7 +68,8 @@ const Page = async ({ params }) => {
       {service.how_we_delivered?.published && (
         <HowWeDeliver data={service.how_we_delivered} />
       )}
-      {service.how_we_delivered?.published && <ThirdSection />}
+      {service.detail?.published && <ServiceStats data={service.detail} />}
+      {/* {service.how_we_delivered?.published && <ThirdSection />} */}
       {service.faqs?.published && <Faqs data={service.faqs} />}
       {service.video?.published && <VideoSection data={service.video} />}
       {service.portfolio?.published && (
@@ -76,7 +77,6 @@ const Page = async ({ params }) => {
       )}
       <Testimonal />
 
-      {service.detail?.published && <ServiceStats data={service.detail} />}
     </div>
   );
 };

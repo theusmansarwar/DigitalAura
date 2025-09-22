@@ -1,7 +1,7 @@
 import Header from "@/components/Header/Header";
 import "./globals.css";
 import { Syne } from "next/font/google";
-import { Geist, } from "next/font/google";
+import { Geist } from "next/font/google";
 import FooterF from "@/components/Footer/FooterF";
 import { ToastContainer } from "react-toastify";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -49,6 +49,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Digital Aura",
+              url: "https://digitalaura.se",
+              logo: "https://digitalaura.se/favicon.svg",
+              sameAs: [
+                "https://linkedin.com/company/thedigitalaura",
+                "https://youtube.com/@DigitalAura-h2o",
+                "https://facebook.com/share/1CdEhnbb42",
+                "https://instagram.com/digitalaura8",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${syne.variable}`}>
         <ToastContainer
           position="top-right"

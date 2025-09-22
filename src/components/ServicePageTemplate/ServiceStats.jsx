@@ -8,7 +8,7 @@ const ServiceStats = () => {
   return (
     <div className="service-stats">
       {/* Title */}
-      <h2 dangerouslySetInnerHTML={{ __html: data?.title || "" }} />
+      <h2 dangerouslySetInnerHTML={{ __html: data?.title || "Lorem Ipsum" }} />
 
       {/* Description 1 */}
       {data?.detail && (
@@ -43,7 +43,7 @@ const ServiceStats = () => {
           </span>
         </button>
       </div>
-      {/* <div className="stats-footer">
+      <div className="stats-footer">
         <div className="each-stat">
           <strong>183+</strong>
           <p>
@@ -71,7 +71,7 @@ const ServiceStats = () => {
             inventore cumque voluptatem natus.
           </p>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -14,31 +14,21 @@ export default function SmartStrategy() {
           Smart Marketing Strategies Designed for Your Business
         </h2>
         <p>
-          Our digital marketing plans include digital marketing, YouTube
-          automation, and are built on research, real data, and market insight.
-          We look at your industry, study competitors, and understand customer
-          behavior. Then, we design campaigns that match your business goals.
-          Each step gives results you can measure. Growth comes from clarity and
-          focus. That is why we mix creative ideas with methods that deliver
-          performance. Our strategies adjust quickly to market changes. You want
-          to grow worldwide or build strength in local markets. You connect with
-          your audience and achieve real growth through the right mix of
-          planning, action, and YouTube channel optimization.
+          Our digital marketing plans are built to deliver real results. We
+          combine YouTube automation, research, and market insights to create
+          strategies that actually work. By studying your industry, keeping an
+          eye on competitors, and understanding customer behavior, we design
+          campaigns that align with your goals. Every step is measurable, so you
+          always see the impact. We balance creative ideas with proven methods,
+          and our strategies adapt quickly as markets change. Whether you’re
+          aiming to grow globally or strengthen your local presence, we’ll help
+          you connect with your audience and achieve lasting growth
         </p>
 
         {/* Buttons */}
         <div className="buttons-container">
           <Button
             variant="filled"
-            onClick={() => {
-              router.push("/services");
-            }}
-          >
-            Start Ranking Now
-          </Button>
-
-          <Button
-            variant="outline"
             onClick={() => {
               router.push("/contact-us");
             }}

@@ -22,7 +22,7 @@ const contactData = [
     id: 3,
     icon: <TiLocation />,
     title: "OUR OFFICE",
-    detail: "132 Dartmouth Street\nBoston, Massachusetts\n02156 United States",
+    detail: "Kronetorpsgatan 86A\n 212 27 Malmö,\n Sweden",
     link: "https://share.google/DDk8VxJU7znODpsvA", // map link
   },
 ];

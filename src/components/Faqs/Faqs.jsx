@@ -34,13 +34,9 @@ const Faqs = ({ data }) => {
           <div className="buttons-container">
             <Button
               variant="filled"
-              onClick={() => router.push("/services")}
-            >
-              Start Ranking Now
-            </Button>
-            <Button
-              variant="outline"
-              onClick={() => router.push("/contact-us")}
+              onClick={() => {
+                router.push("/contact-us");
+              }}
             >
               Contact Now
             </Button>
@@ -50,10 +46,7 @@ const Faqs = ({ data }) => {
         <div className="faq-right">
           {visibleQuestions.map((item, index) => (
             <div key={index} className="faq-item">
-              <div
-                className="faq-question"
-                onClick={() => toggle(index)}
-              >
+              <div className="faq-question" onClick={() => toggle(index)}>
                 <span>{item.question}</span>
                 <span>{openIndex === index ? "−" : "+"}</span>
               </div>

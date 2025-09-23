@@ -12,28 +12,32 @@ const Featured = () => {
         {/* Left Content */}
         <div className="vertical-box">
           <div className="section-one-vert">
-            <a className="featured-social-links"
+            <a
+              className="featured-social-links"
               href="https://facebook.com/share/1CdEhnbb42"
               target="_blank"
               rel="noopener noreferrer"
             >
               fb
             </a>
-            <a className="featured-social-links"
+            <a
+              className="featured-social-links"
               href="https://instagram.com/digitalaura8"
               target="_blank"
               rel="noopener noreferrer"
             >
               Insta
             </a>
-            <a className="featured-social-links"
+            <a
+              className="featured-social-links"
               href="https://linkedin.com/company/thedigitalaura"
               target="_blank"
               rel="noopener noreferrer"
             >
               in
             </a>
-            <a className="featured-social-links"
+            <a
+              className="featured-social-links"
               href="https://youtube.com/@DigitalAura-h2o"
               target="_blank"
               rel="noopener noreferrer"
@@ -43,9 +47,27 @@ const Featured = () => {
           </div>
 
           <ul className="section-two-vert">
-            <li>Marketing</li>
-            <li>Designing</li>
-            <li>Youtube</li>
+            <li
+              onClick={() => {
+                router.push("/services/social-media-marketing");
+              }}
+            >
+              Marketing
+            </li>
+            <li
+              onClick={() => {
+                router.push("/services/website-designing");
+              }}
+            >
+              Designing
+            </li>
+            <li
+              onClick={() => {
+                router.push("/services/youtube-automation");
+              }}
+            >
+              Youtube
+            </li>
           </ul>
         </div>
         <div className="featured-left">
@@ -69,15 +91,6 @@ const Featured = () => {
           <div className="buttons-container">
             <Button
               variant="filled"
-              onClick={() => {
-                router.push("/services");
-              }}
-            >
-              Start Ranking Now
-            </Button>
-
-            <Button
-              variant="outline"
               onClick={() => {
                 router.push("/contact-us");
               }}
@@ -120,10 +133,10 @@ const Featured = () => {
           <p>Clients</p>
         </div>
         <div className="featured-logos-section">
-          <img src="item1.png" alt="company1" />
+          {/* <img src="item1.png" alt="company1" />
           <img src="item2.png" alt="company2" />
           <img src="item3.png" alt="company3" />
-          <img src="item4.png" alt="company4" />
+          <img src="item4.png" alt="company4" /> */}
         </div>
       </div>
     </>

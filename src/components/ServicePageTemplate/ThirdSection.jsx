@@ -22,7 +22,7 @@ const ThirdSection = ({ data }) => {
       {data.title && <h2 className="section-heading">{data.title}</h2>}
 
       {/* API description */}
-        <div
+      <div
         className="service-description"
         dangerouslySetInnerHTML={{ __html: data?.description || "" }}
       />
@@ -30,15 +30,6 @@ const ThirdSection = ({ data }) => {
       <div className="buttons-container">
         <Button
           variant="filled"
-          onClick={() => {
-            router.push("/services");
-          }}
-        >
-          Start Ranking Now
-        </Button>
-
-        <Button
-          variant="outline"
           onClick={() => {
             router.push("/contact-us");
           }}

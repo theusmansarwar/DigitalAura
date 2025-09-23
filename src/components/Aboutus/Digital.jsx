@@ -1,4 +1,4 @@
-  "use client";
+"use client";
 import React from "react";
 import "./Digital.css";
 import Button from "../Buttons/Button";
@@ -41,15 +41,6 @@ const Digital = () => {
         <div className="buttons-container">
           <Button
             variant="filled"
-            onClick={() => {
-              router.push("/services");
-            }}
-          >
-            Start Ranking Now
-          </Button>
-
-          <Button
-            variant="outline"
             onClick={() => {
               router.push("/contact-us");
             }}

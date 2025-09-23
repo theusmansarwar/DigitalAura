@@ -17,9 +17,9 @@ const services = [
   },
   {
     id: 2,
-    title: "SEO Optimization",
+    title: "SEO, GEO & AEO Optimization",
     description:
-      "Our SEO services improve visibility and bring higher search rankings. We work on your website, content, and backlinks using trusted methods. The goal is steady organic traffic that brings long-term growth.",
+      "We boost visibility and rankings on search engines and AI-driven results. Beyond SEO, we prepare your brand for Generative and Answer Engine Optimization so you appear in AI overviews, voice assistants, and zero-click results—driving steady, future-proof growth.",
     icon: "/seo.svg",
     number: "02",
     slug: "seo",

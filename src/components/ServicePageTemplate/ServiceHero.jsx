@@ -19,15 +19,6 @@ const ServiceHero = ({ service }) => {
         <Button
           variant="filled"
           onClick={() => {
-            router.push("/services");
-          }}
-        >
-          Start Ranking Now
-        </Button>
-
-        <Button
-          variant="outline"
-          onClick={() => {
             router.push("/contact-us");
           }}
         >

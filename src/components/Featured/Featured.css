@@ -233,6 +233,13 @@ font-size: var(--default-p-size);
   font-style: italic;
   color: var(--text-color);
 }
+.section-two-vert  li{
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.section-two-vert  li:hover{
+  color: var(--primary-color);
+}
 .featured-social-links {
   text-decoration: none;
   color: var(--secondary-color);

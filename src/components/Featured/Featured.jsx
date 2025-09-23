@@ -104,12 +104,12 @@ const Featured = () => {
             creativity, data, and smart ideas. We focus on lasting success, not
             quick fixes, so you see growth that stays.
           </p>
-          <div className="trusted-by-cont">
+          {/* <div className="trusted-by-cont">
             <p className="trusted-by-heading">
               Trusted by <span>Top Global Brands</span>
             </p>
             <img src="/featured-arrow.svg" alt="Arrow Image" />
-          </div>
+          </div> */}
         </div>
 
         {/* Right Image */}
@@ -127,18 +127,18 @@ const Featured = () => {
         </div>
       </section>
 
-      <div className="featured-bottom">
+      {/* <div className="featured-bottom">
         <div className="featured-heading-section">
           <p>Our Esteemed </p>
           <p>Clients</p>
         </div>
         <div className="featured-logos-section">
-          {/* <img src="item1.png" alt="company1" />
+          <img src="item1.png" alt="company1" />
           <img src="item2.png" alt="company2" />
           <img src="item3.png" alt="company3" />
-          <img src="item4.png" alt="company4" /> */}
+          <img src="item4.png" alt="company4" />
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

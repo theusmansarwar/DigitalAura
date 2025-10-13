@@ -16,10 +16,9 @@ const MainHead = ({ title, date, author, thumbnail }) => {
         </div>
       </div>
 
-      <div
-        className="feature-img"
-        style={{ backgroundImage: `url(${baseUrl + thumbnail})` }}
-      ></div>
+      <div className="feature-img">
+        <img src={`${baseUrl + thumbnail}`} alt={title} />
+      </div>
     </div>
   );
 };

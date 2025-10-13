@@ -3,8 +3,10 @@ import "./PartA.css";
 import { formatDate } from "@/utils/FormatDate";
 import { baseUrl } from "@/app/config/Config";
 import truncateTextByWords from "@/utils/TruncateByWords";
+import { useRouter } from "next/navigation";
 
 const PartA = ({ blogs = [] }) => {
+  const router = useRouter()
   
   return (
     <>

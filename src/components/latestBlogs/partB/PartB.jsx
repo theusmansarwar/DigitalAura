@@ -3,8 +3,10 @@ import "./PartB.css";
 import { baseUrl } from "@/app/config/Config";
 import { formatDate } from "@/utils/FormatDate";
 import truncateTextByWords from "@/utils/TruncateByWords";
+import { useRouter } from "next/navigation";
 
 const PartB = ({ blogs = [] }) => {
+    const router = useRouter()
   return (
     <div className="card-section">
       {blogs.map((blog) => (

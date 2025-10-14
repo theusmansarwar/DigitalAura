@@ -21,7 +21,7 @@ export const CreateApplication = async (data) => {
 };
 export const countView = async () => {
   const reqObj = {
-    path: "/view/count",
+    path: "/views/count",
     method: "POST",
     headers: {},
     postData: {},

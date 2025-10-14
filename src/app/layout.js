@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
           pauseOnHover={false}
           newestOnTop
         />
-        {/* <ViewCounter /> */}
+        <ViewCounter />
         <Header />
         {children}
         <FooterF />

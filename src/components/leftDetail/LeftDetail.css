@@ -13,9 +13,4 @@
 }
 
 
-@media (min-width: 640px) {
-  .custom-html-styles {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
+

@@ -24,8 +24,10 @@ const FooterF = () => {
       <div className="footer-container">
         {/* About Section */}
         <div className="footer-col about">
-          <div className="logo">
-            <img src="/logo.svg" alt="Digital Aura" />
+          <div className="logo" >
+            <img src="/logo.svg" alt="Digital Aura"   onClick={() => {
+              router.push("/");
+            }}/>
           </div>
           <p>
             Digital Aura is a creative digital solutions company based in Malmö,

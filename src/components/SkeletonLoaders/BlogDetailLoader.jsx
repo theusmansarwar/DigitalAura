@@ -1,24 +1,25 @@
 import React from "react";
-import "./BlogDetailLoader.css"
+import "./BlogDetailLoader.css";
+
 const BlogDeatilLoader = () => {
   return (
-    <div className="skeleton-blog">
-      <div className="skeleton-btn"></div>
-      <div className="skeleton-title"></div>
-      <div className="skeleton-meta"></div>
-      <div className="skeleton-image"></div>
-      <div className="skeleton-text"></div>
-      <div className="skeleton-text"></div>
-      <div className="skeleton-text"></div>
-      <div className="skeleton-text"></div>
-      <div className="skeleton-text"></div>
-      <div className="skeleton-text"></div>
-      <div className="skeleton-text"></div>
-      <div className="skeleton-text"></div>
-      <div className="skeleton-text"></div>
-      <div className="skeleton-text"></div>
-      <div className="skeleton-text"></div>
-      <div className="skeleton-text"></div>
+    <div className="bdetail-skeleton-blog">
+      <div className="bdetail-skeleton-btn"></div>
+      <div className="bdetail-skeleton-title"></div>
+      <div className="bdetail-skeleton-meta"></div>
+      <div className="bdetail-skeleton-image"></div>
+      <div className="bdetail-skeleton-text"></div>
+      <div className="bdetail-skeleton-text"></div>
+      <div className="bdetail-skeleton-text"></div>
+      <div className="bdetail-skeleton-text"></div>
+      <div className="bdetail-skeleton-text"></div>
+      <div className="bdetail-skeleton-text"></div>
+      <div className="bdetail-skeleton-text"></div>
+      <div className="bdetail-skeleton-text"></div>
+      <div className="bdetail-skeleton-text"></div>
+      <div className="bdetail-skeleton-text"></div>
+      <div className="bdetail-skeleton-text"></div>
+      <div className="bdetail-skeleton-text"></div>
     </div>
   );
 };

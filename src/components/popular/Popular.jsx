@@ -91,9 +91,9 @@ export default function PopularPostsSidebar() {
           Together With Us
         </h3>
 
-        <p className="cta-description">
+        {/* <p className="cta-description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
+        </p> */}
 
         <button
           className="cta-button"

@@ -4,6 +4,7 @@ import { Syne } from "next/font/google";
 import { Geist } from "next/font/google";
 import FooterF from "@/components/Footer/FooterF";
 import { ToastContainer } from "react-toastify";
+import ViewCounter from "@/components/ViewCounter/ViewCounter";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const syne = Syne({
   variable: "--font-syne",
@@ -76,6 +77,7 @@ export default function RootLayout({ children }) {
           pauseOnHover={false}
           newestOnTop
         />
+        {/* <ViewCounter /> */}
         <Header />
         {children}
         <FooterF />

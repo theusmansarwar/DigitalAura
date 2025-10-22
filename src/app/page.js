@@ -9,7 +9,7 @@ import WhyChoose from "@/components/WhyChoose/WhyChoose";
 import MarketingSolutions from "@/components/MarketingSolutions/MarketingSolutions";
 
 export const metadata = {
-  title: "Digital Aura",
+  title: "Marketing, SEO & Automation Services in Sweden | Digital Aura",
   description:
     "DigitalAura offers SEO, PPC, branding, social media, and YouTube automation to help your business gain visibility, leads, and long-term growth.",
 };

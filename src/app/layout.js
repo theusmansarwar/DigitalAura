@@ -12,7 +12,7 @@ const syne = Syne({
   weight: ["400", "700", "800"],
 });
 
-const title = "Digital Aura";
+const title = "Marketing, SEO & Automation Services in Sweden | Digital Aura";
 const description =
   "DigitalAura offers SEO, PPC, branding, social media, and YouTube automation to help your business gain visibility, leads, and long-term growth.";
 

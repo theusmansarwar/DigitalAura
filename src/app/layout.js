@@ -5,6 +5,8 @@ import { Geist } from "next/font/google";
 import FooterF from "@/components/Footer/FooterF";
 import { ToastContainer } from "react-toastify";
 import ViewCounter from "@/components/ViewCounter/ViewCounter";
+import Script from "next/script"; // ✅ Added for Google Analytics
+
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const syne = Syne({
   variable: "--font-syne",
@@ -45,12 +47,17 @@ export const metadata = {
     description,
     images: [image],
   },
+  // ✅ Add Google Search Console verification meta
+  other: {
+    "google-site-verification": "d3ZpHGSOWYYfirQNoVhab8jghx9xwHZccCBejV0fURQ",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* ✅ JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -71,6 +78,21 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${geistSans.variable} ${syne.variable}`}>
+        {/* ✅ Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-72FE2JFDL2"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-72FE2JFDL2');
+          `}
+        </Script>
+
+        {/* ✅ App Components */}
         <ToastContainer
           position="top-right"
           autoClose={2000}

@@ -4,7 +4,7 @@ import PopularPostsSidebar from "@/components/popular/Popular";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Terms and Conditions | Digital Aura",
+  title: "Privacy Policy | Digital Aura",
   description:
     "DigitalAura offers SEO, PPC, branding, social media, and YouTube automation to help your business gain visibility, leads, and long-term growth.",
 };

@@ -5,7 +5,7 @@ import { Geist } from "next/font/google";
 import FooterF from "@/components/Footer/FooterF";
 import { ToastContainer } from "react-toastify";
 import ViewCounter from "@/components/ViewCounter/ViewCounter";
-import Script from "next/script"; // ✅ Added for Google Analytics
+import Script from "next/script"; //  Added for Google Analytics
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const syne = Syne({
@@ -47,7 +47,7 @@ export const metadata = {
     description,
     images: [image],
   },
-  // ✅ Add Google Search Console verification meta
+  //  Add Google Search Console verification meta
   other: {
     "google-site-verification": "d3ZpHGSOWYYfirQNoVhab8jghx9xwHZccCBejV0fURQ",
   },
@@ -57,25 +57,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* ✅ JSON-LD Structured Data */}
-        {/* <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Digital Aura",
-              url: "https://digitalaura.se",
-              logo: "https://digitalaura.se/favicon.svg",
-              sameAs: [
-                "https://linkedin.com/company/thedigitalaura",
-                "https://youtube.com/@DigitalAura-h2o",
-                "https://facebook.com/share/1CdEhnbb42",
-                "https://instagram.com/digitalaura8",
-              ],
-            }),
-          }}
-        /> */}
+        {/*  JSON-LD Structured Data */}
         <Script
           id="structured-data-digitalaura-full"
           type="application/ld+json"
@@ -88,9 +70,7 @@ export default function RootLayout({ children }) {
                   "@type": "WebSite",
                   name: "Digital Aura",
                   url: "https://digitalaura.se",
-                  alternateName: [
-                    "Digital Aura",
-                  ],
+                  alternateName: ["Digital Aura"],
                   potentialAction: {
                     "@type": "SearchAction",
                     target: "https://digitalaura.se/?s={search_term_string}",
@@ -105,37 +85,37 @@ export default function RootLayout({ children }) {
                   contactPoint: [
                     {
                       "@type": "ContactPoint",
-                      telephone: "+46-763-177364",
+                      telephone: "+46763177364",
                       contactType: "Customer Support",
                       areaServed: "SE",
-                      availableLanguage: ["Swedish", "English"]
+                      availableLanguage: ["Swedish", "English"],
                     },
                     {
                       "@type": "ContactPoint",
                       email: "info@digitalaura.se",
                       contactType: "General Inquiries",
                       areaServed: "SE",
-                      availableLanguage: ["Swedish", "English"]
-                    }
+                      availableLanguage: ["Swedish", "English"],
+                    },
                   ],
                   sameAs: [
                     "https://linkedin.com/company/thedigitalaura",
                     "https://youtube.com/@DigitalAura-h2o",
                     "https://facebook.com/share/1CdEhnbb42",
-                    "https://instagram.com/digitalaura8"
-                  ]
+                    "https://instagram.com/digitalaura8",
+                  ],
                 },
                 {
                   "@type": "LocalBusiness",
                   name: "Digital Aura",
-                  image: "https://digitalaura.se/favicon.svg",
+                  image: "https://digitalaura.se/logo.svg", 
                   address: {
                     "@type": "PostalAddress",
                     streetAddress: "Kronetorpsgatan 86A 212 27 Malmö, Sweden",
                     addressLocality: "Malmö",
-                    addressCountry: "SE"
+                    addressCountry: "SE",
                   },
-                  telephone: "+46-763-177364",
+                  telephone: "+46763177364",
                   url: "https://digitalaura.se",
                 },
                 {
@@ -143,42 +123,153 @@ export default function RootLayout({ children }) {
                   name: "Digital Aura Services",
                   itemListElement: [
                     {
-                      "@type": "SiteNavigationElement",
+                      "@type": "ListItem",
                       position: 1,
-                      name: "Social Media Marketing",
-                      url: "https://digitalaura.se/services/social-media-marketing"
+                      item: {
+                        "@type": "WebPage",
+                        name: "Social Media Marketing",
+                        url: "https://digitalaura.se/services/social-media-marketing",
+                      },
                     },
                     {
-                      "@type": "SiteNavigationElement",
+                      "@type": "ListItem",
                       position: 2,
-                      name: "SEO, GEO & AEO Optimization",
-                      url: "https://digitalaura.se/services/seo"
+                      item: {
+                        "@type": "WebPage",
+                        name: "SEO, GEO & AEO Optimization",
+                        url: "https://digitalaura.se/services/seo",
+                      },
                     },
                     {
-                      "@type": "SiteNavigationElement",
+                      "@type": "ListItem",
                       position: 3,
-                      name: "YouTube Automation",
-                      url: "https://digitalaura.se/services/youtube-automation"
+                      item: {
+                        "@type": "WebPage",
+                        name: "YouTube Automation",
+                        url: "https://digitalaura.se/services/youtube-automation",
+                      },
                     },
                     {
-                      "@type": "SiteNavigationElement",
+                      "@type": "ListItem",
                       position: 4,
-                      name: "Branding & Web Design",
-                      url: "https://digitalaura.se/services/website-designing"
+                      item: {
+                        "@type": "WebPage",
+                        name: "Branding & Web Design",
+                        url: "https://digitalaura.se/services/website-designing",
+                      },
                     },
                     {
-                      "@type": "SiteNavigationElement",
+                      "@type": "ListItem",
                       position: 5,
-                      name: "Contact Us",
-                      url: "https://digitalaura.se/contact",
+                      item: {
+                        "@type": "WebPage",
+                        name: "Contact Us",
+                        url: "https://digitalaura.se/contact",
+                      },
                     },
-                  ]
-                }
-              ]
+                  ],
+                },
+                {
+                  "@type": "Service",
+                  "@id": "https://digitalaura.se/services",
+                  serviceType: "Digital Marketing Services",
+                  provider: {
+                    "@type": "Organization",
+                    name: "Digital Aura",
+                    url: "https://digitalaura.se",
+                  },
+                  areaServed: {
+                    "@type": "Country",
+                    name: "Sweden",
+                  },
+                  hasOfferCatalog: {
+                    "@type": "OfferCatalog",
+                    name: "Digital Aura Service Catalog",
+                    itemListElement: [
+                      {
+                        "@type": "Offer",
+                        itemOffered: {
+                          "@type": "Service",
+                          name: "Social Media Marketing",
+                          description:
+                            "Digital Aura creates campaigns that blend creativity with precision. We study market trends and understand how audiences behave.",
+                          url: "https://digitalaura.se/services/social-media-marketing",
+                        },
+                      },
+                      {
+                        "@type": "Offer",
+                        itemOffered: {
+                          "@type": "Service",
+                          name: "SEO, GEO & AEO Optimization",
+                          description:
+                            "We boost visibility and rankings on search engines and AI-driven results. We prepare your brand for Generative and Answer Engine Optimization.",
+                          url: "https://digitalaura.se/services/seo",
+                        },
+                      },
+                      {
+                        "@type": "Offer",
+                        itemOffered: {
+                          "@type": "Service",
+                          name: "Graphic & Web Design",
+                          description:
+                            "DigitalAura transforms ideas into visuals that speak louder than words. We deliver branding, graphic, and web design services.",
+                          url: "https://digitalaura.se/services/website-designing",
+                        },
+                      },
+                      {
+                        "@type": "Offer",
+                        itemOffered: {
+                          "@type": "Service",
+                          name: "YouTube Automation",
+                          description:
+                            "DigitalAura turns YouTube automation into a simple yet powerful growth system. Strategies for subscribers, video rankings, and audience engagement.",
+                          url: "https://digitalaura.se/services/youtube-automation",
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
+                  "@type": "FAQPage",
+                  mainEntity: [
+                    {
+                      "@type": "Question",
+                      name: "What digital marketing services does DigitalAura offer?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "DigitalAura gives you a full range of digital marketing services including SEO, social media marketing, PPC, branding, and web design.",
+                      },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "How long does SEO take to show results?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Most businesses see SEO progress in 3 to 6 months depending on competition, industry, and keywords.",
+                      },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Can search engine rankings be guaranteed with SEO?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "No, rankings depend on search engines and cannot be guaranteed.",
+                      },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Does DigitalAura provide social media marketing for global clients?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Yes, campaigns reach the right audience globally, building awareness and engagement.",
+                      },
+                    },
+                  ],
+                },
+              ],
             }),
           }}
         />
-
       </head>
       <body className={`${geistSans.variable} ${syne.variable}`}>
         {/* ✅ Google Analytics */}

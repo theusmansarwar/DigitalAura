@@ -52,13 +52,18 @@ export default function CookieConsent() {
           position: "fixed",
           bottom: 20,
           right: 20,
-          width: 400,
+          width: {
+            xs: "90%", 
+            sm: "90%",  
+            md: 400,     
+          },
           bgcolor: "white",
           boxShadow: 4,
           borderRadius: 2,
           p: 2,
         }}
       >
+
         <Tabs
           value={value}
           onChange={handleChange}

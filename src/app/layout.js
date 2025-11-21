@@ -6,6 +6,7 @@ import FooterF from "@/components/Footer/FooterF";
 import { ToastContainer } from "react-toastify";
 import ViewCounter from "@/components/ViewCounter/ViewCounter";
 import Script from "next/script"; //  Added for Google Analytics
+import CookieConsent from "@/components/Cookies/CookieConsent";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const syne = Syne({
@@ -297,6 +298,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <FooterF />
+        <CookieConsent/>
       </body>
     </html>
   );
